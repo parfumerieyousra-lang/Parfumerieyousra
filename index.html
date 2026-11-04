@@ -189,7 +189,7 @@
             box-shadow: 0 15px 35px rgba(212, 175, 55, 0.4);
         }
 
-        /* قسم معرض المجموعات والإصدارات الخاصة (الصور الأربع الجديدة) */
+        /* قسم معرض المجموعات والإصدارات الخاصة */
         .showcase-section {
             max-width: 1300px;
             margin: 80px auto;
@@ -235,7 +235,7 @@
             border-color: var(--gold);
         }
 
-        .showcase-card img {
+        .showcase-img {
             width: 100%;
             height: auto;
             display: block;
@@ -243,7 +243,7 @@
             transition: var(--transition);
         }
 
-        .showcase-card:hover img {
+        .showcase-card:hover .showcase-img {
             transform: scale(1.03);
         }
 
@@ -426,7 +426,7 @@
             color: var(--primary);
         }
 
-        /* زر الواتساب العائم النابض (نظيف وبدون خطوط) */
+        /* زر الواتساب العائم النابض */
         .float-whatsapp {
             position: fixed;
             bottom: 35px;
@@ -657,7 +657,7 @@
         </div>
     </section>
 
-    <!-- قسم معرض المجموعات والإصدارات الخاصة (الصور الأربع الجديدة بمعزل عن منتجات البيع الفردية) -->
+    <!-- قسم معرض المجموعات والإصدارات الخاصة (مصصح بكلاس مستقل showcase-img) -->
     <section id="showcase" class="showcase-section">
         <div class="showcase-header">
             <h2 class="showcase-title">مجموعات وعروض سولانا الحصرية</h2>
@@ -665,16 +665,16 @@
         </div>
         <div class="showcase-grid">
             <div class="showcase-card">
-                <img src="1000598373.jpg" alt="مجموعة سولانا الفاخرة" class="product-img" loading="lazy">
+                <img src="1000598373.jpg" alt="مجموعة سولانا الفاخرة" class="showcase-img" loading="lazy">
             </div>
             <div class="showcase-card">
-                <img src="1000598354.jpg" alt="تشكيلة العطور المركزة" class="product-img" loading="lazy">
+                <img src="1000598354.jpg" alt="تشكيلة العطور المركزة" class="showcase-img" loading="lazy">
             </div>
             <div class="showcase-card">
-                <img src="1000598358.jpg" alt="إصدارات العطور النسائية" class="product-img" loading="lazy">
+                <img src="1000598358.jpg" alt="إصدارات العطور النسائية" class="showcase-img" loading="lazy">
             </div>
             <div class="showcase-card">
-                <img src="1000598360.jpg" alt="عروض العطور المميزة" class="product-img" loading="lazy">
+                <img src="1000598360.jpg" alt="عروض العطور المميزة" class="showcase-img" loading="lazy">
             </div>
         </div>
     </section>
@@ -1138,6 +1138,14 @@
         const closeBtn = document.getElementsByClassName("close-modal")[0];
 
         document.querySelectorAll('.product-img').forEach(img => {
+            img.addEventListener('click', function() {
+                modal.style.display = "block";
+                modalImg.src = this.src;
+            });
+        });
+
+        // دعم تكبير صور العروض أيضاً عند النقر عليها
+        document.querySelectorAll('.showcase-img').forEach(img => {
             img.addEventListener('click', function() {
                 modal.style.display = "block";
                 modalImg.src = this.src;
