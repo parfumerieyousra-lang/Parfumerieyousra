@@ -35,15 +35,28 @@
             line-height: 1.7;
         }
 
-        /* شريط الإعلانات العلوي */
+        /* شريط الإعلانات المتحرك (Marquee Top Bar) */
         .top-bar {
             background-color: var(--primary);
             color: var(--gold);
-            text-align: center;
-            padding: 8px 15px;
+            padding: 9px 0;
             font-size: 13px;
             font-weight: 600;
-            letter-spacing: 0.5px;
+            overflow: hidden;
+            white-space: nowrap;
+            position: relative;
+            border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+        }
+
+        .marquee-track {
+            display: inline-block;
+            white-space: nowrap;
+            animation: moveText 25s linear infinite;
+        }
+
+        @keyframes moveText {
+            0% { transform: translateX(100%); }
+            100% { transform: translateX(-100%); }
         }
 
         /* الهيدر الفاخر */
@@ -268,7 +281,7 @@
 
         /* حاوية الصور الكبيرة والواضحة */
         .product-img-container {
-            height: 400px; /* تم زيادة الارتفاع لتصبح الصور كبيرة وواضحة جداً */
+            height: 400px;
             background-color: #f7f4ee;
             cursor: pointer;
             display: flex;
@@ -355,7 +368,7 @@
             color: var(--primary);
         }
 
-        /* زر الواتساب العائم النابض */
+        /* زر الواتساب العائم النابض (نظيف وبدون خطوط) */
         .float-whatsapp {
             position: fixed;
             bottom: 35px;
@@ -544,9 +557,11 @@
 </head>
 <body>
 
-    <!-- شريط الإعلانات -->
+    <!-- شريط الإعلانات العلوي المتحرك -->
     <div class="top-bar">
-        ✨ خدمة التوصيل السريع والآمن خاصة بمدينة ميدلت | الدفع عند الاستلام 🚚
+        <div class="marquee-track">
+            ✨ خدمة التوصيل السريع والآمن خاصة بمدينة ميدلت | الدفع عند الاستلام 🚚 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 💎 عطور نسائية فاخرة سعة 20 مل بتركيبة مركزة تدوم طويلاً ✨ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 🌸 اطلبي عطرك المفضلة الآن عبر الواتساب واستمتعي بأرقى النفحات العطرية 🛍️
+        </div>
     </div>
 
     <!-- الهيدر -->
