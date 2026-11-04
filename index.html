@@ -230,15 +230,15 @@
         /* شبكة المنتجات */
         .products-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-            gap: 30px;
+            grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+            gap: 35px;
         }
 
         .product-card {
             background: var(--card-bg);
             border-radius: 16px;
             overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.04);
             transition: var(--transition);
             border: 1px solid var(--border-color);
             display: flex;
@@ -248,7 +248,7 @@
 
         .product-card:hover {
             transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(212, 175, 55, 0.12);
+            box-shadow: 0 20px 40px rgba(212, 175, 55, 0.15);
             border-color: var(--gold);
         }
 
@@ -259,21 +259,22 @@
             background-color: var(--primary);
             color: var(--gold);
             font-size: 11px;
-            padding: 4px 12px;
+            padding: 5px 14px;
             border-radius: 20px;
             font-weight: 700;
             z-index: 10;
             letter-spacing: 0.5px;
         }
 
+        /* حاوية الصور الكبيرة والواضحة */
         .product-img-container {
-            height: 320px;
+            height: 400px; /* تم زيادة الارتفاع لتصبح الصور كبيرة وواضحة جداً */
             background-color: #f7f4ee;
             cursor: pointer;
             display: flex;
             align-items: center;
             justify-content: center;
-            padding: 20px;
+            padding: 15px;
             overflow: hidden;
             position: relative;
         }
@@ -286,7 +287,7 @@
         }
 
         .product-card:hover .product-img {
-            transform: scale(1.08);
+            transform: scale(1.06);
         }
 
         .product-info {
@@ -300,7 +301,7 @@
 
         .product-title {
             font-family: 'Playfair Display', serif;
-            font-size: 21px;
+            font-size: 22px;
             font-weight: 700;
             margin-bottom: 8px;
             color: var(--primary);
@@ -310,11 +311,11 @@
             font-size: 13px;
             color: var(--gold);
             font-weight: 700;
-            margin-bottom: 8px;
+            margin-bottom: 10px;
             background: #1a1a1a;
             display: inline-block;
-            padding: 2px 10px;
-            border-radius: 10px;
+            padding: 3px 12px;
+            border-radius: 12px;
         }
 
         .product-desc {
@@ -354,7 +355,7 @@
             color: var(--primary);
         }
 
-        /* زر الواتساب العائم النابض (خالٍ تماماً من أي خطوط أو مشاكل في التنسيق) */
+        /* زر الواتساب العائم النابض */
         .float-whatsapp {
             position: fixed;
             bottom: 35px;
@@ -958,7 +959,7 @@
                 </div>
             </div>
 
-            <!-- منتج 22 (دولتشي آند غابانا لايت بلو) -->
+            <!-- منتج 22 (دولتشي آند غابانا لايت بلو صن) -->
             <div class="product-card" data-category="floral">
                 <div class="product-badge">حصري</div>
                 <div class="product-img-container">
