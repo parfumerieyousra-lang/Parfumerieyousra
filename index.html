@@ -35,7 +35,7 @@
             line-height: 1.7;
         }
 
-        /* شريط الإعلانات المتحرك (Marquee Top Bar) */
+        /* شريط الإعلانات العلوي المتحرك من اليمين إلى اليسار */
         .top-bar {
             background-color: var(--primary);
             color: var(--gold);
@@ -51,10 +51,10 @@
         .marquee-track {
             display: inline-block;
             white-space: nowrap;
-            animation: moveText 25s linear infinite;
+            animation: moveTextFromRight 25s linear infinite;
         }
 
-        @keyframes moveText {
+        @keyframes moveTextFromRight {
             0% { transform: translateX(100%); }
             100% { transform: translateX(-100%); }
         }
@@ -557,7 +557,7 @@
 </head>
 <body>
 
-    <!-- شريط الإعلانات العلوي المتحرك -->
+    <!-- شريط الإعلانات العلوي المتحرك (من اليمين إلى اليسار) -->
     <div class="top-bar">
         <div class="marquee-track">
             ✨ خدمة التوصيل السريع والآمن خاصة بمدينة ميدلت | الدفع عند الاستلام 🚚 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 💎 عطور نسائية فاخرة سعة 20 مل بتركيبة مركزة تدوم طويلاً ✨ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 🌸 اطلبي عطرك المفضلة الآن عبر الواتساب واستمتعي بأرقى النفحات العطرية 🛍️
