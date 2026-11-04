@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parfumerie Yousra | عطور نسائية فاخرة</title>
+    <!-- خطوط عربية عصرية -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,600;1,400&display=swap" rel="stylesheet">
+    <!-- أيقونات FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary-color: #1a1a1a;
+            --accent-gold: #c5a059;
+            --light-bg: #fdfbf7;
+            --card-bg: #ffffff;
+            --text-dark: #2c2c2c;
+            --text-light: #666666;
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Cairo', sans-serif;
+            background-color: var(--light-bg);
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+
+        /* الهيدر وشريط التنقل */
+        header {
+            background-color: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--primary-color);
+            letter-spacing: 1px;
+        }
+
+        .logo span {
+            color: var(--accent-gold);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 600;
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover {
+            color: var(--accent-gold);
+        }
+
+        .cta-btn {
+            background-color: var(--accent-gold);
+            color: white;
+            padding: 10px 22px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition);
+            box-shadow: 0 4px 15px rgba(197, 160, 89, 0.3);
+        }
+
+        .cta-btn:hover {
+            background-color: #b08d46;
+            transform: translateY(-2px);
+        }
+
+        /* القسم الرئيسي Hero Section */
+        .hero {
+            height: 90vh;
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1615397349754-cfa2066a298e?auto=format&fit=crop&w=1920&q=80') no-repeat center center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            padding: 0 20px;
+            margin-top: 70px;
+        }
+
+        .hero-content h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 48px;
+            margin-bottom: 20px;
+            color: #fff;
+        }
+
+        .hero-content p {
+            font-size: 18px;
+            margin-bottom: 30px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            color: #e0e0e0;
+        }
+
+        /* قسم المنتجات */
+        .section {
+            max-width: 1200px;
+            margin: 80px auto;
+            padding: 0 20px;
+        }
+
+        .section-title {
+            text-align: center;
+            font-family: 'Playfair Display', serif;
+            font-size: 36px;
+            margin-bottom: 10px;
+            color: var(--primary-color);
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: var(--text-light);
+            margin-bottom: 50px;
+            font-size: 16px;
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .product-card {
+            background: var(--card-bg);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.04);
+            transition: var(--transition);
+            border: 1px solid #f0e9df;
+        }
+
+        .product-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 35px rgba(197, 160, 89, 0.15);
+        }
+
+        .product-img {
+            height: 320px;
+            width: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .product-card:hover .product-img {
+            transform: scale(1.03);
+        }
+
+        .product-info {
+            padding: 25px;
+            text-align: center;
+        }
+
+        .product-title {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: var(--primary-color);
+        }
+
+        .product-desc {
+            font-size: 14px;
+            color: var(--text-light);
+            margin-bottom: 15px;
+        }
+
+        .product-price {
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--accent-gold);
+            margin-bottom: 20px;
+        }
+
+        .buy-btn {
+            display: inline-block;
+            width: 100%;
+            background-color: var(--primary-color);
+            color: white;
+            padding: 12px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+
+        .buy-btn:hover {
+            background-color: var(--accent-gold);
+        }
+
+        /* مميزات المتجر */
+        .features {
+            background-color: #f5f0e6;
+            padding: 60px 0;
+            margin-top: 80px;
+        }
+
+        .features-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            padding: 0 20px;
+            text-align: center;
+        }
+
+        .feature-item i {
+            font-size: 36px;
+            color: var(--accent-gold);
+            margin-bottom: 15px;
+        }
+
+        .feature-item h3 {
+            font-size: 18px;
+            margin-bottom: 10px;
+            color: var(--primary-color);
+        }
+
+        .feature-item p {
+            font-size: 14px;
+            color: var(--text-light);
+        }
+
+        /* الفوتر */
+        footer {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 40px 20px 20px;
+            text-align: center;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 20px;
+        }
+
+        .social-icons a {
+            color: white;
+            font-size: 20px;
+            transition: var(--transition);
+        }
+
+        .social-icons a:hover {
+            color: var(--accent-gold);
+        }
+
+        .copyright {
+            font-size: 13px;
+            color: #888;
+            border-top: 1px solid #333;
+            width: 100%;
+            padding-top: 20px;
+            margin-top: 20px;
+        }
+
+        /* التجاوب مع الهواتف */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            .hero-content h1 {
+                font-size: 32px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- الهيدر -->
+    <header>
+        <div class="nav-container">
+            <div class="logo">Parfumerie <span>Yousra</span></div>
+            <ul class="nav-links">
+                <li><a href="#">الرئيسية</a></li>
+                <li><a href="#products">العطور</a></li>
+                <li><a href="#features">مميزاتنا</a></li>
+            </ul>
+            <a href="https://wa.me/212600000000?text=سلام، أهتم بالاستفسار عن عطور Parfumerie Yousra" target="_blank" class="cta-btn">تواصل عبر الواتساب</a>
+        </div>
+    </header>
+
+    <!-- الواجهة الرئيسية -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>عطور تعكس أناقتك الفريدة</h1>
+            <p>اكتشفي تشكيلة راقية من أرقى العطور النسائية المصممة خصيصاً لتلهم حضورك بجاذبية لا تُنسى.</p>
+            <a href="#products" class="cta-btn" style="padding: 14px 35px; font-size: 16px;">تسوقي المجموعة</a>
+        </div>
+    </section>
+
+    <!-- قسم العطور المميزة -->
+    <section id="products" class="section">
+        <h2 class="section-title">تشكيلة العطور الفاخرة</h2>
+        <p class="section-subtitle">روائح تدوم طويلاً وتترك انطباعاً ساحراً</p>
+
+        <div class="products-grid">
+            <!-- منتج 1 -->
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1523293182086-7651a899d37f?auto=format&fit=crop&w=600&q=80" alt="عطر أسرار الياسمين" class="product-img">
+                <div class="product-info">
+                    <h3 class="product-title">أسرار الياسمين</h3>
+                    <p class="product-desc">مزيج ساحر من زهور الياسمين الأبيض والمسك الفاخر.</p>
+                    <div class="product-price">450 درهم</div>
+                    <a href="https://wa.me/212600000000?text=أريد طلب عطر: أسرار الياسمين" target="_blank" class="buy-btn">اطلبي الآن</a>
+                </div>
+            </div>
+
+            <!-- منتج 2 -->
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1594035910387-fea47794261f?auto=format&fit=crop&w=600&q=80" alt="عطر سحر الورد" class="product-img">
+                <div class="product-info">
+                    <h3 class="product-title">سحر الورد الجوري</h3>
+                    <p class="product-desc">نفحات دافئة من الورد الجوري مع لمسة خفيفة من الفانيليا.</p>
+                    <div class="product-price">520 درهم</div>
+                    <a href="https://wa.me/212600000000?text=أريد طلب عطر: سحر الورد الجوري" target="_blank" class="buy-btn">اطلبي الآن</a>
+                </div>
+            </div>
+
+            <!-- منتج 3 -->
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1547887537-6158d64c35b3?auto=format&fit=crop&w=600&q=80" alt="عطر إكسير الفخامة" class="product-img">
+                <div class="product-info">
+                    <h3 class="product-title">إكسير الفخامة</h3>
+                    <p class="product-desc">تركيبة استثنائية تناسب السهرات والمناسبات الخاصة.</p>
+                    <div class="product-price">600 درهم</div>
+                    <a href="https://wa.me/212600000000?text=أريد طلب عطر: إكسير الفخامة" target="_blank" class="buy-btn">اطلبي الآن</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم المميزات -->
+    <section id="features" class="features">
+        <div class="features-grid">
+            <div class="feature-item">
+                <i class="fas fa-gem"></i>
+                <h3>جودة أصلية</h3>
+                <p>عطور مختارة بعناية فائقة لتضمن لكِ ثباتاً عالياً طوال اليوم.</p>
+            </div>
+            <div class="feature-item">
+                <i class="fas fa-shipping-fast"></i>
+                <h3>توصيل سريع</h3>
+                <p>خدمة توصيل آمنة وسريعة لكافة المدن مع الدفع عند الاستلام.</p>
+            </div>
+            <div class="feature-item">
+                <i class="fas fa-headset"></i>
+                <h3>دعم عملاء ممتاز</h3>
+                <p>فريقنا جاهز دائماً لمساعدتكِ في اختيار العطر المناسب لذوقكِ.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- الفوتر -->
+    <footer>
+        <div class="footer-content">
+            <div class="logo" style="color: white;">Parfumerie <span>Yousra</span></div>
+            <p>وجهتك الأولى للعطور النسائية الفاخرة التي تليق بتميزك.</p>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-whatsapp"></i></a>
+            </div>
+            <div class="copyright">
+                &copy; 2026 Parfumerie Yousra. جميع Rights Reserved.
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
