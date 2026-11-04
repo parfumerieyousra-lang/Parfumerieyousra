@@ -170,22 +170,27 @@
             box-shadow: 0 15px 35px rgba(197, 160, 89, 0.15);
         }
 
+        /* تنسيق حاوية الصور لضمان التناسق والتوسيط التام */
         .product-img-container {
-            overflow: hidden;
             height: 320px;
-            background-color: #f7f4ee;
+            background-color: #faf7f2;
             cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 15px;
+            overflow: hidden;
         }
 
         .product-img {
-            height: 100%;
-            width: 100%;
-            object-fit: cover;
+            max-height: 100%;
+            max-width: 100%;
+            object-fit: contain;
             transition: var(--transition);
         }
 
         .product-card:hover .product-img {
-            transform: scale(1.05);
+            transform: scale(1.08);
         }
 
         .product-info {
@@ -537,7 +542,7 @@
                 </div>
             </div>
 
-            <!-- منتج 11 (ميرة العرب) -->
+            <!-- منتج 11 -->
             <div class="product-card">
                 <div class="product-img-container">
                     <img src="1000598213.jpg" alt="ميرة العرب" class="product-img" loading="lazy">
@@ -549,7 +554,7 @@
                 </div>
             </div>
 
-            <!-- منتج 12 (شانس شانيل) -->
+            <!-- منتج 12 -->
             <div class="product-card">
                 <div class="product-img-container">
                     <img src="1000598214.png" alt="شانس شانيل" class="product-img" loading="lazy">
@@ -561,7 +566,7 @@
                 </div>
             </div>
 
-            <!-- منتج 13 (لأنترديت جيفنشي) -->
+            <!-- منتج 13 -->
             <div class="product-card">
                 <div class="product-img-container">
                     <img src="1000598215.png" alt="لأنترديت جيفنشي" class="product-img" loading="lazy">
@@ -573,7 +578,7 @@
                 </div>
             </div>
 
-            <!-- منتج 14 (فيكتوريا سيكريت) -->
+            <!-- منتج 14 -->
             <div class="product-card">
                 <div class="product-img-container">
                     <img src="1000598216.png" alt="فيكتوريا سيكريت" class="product-img" loading="lazy">
@@ -585,7 +590,7 @@
                 </div>
             </div>
 
-            <!-- منتج 15 (إنسانس أولترامارين) -->
+            <!-- منتج 15 -->
             <div class="product-card">
                 <div class="product-img-container">
                     <img src="1000598217.png" alt="إنسانس أولترامارين" class="product-img" loading="lazy">
@@ -597,7 +602,7 @@
                 </div>
             </div>
 
-            <!-- منتج 16 (غوتشي فلورال) -->
+            <!-- منتج 16 -->
             <div class="product-card">
                 <div class="product-img-container">
                     <img src="1000598218.jpg" alt="غوتشي فلورال" class="product-img" loading="lazy">
@@ -609,7 +614,7 @@
                 </div>
             </div>
 
-            <!-- منتج 17 (سكاندال جان بول غوتييه) -->
+            <!-- منتج 17 -->
             <div class="product-card">
                 <div class="product-img-container">
                     <img src="1000598219.jpg" alt="سكاندال" class="product-img" loading="lazy">
@@ -621,7 +626,7 @@
                 </div>
             </div>
 
-            <!-- منتج 18 (كوم يون إفدونس) -->
+            <!-- منتج 18 -->
             <div class="product-card">
                 <div class="product-img-container">
                     <img src="1000598220.jpg" alt="كوم يون إفدونس" class="product-img" loading="lazy">
@@ -633,7 +638,7 @@
                 </div>
             </div>
 
-            <!-- منتج 19 (أوليمبيا) -->
+            <!-- منتج 19 -->
             <div class="product-card">
                 <div class="product-img-container">
                     <img src="1000598221.jpg" alt="أوليمبيا" class="product-img" loading="lazy">
@@ -645,7 +650,7 @@
                 </div>
             </div>
 
-            <!-- منتج 20 (ليبر إيف سان لوران) -->
+            <!-- منتج 20 -->
             <div class="product-card">
                 <div class="product-img-container">
                     <img src="1000598222.jpg" alt="ليبر إيف سان لوران" class="product-img" loading="lazy">
