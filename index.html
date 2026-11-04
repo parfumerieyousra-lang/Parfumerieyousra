@@ -170,16 +170,22 @@
             box-shadow: 0 15px 35px rgba(197, 160, 89, 0.15);
         }
 
-        .product-img {
+        .product-img-container {
+            overflow: hidden;
             height: 320px;
+            background-color: #f7f4ee;
+            cursor: pointer;
+        }
+
+        .product-img {
+            height: 100%;
             width: 100%;
             object-fit: cover;
             transition: var(--transition);
-            background-color: #f7f4ee;
         }
 
         .product-card:hover .product-img {
-            transform: scale(1.03);
+            transform: scale(1.05);
         }
 
         .product-info {
@@ -197,13 +203,6 @@
         .product-desc {
             font-size: 14px;
             color: var(--text-light);
-            margin-bottom: 15px;
-        }
-
-        .product-price {
-            font-size: 18px;
-            font-weight: 700;
-            color: var(--accent-gold);
             margin-bottom: 20px;
         }
 
@@ -221,6 +220,73 @@
 
         .buy-btn:hover {
             background-color: var(--accent-gold);
+        }
+
+        /* زر الواتساب العائم */
+        .float-whatsapp {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background-color: #25d366;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+            z-index: 2000;
+            transition: var(--transition);
+        }
+
+        .float-whatsapp:hover {
+            transform: scale(1.1);
+            background-color: #20ba5a;
+        }
+
+        /* نافذة تكبير الصور (Lightbox Modal) */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 3000;
+            padding-top: 50px;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.9);
+        }
+
+        .modal-content {
+            margin: auto;
+            display: block;
+            max-width: 85%;
+            max-height: 85vh;
+            border-radius: 10px;
+            animation: zoom 0.3s;
+        }
+
+        @keyframes zoom {
+            from {transform: scale(0);}
+            to {transform: scale(1);}
+        }
+
+        .close-modal {
+            position: absolute;
+            top: 25px;
+            right: 40px;
+            color: #f1f1f1;
+            font-size: 45px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .close-modal:hover {
+            color: var(--accent-gold);
         }
 
         /* مميزات المتجر */
@@ -320,9 +386,20 @@
                 <li><a href="#products">العطور</a></li>
                 <li><a href="#features">مميزاتنا</a></li>
             </ul>
-            <a href="https://wa.me/212600000000?text=سلام، أهتم بالاستفسار عن عطور Parfumerie Yousra" target="_blank" class="cta-btn">تواصل عبر الواتساب</a>
+            <a href="https://wa.me/212605015387?text=سلام، أهتم بالاستفسار عن عطور Parfumerie Yousra" target="_blank" class="cta-btn">تواصل عبر الواتساب</a>
         </div>
     </header>
+
+    <!-- زر الواتساب العائم -->
+    <a href="https://wa.me/212605015387?text=سلام، أريد طلب عطر من متجر Parfumerie Yousra" target="_blank" class="float-whatsapp" title="تواصل معنا عبر الواتساب">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- نافذة تكبير الصور -->
+    <div id="imageModal" class="modal">
+        <span class="close-modal">&times;</span>
+        <img class="modal-content" id="modalImg">
+    </div>
 
     <!-- الواجهة الرئيسية -->
     <section class="hero">
@@ -340,113 +417,243 @@
 
         <div class="products-grid">
             
-            <!-- منتج 1: Amebr Ilixer -->
+            <!-- منتج 1 -->
             <div class="product-card">
-                <img src="1000598193.jpg" alt="Amebr Ilixer" class="product-img">
+                <div class="product-img-container">
+                    <img src="1000598193.jpg" alt="أمبر إيليكسير" class="product-img" loading="lazy">
+                </div>
                 <div class="product-info">
                     <h3 class="product-title">أمبر إيليكسير</h3>
                     <p class="product-desc">تركيبة مركزة تنبض بالفخامة والدفء الشرقي.</p>
-                    <div class="product-price">480 درهم</div>
-                    <a href="https://wa.me/212600000000?text=أريد طلب عطر: أمبر إيليكسير" target="_blank" class="buy-btn">اطلبي الآن</a>
+                    <a href="https://wa.me/212605015387?text=أريد طلب عطر: أمبر إيليكسير" target="_blank" class="buy-btn">اطلبي الآن عبر الواتساب</a>
                 </div>
             </div>
 
-            <!-- منتج 2: Cniema -->
+            <!-- منتج 2 -->
             <div class="product-card">
-                <img src="1000598196.jpg" alt="Cniema" class="product-img">
+                <div class="product-img-container">
+                    <img src="1000598196.jpg" alt="سينما" class="product-img" loading="lazy">
+                </div>
                 <div class="product-info">
                     <h3 class="product-title">سينما</h3>
-                    <p class="product-desc">عطر السريانية والأضواء بلمسات أنثوية خلابة.</p>
-                    <div class="product-price">450 درهم</div>
-                    <a href="https://wa.me/212600000000?text=أريد طلب عطر: سينما" target="_blank" class="buy-btn">اطلبي الآن</a>
+                    <p class="product-desc">عطر الأضواء بلمسات أنثوية خلابة.</p>
+                    <a href="https://wa.me/212605015387?text=أريد طلب عطر: سينما" target="_blank" class="buy-btn">اطلبي الآن عبر الواتساب</a>
                 </div>
             </div>
 
-            <!-- منتج 3: Mywya -->
+            <!-- منتج 3 -->
             <div class="product-card">
-                <img src="1000598197.png" alt="Mywya" class="product-img">
+                <div class="product-img-container">
+                    <img src="1000598197.png" alt="ماي فيا" class="product-img" loading="lazy">
+                </div>
                 <div class="product-info">
                     <h3 class="product-title">ماي فيا</h3>
                     <p class="product-desc">مزيج زهور رقيق يعبر عن الحرية والجاذبية.</p>
-                    <div class="product-price">420 درهم</div>
-                    <a href="https://wa.me/212600000000?text=أريد طلب عطر: ماي فيا" target="_blank" class="buy-btn">اطلبي الآن</a>
+                    <a href="https://wa.me/212605015387?text=أريد طلب عطر: ماي فيا" target="_blank" class="buy-btn">اطلبي الآن عبر الواتساب</a>
                 </div>
             </div>
 
-            <!-- منتج 4: Kay Ail -->
+            <!-- منتج 4 -->
             <div class="product-card">
-                <img src="1000598198.jpg" alt="Kay Ail" class="product-img">
+                <div class="product-img-container">
+                    <img src="1000598198.jpg" alt="كايالي" class="product-img" loading="lazy">
+                </div>
                 <div class="product-info">
                     <h3 class="product-title">كايالي</h3>
                     <p class="product-desc">نفحات دافئة تجمع بين العصرية والعمق العطري.</p>
-                    <div class="product-price">500 درهم</div>
-                    <a href="https://wa.me/212600000000?text=أريد طلب عطر: كايالي" target="_blank" class="buy-btn">اطلبي الآن</a>
+                    <a href="https://wa.me/212605015387?text=أريد طلب عطر: كايالي" target="_blank" class="buy-btn">اطلبي الآن عبر الواتساب</a>
                 </div>
             </div>
 
-            <!-- منتج 5: Escada -->
+            <!-- منتج 5 -->
             <div class="product-card">
-                <img src="1000598199.jpg" alt="Escada" class="product-img">
+                <div class="product-img-container">
+                    <img src="1000598199.jpg" alt="إسكادا" class="product-img" loading="lazy">
+                </div>
                 <div class="product-info">
                     <h3 class="product-title">إسكادا</h3>
                     <p class="product-desc">انتعاش الفواكه الصيفية بنفحات حيوية ومشرقة.</p>
-                    <div class="product-price">390 درهم</div>
-                    <a href="https://wa.me/212600000000?text=أريد طلب عطر: إسكادا" target="_blank" class="buy-btn">اطلبي الآن</a>
+                    <a href="https://wa.me/212605015387?text=أريد طلب عطر: إسكادا" target="_blank" class="buy-btn">اطلبي الآن عبر الواتساب</a>
                 </div>
             </div>
 
-            <!-- منتج 6: L'Impiratrice -->
+            <!-- منتج 6 -->
             <div class="product-card">
-                <img src="1000598200.jpg" alt="L'Impiratrice" class="product-img">
+                <div class="product-img-container">
+                    <img src="1000598200.jpg" alt="لومبيراتريس" class="product-img" loading="lazy">
+                </div>
                 <div class="product-info">
                     <h3 class="product-title">لومبيراتريس</h3>
-                    <p class="product-desc">عطر الملكات الفاخر بعبق الفواكه المنعشة والزهور.</p>
-                    <div class="product-price">460 درهم</div>
-                    <a href="https://wa.me/212600000000?text=أريد طلب عطر: لومبيراتريس" target="_blank" class="buy-btn">اطلبي الآن</a>
+                    <p class="product-desc">عطر الملكات الفاخر بعبق الفواكه المنعشة.</p>
+                    <a href="https://wa.me/212605015387?text=أريد طلب عطر: لومبيراتريس" target="_blank" class="buy-btn">اطلبي الآن عبر الواتساب</a>
                 </div>
             </div>
 
-            <!-- منتج 7: Yaraa -->
+            <!-- منتج 7 -->
             <div class="product-card">
-                <img src="1000598209.jpg" alt="Yaraa" class="product-img">
+                <div class="product-img-container">
+                    <img src="1000598209.jpg" alt="يارا" class="product-img" loading="lazy">
+                </div>
                 <div class="product-info">
                     <h3 class="product-title">يارا</h3>
                     <p class="product-desc">عبير شرقي ساحر يترك أثراً ناعماً لا يُنسى.</p>
-                    <div class="product-price">430 درهم</div>
-                    <a href="https://wa.me/212600000000?text=أريد طلب عطر: يارا" target="_blank" class="buy-btn">اطلبي الآن</a>
+                    <a href="https://wa.me/212605015387?text=أريد طلب عطر: يارا" target="_blank" class="buy-btn">اطلبي الآن عبر الواتساب</a>
                 </div>
             </div>
 
-            <!-- منتج 8: Mywya (Variant) -->
+            <!-- منتج 8 -->
             <div class="product-card">
-                <img src="1000598210.jpg" alt="Mywya Classic" class="product-img">
+                <div class="product-img-container">
+                    <img src="1000598210.jpg" alt="ماي فيا جولد" class="product-img" loading="lazy">
+                </div>
                 <div class="product-info">
                     <h3 class="product-title">ماي فيا جولد</h3>
                     <p class="product-desc">إصدار خاص وفخم يجمع بين نعومة الزهور ودفء القاعدة.</p>
-                    <div class="product-price">490 درهم</div>
-                    <a href="https://wa.me/212600000000?text=أريد طلب عطر: ماي فيا جولد" target="_blank" class="buy-btn">اطلبي الآن</a>
+                    <a href="https://wa.me/212605015387?text=أريد طلب عطر: ماي فيا جولد" target="_blank" class="buy-btn">اطلبي الآن عبر الواتساب</a>
                 </div>
             </div>
 
-            <!-- منتج 9: Coconut Passion -->
+            <!-- منتج 9 -->
             <div class="product-card">
-                <img src="1000598211.jpg" alt="Coconut Passion" class="product-img">
+                <div class="product-img-container">
+                    <img src="1000598211.jpg" alt="كوكونت باشن" class="product-img" loading="lazy">
+                </div>
                 <div class="product-info">
                     <h3 class="product-title">كوكونت باشن</h3>
                     <p class="product-desc">نفحات استوائية دافئة من جوز الهند والفانيليا.</p>
-                    <div class="product-price">350 درهم</div>
-                    <a href="https://wa.me/212600000000?text=أريد طلب عطر: كوكونت باشن" target="_blank" class="buy-btn">اطلبي الآن</a>
+                    <a href="https://wa.me/212605015387?text=أريد طلب عطر: كوكونت باشن" target="_blank" class="buy-btn">اطلبي الآن عبر الواتساب</a>
                 </div>
             </div>
 
-            <!-- منتج 10: L'Impiratrice (Variant) -->
+            <!-- منتج 10 -->
             <div class="product-card">
-                <img src="1000598212.jpg" alt="L'Impiratrice Elegant" class="product-img">
+                <div class="product-img-container">
+                    <img src="1000598212.jpg" alt="لومبيراتريس إيليت" class="product-img" loading="lazy">
+                </div>
                 <div class="product-info">
                     <h3 class="product-title">لومبيراتريس إيليت</h3>
                     <p class="product-desc">تركيبة مكثفة خاصة تزيد من ثبات العطر وفخامته.</p>
-                    <div class="product-price">520 درهم</div>
-                    <a href="https://wa.me/212600000000?text=أريد طلب عطر: لومبيراتريس إيليت" target="_blank" class="buy-btn">اطلبي الآن</a>
+                    <a href="https://wa.me/212605015387?text=أريد طلب عطر: لومبيراتريس إيليت" target="_blank" class="buy-btn">اطلبي الآن عبر الواتساب</a>
+                </div>
+            </div>
+
+            <!-- منتج 11 (ميرة العرب) -->
+            <div class="product-card">
+                <div class="product-img-container">
+                    <img src="1000598213.jpg" alt="ميرة العرب" class="product-img" loading="lazy">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-title">ميرة العرب</h3>
+                    <p class="product-desc">عطر عربي أصيل يجمع بين عبق التراث وفخامة الحاضر.</p>
+                    <a href="https://wa.me/212605015387?text=أريد طلب عطر: ميرة العرب" target="_blank" class="buy-btn">اطلبي الآن عبر الواتساب</a>
+                </div>
+            </div>
+
+            <!-- منتج 12 (شانس شانيل) -->
+            <div class="product-card">
+                <div class="product-img-container">
+                    <img src="1000598214.png" alt="شانس شانيل" class="product-img" loading="lazy">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-title">شانس شانيل</h3>
+                    <p class="product-desc">نفحات منعشة ومفعمة بالحيوية لكل أوقات اليوم.</p>
+                    <a href="https://wa.me/212605015387?text=أريد طلب عطر: شانس شانيل" target="_blank" class="buy-btn">اطلبي الآن عبر الواتساب</a>
+                </div>
+            </div>
+
+            <!-- منتج 13 (لأنترديت جيفنشي) -->
+            <div class="product-card">
+                <div class="product-img-container">
+                    <img src="1000598215.png" alt="لأنترديت جيفنشي" class="product-img" loading="lazy">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-title">لأنترديت جيفنشي</h3>
+                    <p class="product-desc">عطر الجرأة والأناقة بزهور بيضاء استثنائية.</p>
+                    <a href="https://wa.me/212605015387?text=أريد طلب عطر: لأنترديت جيفنشي" target="_blank" class="buy-btn">اطلبي الآن عبر الواتساب</a>
+                </div>
+            </div>
+
+            <!-- منتج 14 (فيكتوريا سيكريت) -->
+            <div class="product-card">
+                <div class="product-img-container">
+                    <img src="1000598216.png" alt="فيكتوريا سيكريت" class="product-img" loading="lazy">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-title">فيكتوريا سيكريت</h3>
+                    <p class="product-desc">رائحة رومانسية جذابة تمنحك شعوراً بالانتعاش الدائم.</p>
+                    <a href="https://wa.me/212605015387?text=أريد طلب عطر: فيكتوريا سيكريت" target="_blank" class="buy-btn">اطلبي الآن عبر الواتساب</a>
+                </div>
+            </div>
+
+            <!-- منتج 15 (إنسانس أولترامارين) -->
+            <div class="product-card">
+                <div class="product-img-container">
+                    <img src="1000598217.png" alt="إنسانس أولترامارين" class="product-img" loading="lazy">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-title">إنسانس أولترامارين</h3>
+                    <p class="product-desc">نفحات مائية ومنعشة تضفي طابعاً من الحيوية المطلقة.</p>
+                    <a href="https://wa.me/212605015387?text=أريد طلب عطر: إنسانس أولترامارين" target="_blank" class="buy-btn">اطلبي الآن عبر الواتساب</a>
+                </div>
+            </div>
+
+            <!-- منتج 16 (غوتشي فلورال) -->
+            <div class="product-card">
+                <div class="product-img-container">
+                    <img src="1000598218.jpg" alt="غوتشي فلورال" class="product-img" loading="lazy">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-title">غوتشي فلورال</h3>
+                    <p class="product-desc">باقة زهور ساحرة تعبر عن رقة وجمال الأنثى.</p>
+                    <a href="https://wa.me/212605015387?text=أريد طلب عطر: غوتشي فلورال" target="_blank" class="buy-btn">اطلبي الآن عبر الواتساب</a>
+                </div>
+            </div>
+
+            <!-- منتج 17 (سكاندال جان بول غوتييه) -->
+            <div class="product-card">
+                <div class="product-img-container">
+                    <img src="1000598219.jpg" alt="سكاندال" class="product-img" loading="lazy">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-title">سكاندال</h3>
+                    <p class="product-desc">عطر جذاب بتركيبة جريئة تترك أثراً قوياً لا يُمحى.</p>
+                    <a href="https://wa.me/212605015387?text=أريد طلب عطر: سكاندال" target="_blank" class="buy-btn">اطلبي الآن عبر الواتساب</a>
+                </div>
+            </div>
+
+            <!-- منتج 18 (كوم يون إفدونس) -->
+            <div class="product-card">
+                <div class="product-img-container">
+                    <img src="1000598220.jpg" alt="كوم يون إفدونس" class="product-img" loading="lazy">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-title">كوم يون إفدونس</h3>
+                    <p class="product-desc">رائحة طبيعية راقية تنبض بالصفاء والانسجام.</p>
+                    <a href="https://wa.me/212605015387?text=أريد طلب عطر: كوم يون إفدونس" target="_blank" class="buy-btn">اطلبي الآن عبر الواتساب</a>
+                </div>
+            </div>
+
+            <!-- منتج 19 (أوليمبيا) -->
+            <div class="product-card">
+                <div class="product-img-container">
+                    <img src="1000598221.jpg" alt="أوليمبيا" class="product-img" loading="lazy">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-title">أوليمبيا</h3>
+                    <p class="product-desc">عطر الأساطير بأسلوب شرقي مالح وفانيليا ساحرة.</p>
+                    <a href="https://wa.me/212605015387?text=أريد طلب عطر: أوليمبيا" target="_blank" class="buy-btn">اطلبي الآن عبر الواتساب</a>
+                </div>
+            </div>
+
+            <!-- منتج 20 (ليبر إيف سان لوران) -->
+            <div class="product-card">
+                <div class="product-img-container">
+                    <img src="1000598222.jpg" alt="ليبر إيف سان لوران" class="product-img" loading="lazy">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-title">ليبر إيف سان لوران</h3>
+                    <p class="product-desc">عطر الحرية والأناقة العصرية بامتياز.</p>
+                    <a href="https://wa.me/212605015387?text=أريد طلب عطر: ليبر إيف سان لوران" target="_blank" class="buy-btn">اطلبي الآن عبر الواتساب</a>
                 </div>
             </div>
 
@@ -489,6 +696,35 @@
             </div>
         </div>
     </footer>
+
+    <!-- جافاسكريبت لتكبير الصور -->
+    <script>
+        const modal = document.getElementById("imageModal");
+        const modalImg = document.getElementById("modalImg");
+        const closeBtn = document.getElementsByClassName("close-modal")[0];
+
+        // تفعيل النقر على الصور للتكبير
+        document.querySelectorAll('.product-img').forEach(img => {
+            img.addEventListener('click', function() {
+                modal.style.display = "block";
+                modalImg.src = this.src;
+            });
+        });
+
+        // إغلاق النافذة عند الضغط على علامة (X)
+        if(closeBtn) {
+            closeBtn.onclick = function() { 
+                modal.style.display = "none";
+            }
+        }
+
+        // إغلاق النافذة عند النقر خارج الصورة
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
 
 </body>
 </html>
