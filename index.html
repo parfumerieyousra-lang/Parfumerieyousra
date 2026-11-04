@@ -4,20 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Parfumerie Yousra | عطور نسائية فاخرة</title>
-    <!-- خطوط عربية عصرية -->
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,600;1,400&display=swap" rel="stylesheet">
+    <!-- خطوط عربية وعالمية راقية -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap" rel="stylesheet">
     <!-- أيقونات FontAwesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <style>
         :root {
-            --primary-color: #1a1a1a;
-            --accent-gold: #c5a059;
-            --light-bg: #fdfbf7;
+            --bg-color: #fbf9f5;
             --card-bg: #ffffff;
-            --text-dark: #2c2c2c;
-            --text-light: #666666;
-            --transition: all 0.3s ease;
+            --primary: #121212;
+            --gold: #d4af37;
+            --gold-light: #f3ebd1;
+            --text-main: #2b2b2b;
+            --text-muted: #666666;
+            --border-color: #eee3d0;
+            --transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
         }
 
         * {
@@ -28,158 +30,252 @@
 
         body {
             font-family: 'Cairo', sans-serif;
-            background-color: var(--light-bg);
-            color: var(--text-dark);
-            line-height: 1.6;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.7;
         }
 
-        /* الهيدر وشريط التنقل */
+        /* شريط الإعلانات العلوي */
+        .top-bar {
+            background-color: var(--primary);
+            color: var(--gold);
+            text-align: center;
+            padding: 8px 15px;
+            font-size: 13px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+
+        /* الهيدر الفاخر */
         header {
-            background-color: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            position: fixed;
+            background-color: rgba(255, 255, 255, 0.92);
+            backdrop-filter: blur(12px);
+            position: sticky;
             top: 0;
             left: 0;
             width: 100%;
             z-index: 1000;
-            box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+            border-bottom: 1px solid var(--border-color);
+            transition: var(--transition);
         }
 
         .nav-container {
-            max-width: 1200px;
+            max-width: 1300px;
             margin: 0 auto;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 20px;
+            padding: 18px 30px;
         }
 
         .logo {
             font-family: 'Playfair Display', serif;
-            font-size: 24px;
+            font-size: 26px;
             font-weight: 700;
-            color: var(--primary-color);
-            letter-spacing: 1px;
+            color: var(--primary);
+            letter-spacing: 1.5px;
         }
 
         .logo span {
-            color: var(--accent-gold);
+            color: var(--gold);
+            font-style: italic;
         }
 
         .nav-links {
             display: flex;
-            gap: 30px;
+            gap: 35px;
             list-style: none;
         }
 
         .nav-links a {
             text-decoration: none;
-            color: var(--text-dark);
+            color: var(--text-main);
             font-weight: 600;
+            font-size: 15px;
             transition: var(--transition);
         }
 
         .nav-links a:hover {
-            color: var(--accent-gold);
+            color: var(--gold);
         }
 
-        .cta-btn {
-            background-color: var(--accent-gold);
-            color: white;
-            padding: 10px 22px;
-            border-radius: 30px;
+        .header-cta {
+            background-color: var(--primary);
+            color: var(--gold);
+            padding: 10px 24px;
+            border-radius: 50px;
             text-decoration: none;
             font-weight: 600;
+            font-size: 14px;
+            border: 1px solid var(--gold);
             transition: var(--transition);
-            box-shadow: 0 4px 15px rgba(197, 160, 89, 0.3);
         }
 
-        .cta-btn:hover {
-            background-color: #b08d46;
+        .header-cta:hover {
+            background-color: var(--gold);
+            color: var(--primary);
             transform: translateY(-2px);
         }
 
-        /* القسم الرئيسي Hero Section */
+        /* واجهة الـ Hero الاحترافية */
         .hero {
-            height: 90vh;
-            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1615397349754-cfa2066a298e?auto=format&fit=crop&w=1920&q=80') no-repeat center center/cover;
+            height: 85vh;
+            background: linear-gradient(rgba(18, 18, 18, 0.65), rgba(18, 18, 18, 0.75)), url('https://images.unsplash.com/photo-1615397349754-cfa2066a298e?auto=format&fit=crop&w=1920&q=80') no-repeat center center/cover;
             display: flex;
             align-items: center;
             justify-content: center;
             text-align: center;
             color: white;
             padding: 0 20px;
-            margin-top: 70px;
+            position: relative;
+        }
+
+        .hero-content {
+            max-width: 800px;
+        }
+
+        .hero-subtitle {
+            color: var(--gold);
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-size: 14px;
+            margin-bottom: 15px;
+            font-weight: 700;
         }
 
         .hero-content h1 {
             font-family: 'Playfair Display', serif;
-            font-size: 48px;
+            font-size: 52px;
             margin-bottom: 20px;
-            color: #fff;
+            line-height: 1.2;
         }
 
         .hero-content p {
             font-size: 18px;
-            margin-bottom: 30px;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
-            color: #e0e0e0;
+            margin-bottom: 35px;
+            color: #dcdcdc;
+            font-weight: 300;
         }
 
-        /* قسم المنتجات */
+        .btn-gold {
+            background-color: var(--gold);
+            color: var(--primary);
+            padding: 15px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 16px;
+            transition: var(--transition);
+            display: inline-block;
+            box-shadow: 0 10px 30px rgba(212, 175, 55, 0.3);
+        }
+
+        .btn-gold:hover {
+            background-color: #e6be40;
+            transform: translateY(-3px);
+            box-shadow: 0 15px 35px rgba(212, 175, 55, 0.4);
+        }
+
+        /* قسم المنتجات الرئيسي */
         .section {
-            max-width: 1200px;
-            margin: 80px auto;
-            padding: 0 20px;
+            max-width: 1300px;
+            margin: 90px auto;
+            padding: 0 30px;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 50px;
         }
 
         .section-title {
-            text-align: center;
             font-family: 'Playfair Display', serif;
-            font-size: 36px;
-            margin-bottom: 10px;
-            color: var(--primary-color);
+            font-size: 40px;
+            color: var(--primary);
+            margin-bottom: 12px;
         }
 
-        .section-subtitle {
-            text-align: center;
-            color: var(--text-light);
-            margin-bottom: 50px;
+        .section-desc {
+            color: var(--text-muted);
             font-size: 16px;
         }
 
+        /* أزرار الفلترة الاحترافية */
+        .filter-tabs {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 45px;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            background: transparent;
+            border: 1px solid var(--border-color);
+            padding: 8px 22px;
+            border-radius: 30px;
+            cursor: pointer;
+            font-family: 'Cairo', sans-serif;
+            font-weight: 600;
+            color: var(--text-muted);
+            transition: var(--transition);
+        }
+
+        .filter-btn.active, .filter-btn:hover {
+            background-color: var(--primary);
+            color: var(--gold);
+            border-color: var(--primary);
+        }
+
+        /* شبكة المنتجات */
         .products-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
             gap: 30px;
         }
 
         .product-card {
             background: var(--card-bg);
-            border-radius: 15px;
+            border-radius: 16px;
             overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.04);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.03);
             transition: var(--transition);
-            border: 1px solid #f0e9df;
+            border: 1px solid var(--border-color);
+            display: flex;
+            flex-direction: column;
+            position: relative;
         }
 
         .product-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 15px 35px rgba(197, 160, 89, 0.15);
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(212, 175, 55, 0.12);
+            border-color: var(--gold);
         }
 
-        /* تنسيق حاوية الصور لضمان التناسق والتوسيط التام */
+        .product-badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background-color: var(--primary);
+            color: var(--gold);
+            font-size: 11px;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-weight: 700;
+            z-index: 10;
+            letter-spacing: 0.5px;
+        }
+
         .product-img-container {
             height: 320px;
-            background-color: #faf7f2;
+            background-color: #f7f4ee;
             cursor: pointer;
             display: flex;
             align-items: center;
             justify-content: center;
-            padding: 15px;
+            padding: 20px;
             overflow: hidden;
+            position: relative;
         }
 
         .product-img {
@@ -196,54 +292,81 @@
         .product-info {
             padding: 25px;
             text-align: center;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+            justify-content: space-between;
         }
 
         .product-title {
-            font-size: 20px;
+            font-family: 'Playfair Display', serif;
+            font-size: 21px;
             font-weight: 700;
             margin-bottom: 10px;
-            color: var(--primary-color);
+            color: var(--primary);
         }
 
         .product-desc {
             font-size: 14px;
-            color: var(--text-light);
+            color: var(--text-muted);
             margin-bottom: 20px;
+            line-height: 1.5;
         }
 
         .buy-btn {
-            display: inline-block;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
             width: 100%;
-            background-color: var(--primary-color);
+            background-color: var(--primary);
             color: white;
-            padding: 12px;
-            border-radius: 8px;
+            padding: 13px;
+            border-radius: 10px;
             text-decoration: none;
             font-weight: 600;
+            font-size: 15px;
             transition: var(--transition);
         }
 
-        .buy-btn:hover {
-            background-color: var(--accent-gold);
+        .buy-btn i {
+            color: #25d366;
+            font-size: 18px;
         }
 
-        /* زر الواتساب العائم */
+        .buy-btn:hover {
+            background-color: var(--gold);
+            color: var(--primary);
+        }
+
+        .buy-btn:hover i {
+            color: var(--primary);
+        }
+
+        /* زر الواتساب العائم النابض */
         .float-whatsapp {
             position: fixed;
-            bottom: 30px;
-            right: 30px;
+            bottom: 35px;
+            right: 35px;
             background-color: #25d366;
             color: white;
-            width: 60px;
-            height: 60px;
+            width: 65px;
+            height: 65px;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 32px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+            font-size: 36px;
+            box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
             z-index: 2000;
             transition: var(--transition);
+            animation: pulse-animation 2s infinite;
+        }
+
+        @keyframes pulse-animation {
+            0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.6); }
+            70% { box-shadow: 0 0 0 20px rgba(37, 211, 102, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
         }
 
         .float-whatsapp:hover {
@@ -256,131 +379,160 @@
             display: none;
             position: fixed;
             z-index: 3000;
-            padding-top: 50px;
+            padding-top: 60px;
             left: 0;
             top: 0;
             width: 100%;
             height: 100%;
             overflow: auto;
-            background-color: rgba(0,0,0,0.9);
+            background-color: rgba(10, 10, 10, 0.95);
+            backdrop-filter: blur(8px);
         }
 
         .modal-content {
             margin: auto;
             display: block;
             max-width: 85%;
-            max-height: 85vh;
-            border-radius: 10px;
-            animation: zoom 0.3s;
+            max-height: 80vh;
+            border-radius: 12px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+            animation: zoomIn 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
         }
 
-        @keyframes zoom {
-            from {transform: scale(0);}
-            to {transform: scale(1);}
+        @keyframes zoomIn {
+            from { transform: scale(0.8); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
         }
 
         .close-modal {
             position: absolute;
-            top: 25px;
-            right: 40px;
-            color: #f1f1f1;
-            font-size: 45px;
-            font-weight: bold;
+            top: 30px;
+            right: 50px;
+            color: #fff;
+            font-size: 50px;
+            font-weight: 300;
             cursor: pointer;
-            transition: 0.3s;
+            transition: var(--transition);
         }
 
         .close-modal:hover {
-            color: var(--accent-gold);
+            color: var(--gold);
         }
 
-        /* مميزات المتجر */
+        /* قسم المميزات */
         .features {
-            background-color: #f5f0e6;
-            padding: 60px 0;
-            margin-top: 80px;
+            background-color: var(--gold-light);
+            padding: 70px 0;
+            margin-top: 100px;
+            border-top: 1px solid var(--border-color);
+            border-bottom: 1px solid var(--border-color);
         }
 
         .features-grid {
-            max-width: 1200px;
+            max-width: 1300px;
             margin: 0 auto;
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
-            padding: 0 20px;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 40px;
+            padding: 0 30px;
             text-align: center;
         }
 
         .feature-item i {
-            font-size: 36px;
-            color: var(--accent-gold);
-            margin-bottom: 15px;
+            font-size: 40px;
+            color: var(--primary);
+            margin-bottom: 20px;
+            background: var(--gold);
+            width: 80px;
+            height: 80px;
+            line-height: 80px;
+            border-radius: 50%;
+            display: inline-block;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
         }
 
         .feature-item h3 {
-            font-size: 18px;
+            font-family: 'Playfair Display', serif;
+            font-size: 20px;
             margin-bottom: 10px;
-            color: var(--primary-color);
+            color: var(--primary);
         }
 
         .feature-item p {
             font-size: 14px;
-            color: var(--text-light);
+            color: var(--text-muted);
         }
 
-        /* الفوتر */
+        /* الفوتر الفاخر */
         footer {
-            background-color: var(--primary-color);
+            background-color: var(--primary);
             color: white;
-            padding: 40px 20px 20px;
+            padding: 60px 30px 25px;
             text-align: center;
         }
 
         .footer-content {
-            max-width: 1200px;
+            max-width: 1300px;
             margin: 0 auto;
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 20px;
+            gap: 25px;
         }
 
         .social-icons {
             display: flex;
-            gap: 20px;
+            gap: 25px;
         }
 
         .social-icons a {
             color: white;
-            font-size: 20px;
+            font-size: 22px;
             transition: var(--transition);
+            background: rgba(255,255,255,0.05);
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
         .social-icons a:hover {
-            color: var(--accent-gold);
+            color: var(--primary);
+            background-color: var(--gold);
+            transform: translateY(-3px);
         }
 
         .copyright {
             font-size: 13px;
             color: #888;
-            border-top: 1px solid #333;
+            border-top: 1px solid rgba(255,255,255,0.1);
             width: 100%;
-            padding-top: 20px;
-            margin-top: 20px;
+            padding-top: 25px;
+            margin-top: 15px;
         }
 
-        /* التجاوب مع الهواتف */
+        /* التجاوب مع الهواتف الذكية */
         @media (max-width: 768px) {
             .nav-links {
                 display: none;
             }
             .hero-content h1 {
-                font-size: 32px;
+                font-size: 36px;
+            }
+            .nav-container {
+                padding: 15px 20px;
             }
         }
     </style>
 </head>
 <body>
+
+    <!-- شريط الإعلانات -->
+    <div class="top-bar">
+        ✨ توصيل سريع وآمن لجميع المدن المغربية | الدفع عند الاستلام 🚚
+    </div>
 
     <!-- الهيدر -->
     <header>
@@ -388,10 +540,10 @@
             <div class="logo">Parfumerie <span>Yousra</span></div>
             <ul class="nav-links">
                 <li><a href="#">الرئيسية</a></li>
-                <li><a href="#products">العطور</a></li>
+                <li><a href="#products">التشكيلة الفاخرة</a></li>
                 <li><a href="#features">مميزاتنا</a></li>
             </ul>
-            <a href="https://wa.me/212605015387?text=سلام، أهتم بالاستفسار عن عطور Parfumerie Yousra" target="_blank" class="cta-btn">تواصل عبر الواتساب</a>
+            <a href="https://wa.me/212605015387?text=سلام، أهتم بالاستفسار عن عطور Parfumerie Yousra" target="_blank" class="header-cta">تواصل معنا</a>
         </div>
     </header>
 
@@ -406,259 +558,351 @@
         <img class="modal-content" id="modalImg">
     </div>
 
-    <!-- الواجهة الرئيسية -->
+    <!-- واجهة البداية Hero -->
     <section class="hero">
         <div class="hero-content">
+            <div class="hero-subtitle">إصدارات حصرية لعشاق التميز</div>
             <h1>عطور تعكس أناقتك الفريدة</h1>
-            <p>اكتشفي تشكيلة راقية من أرقى العطور النسائية المصممة خصيصاً لتلهم حضورك بجاذبية لا تُنسى.</p>
-            <a href="#products" class="cta-btn" style="padding: 14px 35px; font-size: 16px;">تسوقي المجموعة</a>
+            <p>اكتشفي تشكيلة راقية من أرقى العطور النسائية المصممة خصيصاً لتلهم حضورك بجاذبية ساحرة لا تُنسى.</p>
+            <a href="#products" class="btn-gold">اكتشفي التشكيلة</a>
         </div>
     </section>
 
-    <!-- قسم العطور المميزة -->
+    <!-- قسم العطور والمنتجات -->
     <section id="products" class="section">
-        <h2 class="section-title">تشكيلة العطور الفاخرة</h2>
-        <p class="section-subtitle">روائح تدوم طويلاً وتترك انطباعاً ساحراً</p>
+        <div class="section-header">
+            <h2 class="section-title">التشكيلة الملكية الفاخرة</h2>
+            <p class="section-desc">روائح مركزة تدوم طويلاً وتترك انطباعاً راقياً</p>
+        </div>
+
+        <!-- تصنيفات سريعة -->
+        <div class="filter-tabs">
+            <button class="filter-btn active" onclick="filterCategory('all')">جميع العطور</button>
+            <button class="filter-btn" onclick="filterCategory('oriental')">شرقية ودافئة</button>
+            <button class="filter-btn" onclick="filterCategory('floral')">زهور ومنعشة</button>
+        </div>
 
         <div class="products-grid">
             
             <!-- منتج 1 -->
-            <div class="product-card">
+            <div class="product-card" data-category="oriental">
+                <div class="product-badge">حصري</div>
                 <div class="product-img-container">
                     <img src="1000598193.jpg" alt="أمبر إيليكسير" class="product-img" loading="lazy">
                 </div>
                 <div class="product-info">
-                    <h3 class="product-title">أمبر إيليكسير</h3>
-                    <p class="product-desc">تركيبة مركزة تنبض بالفخامة والدفء الشرقي.</p>
-                    <a href="https://wa.me/212605015387?text=أريد طلب عطر: أمبر إيليكسير" target="_blank" class="buy-btn">اطلبي الآن عبر الواتساب</a>
+                    <div>
+                        <h3 class="product-title">أمبر إيليكسير</h3>
+                        <p class="product-desc">تركيبة مركزة تنبض بالفخامة والدفء الشرقي.</p>
+                    </div>
+                    <a href="https://wa.me/212605015387?text=أريد طلب عطر: أمبر إيليكسير" target="_blank" class="buy-btn">
+                        <i class="fab fa-whatsapp"></i> اطلبي الآن عبر الواتساب
+                    </a>
                 </div>
             </div>
 
             <!-- منتج 2 -->
-            <div class="product-card">
+            <div class="product-card" data-category="floral">
+                <div class="product-badge">الأكثر طلباً</div>
                 <div class="product-img-container">
                     <img src="1000598196.jpg" alt="سينما" class="product-img" loading="lazy">
                 </div>
                 <div class="product-info">
-                    <h3 class="product-title">سينما</h3>
-                    <p class="product-desc">عطر الأضواء بلمسات أنثوية خلابة.</p>
-                    <a href="https://wa.me/212605015387?text=أريد طلب عطر: سينما" target="_blank" class="buy-btn">اطلبي الآن عبر الواتساب</a>
+                    <div>
+                        <h3 class="product-title">سينما</h3>
+                        <p class="product-desc">عطر الأضواء بلمسات أنثوية خلابة.</p>
+                    </div>
+                    <a href="https://wa.me/212605015387?text=أريد طلب عطر: سينما" target="_blank" class="buy-btn">
+                        <i class="fab fa-whatsapp"></i> اطلبي الآن عبر الواتساب
+                    </a>
                 </div>
             </div>
 
             <!-- منتج 3 -->
-            <div class="product-card">
+            <div class="product-card" data-category="floral">
                 <div class="product-img-container">
                     <img src="1000598197.png" alt="ماي فيا" class="product-img" loading="lazy">
                 </div>
                 <div class="product-info">
-                    <h3 class="product-title">ماي فيا</h3>
-                    <p class="product-desc">مزيج زهور رقيق يعبر عن الحرية والجاذبية.</p>
-                    <a href="https://wa.me/212605015387?text=أريد طلب عطر: ماي فيا" target="_blank" class="buy-btn">اطلبي الآن عبر الواتساب</a>
+                    <div>
+                        <h3 class="product-title">ماي فيا</h3>
+                        <p class="product-desc">مزيج زهور رقيق يعبر عن الحرية والجاذبية.</p>
+                    </div>
+                    <a href="https://wa.me/212605015387?text=أريد طلب عطر: ماي فيا" target="_blank" class="buy-btn">
+                        <i class="fab fa-whatsapp"></i> اطلبي الآن عبر الواتساب
+                    </a>
                 </div>
             </div>
 
             <!-- منتج 4 -->
-            <div class="product-card">
+            <div class="product-card" data-category="oriental">
                 <div class="product-img-container">
                     <img src="1000598198.jpg" alt="كايالي" class="product-img" loading="lazy">
                 </div>
                 <div class="product-info">
-                    <h3 class="product-title">كايالي</h3>
-                    <p class="product-desc">نفحات دافئة تجمع بين العصرية والعمق العطري.</p>
-                    <a href="https://wa.me/212605015387?text=أريد طلب عطر: كايالي" target="_blank" class="buy-btn">اطلبي الآن عبر الواتساب</a>
+                    <div>
+                        <h3 class="product-title">كايالي</h3>
+                        <p class="product-desc">نفحات دافئة تجمع بين العصرية والعمق العطري.</p>
+                    </div>
+                    <a href="https://wa.me/212605015387?text=أريد طلب عطر: كايالي" target="_blank" class="buy-btn">
+                        <i class="fab fa-whatsapp"></i> اطلبي الآن عبر الواتساب
+                    </a>
                 </div>
             </div>
 
             <!-- منتج 5 -->
-            <div class="product-card">
+            <div class="product-card" data-category="floral">
                 <div class="product-img-container">
                     <img src="1000598199.jpg" alt="إسكادا" class="product-img" loading="lazy">
                 </div>
                 <div class="product-info">
-                    <h3 class="product-title">إسكادا</h3>
-                    <p class="product-desc">انتعاش الفواكه الصيفية بنفحات حيوية ومشرقة.</p>
-                    <a href="https://wa.me/212605015387?text=أريد طلب عطر: إسكادا" target="_blank" class="buy-btn">اطلبي الآن عبر الواتساب</a>
+                    <div>
+                        <h3 class="product-title">إسكادا</h3>
+                        <p class="product-desc">انتعاش الفواكه الصيفية بنفحات حيوية ومشرقة.</p>
+                    </div>
+                    <a href="https://wa.me/212605015387?text=أريد طلب عطر: إسكادا" target="_blank" class="buy-btn">
+                        <i class="fab fa-whatsapp"></i> اطلبي الآن عبر الواتساب
+                    </a>
                 </div>
             </div>
 
             <!-- منتج 6 -->
-            <div class="product-card">
+            <div class="product-card" data-category="floral">
                 <div class="product-img-container">
                     <img src="1000598200.jpg" alt="لومبيراتريس" class="product-img" loading="lazy">
                 </div>
                 <div class="product-info">
-                    <h3 class="product-title">لومبيراتريس</h3>
-                    <p class="product-desc">عطر الملكات الفاخر بعبق الفواكه المنعشة.</p>
-                    <a href="https://wa.me/212605015387?text=أريد طلب عطر: لومبيراتريس" target="_blank" class="buy-btn">اطلبي الآن عبر الواتساب</a>
+                    <div>
+                        <h3 class="product-title">لومبيراتريس</h3>
+                        <p class="product-desc">عطر الملكات الفاخر بعبق الفواكه المنعشة.</p>
+                    </div>
+                    <a href="https://wa.me/212605015387?text=أريد طلب عطر: لومبيراتريس" target="_blank" class="buy-btn">
+                        <i class="fab fa-whatsapp"></i> اطلبي الآن عبر الواتساب
+                    </a>
                 </div>
             </div>
 
             <!-- منتج 7 -->
-            <div class="product-card">
+            <div class="product-card" data-category="oriental">
                 <div class="product-img-container">
                     <img src="1000598209.jpg" alt="يارا" class="product-img" loading="lazy">
                 </div>
                 <div class="product-info">
-                    <h3 class="product-title">يارا</h3>
-                    <p class="product-desc">عبير شرقي ساحر يترك أثراً ناعماً لا يُنسى.</p>
-                    <a href="https://wa.me/212605015387?text=أريد طلب عطر: يارا" target="_blank" class="buy-btn">اطلبي الآن عبر الواتساب</a>
+                    <div>
+                        <h3 class="product-title">يارا</h3>
+                        <p class="product-desc">عبير شرقي ساحر يترك أثراً ناعماً لا يُنسى.</p>
+                    </div>
+                    <a href="https://wa.me/212605015387?text=أريد طلب عطر: يارا" target="_blank" class="buy-btn">
+                        <i class="fab fa-whatsapp"></i> اطلبي الآن عبر الواتساب
+                    </a>
                 </div>
             </div>
 
             <!-- منتج 8 -->
-            <div class="product-card">
+            <div class="product-card" data-category="oriental">
                 <div class="product-img-container">
                     <img src="1000598210.jpg" alt="ماي فيا جولد" class="product-img" loading="lazy">
                 </div>
                 <div class="product-info">
-                    <h3 class="product-title">ماي فيا جولد</h3>
-                    <p class="product-desc">إصدار خاص وفخم يجمع بين نعومة الزهور ودفء القاعدة.</p>
-                    <a href="https://wa.me/212605015387?text=أريد طلب عطر: ماي فيا جولد" target="_blank" class="buy-btn">اطلبي الآن عبر الواتساب</a>
+                    <div>
+                        <h3 class="product-title">ماي فيا جولد</h3>
+                        <p class="product-desc">إصدار خاص وفخم يجمع بين نعومة الزهور ودفء القاعدة.</p>
+                    </div>
+                    <a href="https://wa.me/212605015387?text=أريد طلب عطر: ماي فيا جولد" target="_blank" class="buy-btn">
+                        <i class="fab fa-whatsapp"></i> اطلبي الآن عبر الواتساب
+                    </a>
                 </div>
             </div>
 
             <!-- منتج 9 -->
-            <div class="product-card">
+            <div class="product-card" data-category="floral">
                 <div class="product-img-container">
                     <img src="1000598211.jpg" alt="كوكونت باشن" class="product-img" loading="lazy">
                 </div>
                 <div class="product-info">
-                    <h3 class="product-title">كوكونت باشن</h3>
-                    <p class="product-desc">نفحات استوائية دافئة من جوز الهند والفانيليا.</p>
-                    <a href="https://wa.me/212605015387?text=أريد طلب عطر: كوكونت باشن" target="_blank" class="buy-btn">اطلبي الآن عبر الواتساب</a>
+                    <div>
+                        <h3 class="product-title">كوكونت باشن</h3>
+                        <p class="product-desc">نفحات استوائية دافئة من جوز الهند والفانيليا.</p>
+                    </div>
+                    <a href="https://wa.me/212605015387?text=أريد طلب عطر: كوكونت باشن" target="_blank" class="buy-btn">
+                        <i class="fab fa-whatsapp"></i> اطلبي الآن عبر الواتساب
+                    </a>
                 </div>
             </div>
 
             <!-- منتج 10 -->
-            <div class="product-card">
+            <div class="product-card" data-category="oriental">
                 <div class="product-img-container">
                     <img src="1000598212.jpg" alt="لومبيراتريس إيليت" class="product-img" loading="lazy">
                 </div>
                 <div class="product-info">
-                    <h3 class="product-title">لومبيراتريس إيليت</h3>
-                    <p class="product-desc">تركيبة مكثفة خاصة تزيد من ثبات العطر وفخامته.</p>
-                    <a href="https://wa.me/212605015387?text=أريد طلب عطر: لومبيراتريس إيليت" target="_blank" class="buy-btn">اطلبي الآن عبر الواتساب</a>
+                    <div>
+                        <h3 class="product-title">لومبيراتريس إيليت</h3>
+                        <p class="product-desc">تركيبة مكثفة خاصة تزيد من ثبات العطر وفخامته.</p>
+                    </div>
+                    <a href="https://wa.me/212605015387?text=أريد طلب عطر: لومبيراتريس إيليت" target="_blank" class="buy-btn">
+                        <i class="fab fa-whatsapp"></i> اطلبي الآن عبر الواتساب
+                    </a>
                 </div>
             </div>
 
             <!-- منتج 11 -->
-            <div class="product-card">
+            <div class="product-card" data-category="oriental">
                 <div class="product-img-container">
                     <img src="1000598213.jpg" alt="ميرة العرب" class="product-img" loading="lazy">
                 </div>
                 <div class="product-info">
-                    <h3 class="product-title">ميرة العرب</h3>
-                    <p class="product-desc">عطر عربي أصيل يجمع بين عبق التراث وفخامة الحاضر.</p>
-                    <a href="https://wa.me/212605015387?text=أريد طلب عطر: ميرة العرب" target="_blank" class="buy-btn">اطلبي الآن عبر الواتساب</a>
+                    <div>
+                        <h3 class="product-title">ميرة العرب</h3>
+                        <p class="product-desc">عطر عربي أصيل يجمع بين عبق التراث وفخامة الحاضر.</p>
+                    </div>
+                    <a href="https://wa.me/212605015387?text=أريد طلب عطر: ميرة العرب" target="_blank" class="buy-btn">
+                        <i class="fab fa-whatsapp"></i> اطلبي الآن عبر الواتساب
+                    </a>
                 </div>
             </div>
 
             <!-- منتج 12 -->
-            <div class="product-card">
+            <div class="product-card" data-category="floral">
                 <div class="product-img-container">
                     <img src="1000598214.png" alt="شانس شانيل" class="product-img" loading="lazy">
                 </div>
                 <div class="product-info">
-                    <h3 class="product-title">شانس شانيل</h3>
-                    <p class="product-desc">نفحات منعشة ومفعمة بالحيوية لكل أوقات اليوم.</p>
-                    <a href="https://wa.me/212605015387?text=أريد طلب عطر: شانس شانيل" target="_blank" class="buy-btn">اطلبي الآن عبر الواتساب</a>
+                    <div>
+                        <h3 class="product-title">شانس شانيل</h3>
+                        <p class="product-desc">نفحات منعشة ومفعمة بالحيوية لكل أوقات اليوم.</p>
+                    </div>
+                    <a href="https://wa.me/212605015387?text=أريد طلب عطر: شانس شانيل" target="_blank" class="buy-btn">
+                        <i class="fab fa-whatsapp"></i> اطلبي الآن عبر الواتساب
+                    </a>
                 </div>
             </div>
 
             <!-- منتج 13 -->
-            <div class="product-card">
+            <div class="product-card" data-category="floral">
                 <div class="product-img-container">
                     <img src="1000598215.png" alt="لأنترديت جيفنشي" class="product-img" loading="lazy">
                 </div>
                 <div class="product-info">
-                    <h3 class="product-title">لأنترديت جيفنشي</h3>
-                    <p class="product-desc">عطر الجرأة والأناقة بزهور بيضاء استثنائية.</p>
-                    <a href="https://wa.me/212605015387?text=أريد طلب عطر: لأنترديت جيفنشي" target="_blank" class="buy-btn">اطلبي الآن عبر الواتساب</a>
+                    <div>
+                        <h3 class="product-title">لأنترديت جيفنشي</h3>
+                        <p class="product-desc">عطر الجرأة والأناقة بزهور بيضاء استثنائية.</p>
+                    </div>
+                    <a href="https://wa.me/212605015387?text=أريد طلب عطر: لأنترديت جيفنشي" target="_blank" class="buy-btn">
+                        <i class="fab fa-whatsapp"></i> اطلبي الآن عبر الواتساب
+                    </a>
                 </div>
             </div>
 
             <!-- منتج 14 -->
-            <div class="product-card">
+            <div class="product-card" data-category="floral">
                 <div class="product-img-container">
                     <img src="1000598216.png" alt="فيكتوريا سيكريت" class="product-img" loading="lazy">
                 </div>
                 <div class="product-info">
-                    <h3 class="product-title">فيكتوريا سيكريت</h3>
-                    <p class="product-desc">رائحة رومانسية جذابة تمنحك شعوراً بالانتعاش الدائم.</p>
-                    <a href="https://wa.me/212605015387?text=أريد طلب عطر: فيكتوريا سيكريت" target="_blank" class="buy-btn">اطلبي الآن عبر الواتساب</a>
+                    <div>
+                        <h3 class="product-title">فيكتوريا سيكريت</h3>
+                        <p class="product-desc">رائحة رومانسية جذابة تمنحك شعوراً بالانتعاش الدائم.</p>
+                    </div>
+                    <a href="https://wa.me/212605015387?text=أريد طلب عطر: فيكتوريا سيكريت" target="_blank" class="buy-btn">
+                        <i class="fab fa-whatsapp"></i> اطلبي الآن عبر الواتساب
+                    </a>
                 </div>
             </div>
 
             <!-- منتج 15 -->
-            <div class="product-card">
+            <div class="product-card" data-category="floral">
                 <div class="product-img-container">
                     <img src="1000598217.png" alt="إنسانس أولترامارين" class="product-img" loading="lazy">
                 </div>
                 <div class="product-info">
-                    <h3 class="product-title">إنسانس أولترامارين</h3>
-                    <p class="product-desc">نفحات مائية ومنعشة تضفي طابعاً من الحيوية المطلقة.</p>
-                    <a href="https://wa.me/212605015387?text=أريد طلب عطر: إنسانس أولترامارين" target="_blank" class="buy-btn">اطلبي الآن عبر الواتساب</a>
+                    <div>
+                        <h3 class="product-title">إنسانس أولترامارين</h3>
+                        <p class="product-desc">نفحات مائية ومنعشة تضفي طابعاً من الحيوية المطلقة.</p>
+                    </div>
+                    <a href="https://wa.me/212605015387?text=أريد طلب عطر: إنسانس أولترامارين" target="_blank" class="buy-btn">
+                        <i class="fab fa-whatsapp"></i> اطلبي الآن عبر الواتساب
+                    </a>
                 </div>
             </div>
 
             <!-- منتج 16 -->
-            <div class="product-card">
+            <div class="product-card" data-category="floral">
                 <div class="product-img-container">
                     <img src="1000598218.jpg" alt="غوتشي فلورال" class="product-img" loading="lazy">
                 </div>
                 <div class="product-info">
-                    <h3 class="product-title">غوتشي فلورال</h3>
-                    <p class="product-desc">باقة زهور ساحرة تعبر عن رقة وجمال الأنثى.</p>
-                    <a href="https://wa.me/212605015387?text=أريد طلب عطر: غوتشي فلورال" target="_blank" class="buy-btn">اطلبي الآن عبر الواتساب</a>
+                    <div>
+                        <h3 class="product-title">غوتشي فلورال</h3>
+                        <p class="product-desc">باقة زهور ساحرة تعبر عن رقة وجمال الأنثى.</p>
+                    </div>
+                    <a href="https://wa.me/212605015387?text=أريد طلب عطر: غوتشي فلورال" target="_blank" class="buy-btn">
+                        <i class="fab fa-whatsapp"></i> اطلبي الآن عبر الواتساب
+                    </a>
                 </div>
             </div>
 
             <!-- منتج 17 -->
-            <div class="product-card">
+            <div class="product-card" data-category="oriental">
                 <div class="product-img-container">
                     <img src="1000598219.jpg" alt="سكاندال" class="product-img" loading="lazy">
                 </div>
                 <div class="product-info">
-                    <h3 class="product-title">سكاندال</h3>
-                    <p class="product-desc">عطر جذاب بتركيبة جريئة تترك أثراً قوياً لا يُمحى.</p>
-                    <a href="https://wa.me/212605015387?text=أريد طلب عطر: سكاندال" target="_blank" class="buy-btn">اطلبي الآن عبر الواتساب</a>
+                    <div>
+                        <h3 class="product-title">سكاندال</h3>
+                        <p class="product-desc">عطر جذاب بتركيبة جريئة تترك أثراً قوياً لا يُمحى.</p>
+                    </div>
+                    <a href="https://wa.me/212605015387?text=أريد طلب عطر: سكاندال" target="_blank" class="buy-btn">
+                        <i class="fab fa-whatsapp"></i> اطلبي الآن عبر الواتساب
+                    </a>
                 </div>
             </div>
 
             <!-- منتج 18 -->
-            <div class="product-card">
+            <div class="product-card" data-category="floral">
                 <div class="product-img-container">
                     <img src="1000598220.jpg" alt="كوم يون إفدونس" class="product-img" loading="lazy">
                 </div>
                 <div class="product-info">
-                    <h3 class="product-title">كوم يون إفدونس</h3>
-                    <p class="product-desc">رائحة طبيعية راقية تنبض بالصفاء والانسجام.</p>
-                    <a href="https://wa.me/212605015387?text=أريد طلب عطر: كوم يون إفدونس" target="_blank" class="buy-btn">اطلبي الآن عبر الواتساب</a>
+                    <div>
+                        <h3 class="product-title">كوم يون إفدونس</h3>
+                        <p class="product-desc">رائحة طبيعية راقية تنبض بالصفاء والانسجام.</p>
+                    </div>
+                    <a href="https://wa.me/212605015387?text=أريد طلب عطر: كوم يون إفدونس" target="_blank" class="buy-btn">
+                        <i class="fab fa-whatsapp"></i> اطلبي الآن عبر الواتساب
+                    </a>
                 </div>
             </div>
 
             <!-- منتج 19 -->
-            <div class="product-card">
+            <div class="product-card" data-category="oriental">
                 <div class="product-img-container">
                     <img src="1000598221.jpg" alt="أوليمبيا" class="product-img" loading="lazy">
                 </div>
                 <div class="product-info">
-                    <h3 class="product-title">أوليمبيا</h3>
-                    <p class="product-desc">عطر الأساطير بأسلوب شرقي مالح وفانيليا ساحرة.</p>
-                    <a href="https://wa.me/212605015387?text=أريد طلب عطر: أوليمبيا" target="_blank" class="buy-btn">اطلبي الآن عبر الواتساب</a>
+                    <div>
+                        <h3 class="product-title">أوليمبيا</h3>
+                        <p class="product-desc">عطر الأساطير بأسلوب شرقي مالح وفانيليا ساحرة.</p>
+                    </div>
+                    <a href="https://wa.me/212605015387?text=أريد طلب عطر: أوليمبيا" target="_blank" class="buy-btn">
+                        <i class="fab fa-whatsapp"></i> اطلبي الآن عبر الواتساب
+                    </a>
                 </div>
             </div>
 
             <!-- منتج 20 -->
-            <div class="product-card">
+            <div class="product-card" data-category="floral">
                 <div class="product-img-container">
                     <img src="1000598222.jpg" alt="ليبر إيف سان لوران" class="product-img" loading="lazy">
                 </div>
                 <div class="product-info">
-                    <h3 class="product-title">ليبر إيف سان لوران</h3>
-                    <p class="product-desc">عطر الحرية والأناقة العصرية بامتياز.</p>
-                    <a href="https://wa.me/212605015387?text=أريد طلب عطر: ليبر إيف سان لوران" target="_blank" class="buy-btn">اطلبي الآن عبر الواتساب</a>
+                    <div>
+                        <h3 class="product-title">ليبر إيف سان لوران</h3>
+                        <p class="product-desc">عطر الحرية والأناقة العصرية بامتياز.</p>
+                    </div>
+                    <a href="https://wa.me/212605015387?text=أريد طلب عطر: ليبر إيف سان لوران" target="_blank" class="buy-btn">
+                        <i class="fab fa-whatsapp"></i> اطلبي الآن عبر الواتساب
+                    </a>
                 </div>
             </div>
 
@@ -702,13 +946,30 @@
         </div>
     </footer>
 
-    <!-- جافاسكريبت لتكبير الصور -->
+    <!-- جافاسكريبت متقدم للتفاعل وتكبير الصور وتصفية المنتجات -->
     <script>
+        // تصفية المنتجات حسب التصنيف
+        function filterCategory(category) {
+            const cards = document.querySelectorAll('.product-card');
+            const buttons = document.querySelectorAll('.filter-btn');
+            
+            buttons.forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+
+            cards.forEach(card => {
+                if (category === 'all' || card.dataset.category === category) {
+                    card.style.display = "flex";
+                } else {
+                    card.style.display = "none";
+                }
+            });
+        }
+
+        // نافذة تكبير الصور (Lightbox)
         const modal = document.getElementById("imageModal");
         const modalImg = document.getElementById("modalImg");
         const closeBtn = document.getElementsByClassName("close-modal")[0];
 
-        // تفعيل النقر على الصور للتكبير
         document.querySelectorAll('.product-img').forEach(img => {
             img.addEventListener('click', function() {
                 modal.style.display = "block";
@@ -716,14 +977,12 @@
             });
         });
 
-        // إغلاق النافذة عند الضغط على علامة (X)
         if(closeBtn) {
             closeBtn.onclick = function() { 
                 modal.style.display = "none";
             }
         }
 
-        // إغلاق النافذة عند النقر خارج الصورة
         window.onclick = function(event) {
             if (event.target == modal) {
                 modal.style.display = "none";
