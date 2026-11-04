@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Parfumerie Yousra | عطور نسائية فاخرة</title>
+    <title>Parfumerie Yousra | عطور نسائية فاخرة 20 مل</title>
     <!-- خطوط عربية وعالمية راقية -->
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap" rel="stylesheet">
     <!-- أيقونات FontAwesome -->
@@ -117,10 +117,10 @@
             transform: translateY(-2px);
         }
 
-        /* واجهة الـ Hero الاحترافية الخاصة بالعطور */
+        /* واجهة الـ Hero الاحترافية الخاصة بعطور النساء الفاخرة */
         .hero {
             height: 85vh;
-            background: linear-gradient(rgba(18, 18, 18, 0.7), rgba(18, 18, 18, 0.8)), url('https://images.unsplash.com/photo-1523293182086-7651a899d37f?auto=format&fit=crop&w=1920&q=80') no-repeat center center/cover;
+            background: linear-gradient(rgba(18, 18, 18, 0.65), rgba(18, 18, 18, 0.75)), url('https://images.unsplash.com/photo-1594035910387-fea47794261f?auto=format&fit=crop&w=1920&q=80') no-repeat center center/cover;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -302,8 +302,19 @@
             font-family: 'Playfair Display', serif;
             font-size: 21px;
             font-weight: 700;
-            margin-bottom: 10px;
+            margin-bottom: 8px;
             color: var(--primary);
+        }
+
+        .product-size {
+            font-size: 13px;
+            color: var(--gold);
+            font-weight: 700;
+            margin-bottom: 8px;
+            background: #1a1a1a;
+            display: inline-block;
+            padding: 2px 10px;
+            border-radius: 10px;
         }
 
         .product-desc {
@@ -343,7 +354,7 @@
             color: var(--primary);
         }
 
-        /* زر الواتساب العائم النابض */
+        /* زر الواتساب العائم النابض (بدون أي خطوط أو مشاكل في التنسيق) */
         .float-whatsapp {
             position: fixed;
             bottom: 35px;
@@ -359,6 +370,9 @@
             font-size: 36px;
             box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
             z-index: 2000;
+            text-decoration: none;
+            border: none;
+            outline: none;
             transition: var(--transition);
             animation: pulse-animation 2s infinite;
         }
@@ -547,7 +561,7 @@
         </div>
     </header>
 
-    <!-- زر الواتساب العائم -->
+    <!-- زر الواتساب العائم (منسق وخالٍ من الخطوط) -->
     <a href="https://wa.me/212605015387?text=سلام، أريد طلب عطر من متجر Parfumerie Yousra" target="_blank" class="float-whatsapp" title="تواصل معنا عبر الواتساب">
         <i class="fab fa-whatsapp"></i>
     </a>
@@ -562,8 +576,8 @@
     <section class="hero">
         <div class="hero-content">
             <div class="hero-subtitle">إصدارات حصرية لعشاق التميز</div>
-            <h1>عطور تعكس أناقتك الفريدة</h1>
-            <p>اكتشفي تشكيلة راقية من أرقى العطور النسائية المصممة خصيصاً لتلهم حضورك بجاذبية ساحرة لا تُنسى.</p>
+            <h1>عطور نسائية فاخرة سعة 20 مل</h1>
+            <p>اكتشفي تشكيلة راقية من أرقى العطور النسائية المركزة المصممة خصيصاً لتلهم حضورك بجاذبية ساحرة تدوم طويلاً.</p>
             <a href="#products" class="btn-gold">اكتشفي التشكيلة</a>
         </div>
     </section>
@@ -572,7 +586,7 @@
     <section id="products" class="section">
         <div class="section-header">
             <h2 class="section-title">التشكيلة الملكية الفاخرة</h2>
-            <p class="section-desc">روائح مركزة تدوم طويلاً وتترك انطباعاً راقياً</p>
+            <p class="section-desc">تركيبة مركزة سعة 20 مل تدوم طويلاً لتترك انطباعاً راقياً</p>
         </div>
 
         <!-- تصنيفات سريعة -->
@@ -593,9 +607,10 @@
                 <div class="product-info">
                     <div>
                         <h3 class="product-title">أمبر إيليكسير</h3>
-                        <p class="product-desc">تركيبة مركزة تنبض بالفخامة والدفء الشرقي.</p>
+                        <div class="product-size">20 مل | تركيبة مركزة</div>
+                        <p class="product-desc">تركيبة مركزة تنبض بالفخامة والدفء الشرقي وتدوم طويلاً.</p>
                     </div>
-                    <a href="https://wa.me/212605015387?text=أريد طلب عطر: أمبر إيليكسير" target="_blank" class="buy-btn">
+                    <a href="https://wa.me/212605015387?text=أريد طلب عطر: أمبر إيليكسير (20 مل)" target="_blank" class="buy-btn">
                         <i class="fab fa-whatsapp"></i> اطلبي الآن عبر الواتساب
                     </a>
                 </div>
@@ -610,9 +625,10 @@
                 <div class="product-info">
                     <div>
                         <h3 class="product-title">سينما</h3>
-                        <p class="product-desc">عطر الأضواء بلمسات أنثوية خلابة.</p>
+                        <div class="product-size">20 مل | تركيبة مركزة</div>
+                        <p class="product-desc">عطر الأضواء بلمسات أنثوية خلابة وثبات عالٍ يدوم طويلاً.</p>
                     </div>
-                    <a href="https://wa.me/212605015387?text=أريد طلب عطر: سينما" target="_blank" class="buy-btn">
+                    <a href="https://wa.me/212605015387?text=أريد طلب عطر: سينما (20 مل)" target="_blank" class="buy-btn">
                         <i class="fab fa-whatsapp"></i> اطلبي الآن عبر الواتساب
                     </a>
                 </div>
@@ -626,9 +642,10 @@
                 <div class="product-info">
                     <div>
                         <h3 class="product-title">ماي فيا</h3>
-                        <p class="product-desc">مزيج زهور رقيق يعبر عن الحرية والجاذبية.</p>
+                        <div class="product-size">20 مل | تركيبة مركزة</div>
+                        <p class="product-desc">مزيج زهور رقيق يعبر عن الحرية والجاذبية بتركيبة مركزة.</p>
                     </div>
-                    <a href="https://wa.me/212605015387?text=أريد طلب عطر: ماي فيا" target="_blank" class="buy-btn">
+                    <a href="https://wa.me/212605015387?text=أريد طلب عطر: ماي فيا (20 مل)" target="_blank" class="buy-btn">
                         <i class="fab fa-whatsapp"></i> اطلبي الآن عبر الواتساب
                     </a>
                 </div>
@@ -642,9 +659,10 @@
                 <div class="product-info">
                     <div>
                         <h3 class="product-title">كايالي</h3>
-                        <p class="product-desc">نفحات دافئة تجمع بين العصرية والعمق العطري.</p>
+                        <div class="product-size">20 مل | تركيبة مركزة</div>
+                        <p class="product-desc">نفحات دافئة تجمع بين العصرية والعمق العطري الذي يدوم طويلاً.</p>
                     </div>
-                    <a href="https://wa.me/212605015387?text=أريد طلب عطر: كايالي" target="_blank" class="buy-btn">
+                    <a href="https://wa.me/212605015387?text=أريد طلب عطر: كايالي (20 مل)" target="_blank" class="buy-btn">
                         <i class="fab fa-whatsapp"></i> اطلبي الآن عبر الواتساب
                     </a>
                 </div>
@@ -658,9 +676,10 @@
                 <div class="product-info">
                     <div>
                         <h3 class="product-title">إسكادا</h3>
-                        <p class="product-desc">انتعاش الفواكه الصيفية بنفحات حيوية ومشرقة.</p>
+                        <div class="product-size">20 مل | تركيبة مركزة</div>
+                        <p class="product-desc">انتعاش الفواكه الصيفية بنفحات حيوية ومشرقة تدوم طويلاً.</p>
                     </div>
-                    <a href="https://wa.me/212605015387?text=أريد طلب عطر: إسكادا" target="_blank" class="buy-btn">
+                    <a href="https://wa.me/212605015387?text=أريد طلب عطر: إسكادا (20 مل)" target="_blank" class="buy-btn">
                         <i class="fab fa-whatsapp"></i> اطلبي الآن عبر الواتساب
                     </a>
                 </div>
@@ -674,9 +693,10 @@
                 <div class="product-info">
                     <div>
                         <h3 class="product-title">لومبيراتريس</h3>
-                        <p class="product-desc">عطر الملكات الفاخر بعبق الفواكه المنعشة.</p>
+                        <div class="product-size">20 مل | تركيبة مركزة</div>
+                        <p class="product-desc">عطر الملكات الفاخر بعبق الفواكه المنعشة وبثبات ممتاز.</p>
                     </div>
-                    <a href="https://wa.me/212605015387?text=أريد طلب عطر: لومبيراتريس" target="_blank" class="buy-btn">
+                    <a href="https://wa.me/212605015387?text=أريد طلب عطر: لومبيراتريس (20 مل)" target="_blank" class="buy-btn">
                         <i class="fab fa-whatsapp"></i> اطلبي الآن عبر الواتساب
                     </a>
                 </div>
@@ -690,9 +710,10 @@
                 <div class="product-info">
                     <div>
                         <h3 class="product-title">يارا</h3>
-                        <p class="product-desc">عبير شرقي ساحر يترك أثراً ناعماً لا يُنسى.</p>
+                        <div class="product-size">20 مل | تركيبة مركزة</div>
+                        <p class="product-desc">عبير شرقي ساحر يترك أثراً ناعماً وثابتاً طوال اليوم.</p>
                     </div>
-                    <a href="https://wa.me/212605015387?text=أريد طلب عطر: يارا" target="_blank" class="buy-btn">
+                    <a href="https://wa.me/212605015387?text=أريد طلب عطر: يارا (20 مل)" target="_blank" class="buy-btn">
                         <i class="fab fa-whatsapp"></i> اطلبي الآن عبر الواتساب
                     </a>
                 </div>
@@ -706,9 +727,10 @@
                 <div class="product-info">
                     <div>
                         <h3 class="product-title">ماي فيا جولد</h3>
-                        <p class="product-desc">إصدار خاص وفخم يجمع بين نعومة الزهور ودفء القاعدة.</p>
+                        <div class="product-size">20 مل | تركيبة مركزة</div>
+                        <p class="product-desc">إصدار خاص وفخم يجمع بين نعومة الزهور ودفء القاعدة المركزة.</p>
                     </div>
-                    <a href="https://wa.me/212605015387?text=أريد طلب عطر: ماي فيا جولد" target="_blank" class="buy-btn">
+                    <a href="https://wa.me/212605015387?text=أريد طلب عطر: ماي فيا جولد (20 مل)" target="_blank" class="buy-btn">
                         <i class="fab fa-whatsapp"></i> اطلبي الآن عبر الواتساب
                     </a>
                 </div>
@@ -722,9 +744,10 @@
                 <div class="product-info">
                     <div>
                         <h3 class="product-title">كوكونت باشن</h3>
-                        <p class="product-desc">نفحات استوائية دافئة من جوز الهند والفانيليا.</p>
+                        <div class="product-size">20 مل | تركيبة مركزة</div>
+                        <p class="product-desc">نفحات استوائية دافئة من جوز الهند والفانيليا المركزة.</p>
                     </div>
-                    <a href="https://wa.me/212605015387?text=أريد طلب عطر: كوكونت باشن" target="_blank" class="buy-btn">
+                    <a href="https://wa.me/212605015387?text=أريد طلب عطر: كوكونت باشن (20 مل)" target="_blank" class="buy-btn">
                         <i class="fab fa-whatsapp"></i> اطلبي الآن عبر الواتساب
                     </a>
                 </div>
@@ -738,9 +761,10 @@
                 <div class="product-info">
                     <div>
                         <h3 class="product-title">لومبيراتريس إيليت</h3>
-                        <p class="product-desc">تركيبة مكثفة خاصة تزيد من ثبات العطر وفخامته.</p>
+                        <div class="product-size">20 مل | تركيبة مركزة</div>
+                        <p class="product-desc">تركيبة مكثفة خاصة تزيد من ثبات العطر وفخامته طوال اليوم.</p>
                     </div>
-                    <a href="https://wa.me/212605015387?text=أريد طلب عطر: لومبيراتريس إيليت" target="_blank" class="buy-btn">
+                    <a href="https://wa.me/212605015387?text=أريد طلب عطر: لومبيراتريس إيليت (20 مل)" target="_blank" class="buy-btn">
                         <i class="fab fa-whatsapp"></i> اطلبي الآن عبر الواتساب
                     </a>
                 </div>
@@ -754,9 +778,10 @@
                 <div class="product-info">
                     <div>
                         <h3 class="product-title">ميرة العرب</h3>
-                        <p class="product-desc">عطر عربي أصيل يجمع بين عبق التراث وفخامة الحاضر.</p>
+                        <div class="product-size">20 مل | تركيبة مركزة</div>
+                        <p class="product-desc">عطر عربي أصيل يجمع بين عبق التراث وفخامة الثبات الطويل.</p>
                     </div>
-                    <a href="https://wa.me/212605015387?text=أريد طلب عطر: ميرة العرب" target="_blank" class="buy-btn">
+                    <a href="https://wa.me/212605015387?text=أريد طلب عطر: ميرة العرب (20 مل)" target="_blank" class="buy-btn">
                         <i class="fab fa-whatsapp"></i> اطلبي الآن عبر الواتساب
                     </a>
                 </div>
@@ -770,9 +795,10 @@
                 <div class="product-info">
                     <div>
                         <h3 class="product-title">شانس شانيل</h3>
-                        <p class="product-desc">نفحات منعشة ومفعمة بالحيوية لكل أوقات اليوم.</p>
+                        <div class="product-size">20 مل | تركيبة مركزة</div>
+                        <p class="product-desc">نفحات منعشة ومفعمة بالحيوية تدوم طويلاً لكل أوقات اليوم.</p>
                     </div>
-                    <a href="https://wa.me/212605015387?text=أريد طلب عطر: شانس شانيل" target="_blank" class="buy-btn">
+                    <a href="https://wa.me/212605015387?text=أريد طلب عطر: شانس شانيل (20 مل)" target="_blank" class="buy-btn">
                         <i class="fab fa-whatsapp"></i> اطلبي الآن عبر الواتساب
                     </a>
                 </div>
@@ -786,9 +812,10 @@
                 <div class="product-info">
                     <div>
                         <h3 class="product-title">لأنترديت جيفنشي</h3>
-                        <p class="product-desc">عطر الجرأة والأناقة بزهور بيضاء استثنائية.</p>
+                        <div class="product-size">20 مل | تركيبة مركزة</div>
+                        <p class="product-desc">عطر الجرأة والأناقة بزهور بيضاء استثنائية ومركزة للغاية.</p>
                     </div>
-                    <a href="https://wa.me/212605015387?text=أريد طلب عطر: لأنترديت جيفنشي" target="_blank" class="buy-btn">
+                    <a href="https://wa.me/212605015387?text=أريد طلب عطر: لأنترديت جيفنشي (20 مل)" target="_blank" class="buy-btn">
                         <i class="fab fa-whatsapp"></i> اطلبي الآن عبر الواتساب
                     </a>
                 </div>
@@ -802,9 +829,10 @@
                 <div class="product-info">
                     <div>
                         <h3 class="product-title">فيكتوريا سيكريت</h3>
-                        <p class="product-desc">رائحة رومانسية جذابة تمنحك شعوراً بالانتعاش الدائم.</p>
+                        <div class="product-size">20 مل | تركيبة مركزة</div>
+                        <p class="product-desc">رائحة رومانسية جذابة تمنحك شعوراً بالانتعاش الدائم والثبات.</p>
                     </div>
-                    <a href="https://wa.me/212605015387?text=أريد طلب عطر: فيكتوريا سيكريت" target="_blank" class="buy-btn">
+                    <a href="https://wa.me/212605015387?text=أريد طلب عطر: فيكتوريا سيكريت (20 مل)" target="_blank" class="buy-btn">
                         <i class="fab fa-whatsapp"></i> اطلبي الآن عبر الواتساب
                     </a>
                 </div>
@@ -818,9 +846,10 @@
                 <div class="product-info">
                     <div>
                         <h3 class="product-title">إنسانس أولترامارين</h3>
-                        <p class="product-desc">نفحات مائية ومنعشة تضفي طابعاً من الحيوية المطلقة.</p>
+                        <div class="product-size">20 مل | تركيبة مركزة</div>
+                        <p class="product-desc">نفحات مائية ومنعشة تضفي حيوية مطلقة وثباتاً يدوم.</p>
                     </div>
-                    <a href="https://wa.me/212605015387?text=أريد طلب عطر: إنسانس أولترامارين" target="_blank" class="buy-btn">
+                    <a href="https://wa.me/212605015387?text=أريد طلب عطر: إنسانس أولترامارين (20 مل)" target="_blank" class="buy-btn">
                         <i class="fab fa-whatsapp"></i> اطلبي الآن عبر الواتساب
                     </a>
                 </div>
@@ -834,9 +863,10 @@
                 <div class="product-info">
                     <div>
                         <h3 class="product-title">غوتشي فلورال</h3>
-                        <p class="product-desc">باقة زهور ساحرة تعبر عن رقة وجمال الأنثى.</p>
+                        <div class="product-size">20 مل | تركيبة مركزة</div>
+                        <p class="product-desc">باقة زهور ساحرة تعبر عن رقة وجمال الأنثى بتركيبة مركزة.</p>
                     </div>
-                    <a href="https://wa.me/212605015387?text=أريد طلب عطر: غوتشي فلورال" target="_blank" class="buy-btn">
+                    <a href="https://wa.me/212605015387?text=أريد طلب عطر: غوتشي فلورال (20 مل)" target="_blank" class="buy-btn">
                         <i class="fab fa-whatsapp"></i> اطلبي الآن عبر الواتساب
                     </a>
                 </div>
@@ -850,9 +880,10 @@
                 <div class="product-info">
                     <div>
                         <h3 class="product-title">سكاندال</h3>
-                        <p class="product-desc">عطر جذاب بتركيبة جريئة تترك أثراً قوياً لا يُمحى.</p>
+                        <div class="product-size">20 مل | تركيبة مركزة</div>
+                        <p class="product-desc">عطر جذاب بتركيبة جريئة تترك أثراً قوياً لا يُمحى طوال اليوم.</p>
                     </div>
-                    <a href="https://wa.me/212605015387?text=أريد طلب عطر: سكاندال" target="_blank" class="buy-btn">
+                    <a href="https://wa.me/212605015387?text=أريد طلب عطر: سكاندال (20 مل)" target="_blank" class="buy-btn">
                         <i class="fab fa-whatsapp"></i> اطلبي الآن عبر الواتساب
                     </a>
                 </div>
@@ -866,9 +897,10 @@
                 <div class="product-info">
                     <div>
                         <h3 class="product-title">كوم يون إفدونس</h3>
-                        <p class="product-desc">رائحة طبيعية راقية تنبض بالصفاء والانسجام.</p>
+                        <div class="product-size">20 مل | تركيبة مركزة</div>
+                        <p class="product-desc">رائحة طبيعية راقية تنبض بالصفاء والانسجام وثبات عالٍ.</p>
                     </div>
-                    <a href="https://wa.me/212605015387?text=أريد طلب عطر: كوم يون إفدونس" target="_blank" class="buy-btn">
+                    <a href="https://wa.me/212605015387?text=أريد طلب عطر: كوم يون إفدونس (20 مل)" target="_blank" class="buy-btn">
                         <i class="fab fa-whatsapp"></i> اطلبي الآن عبر الواتساب
                     </a>
                 </div>
@@ -882,9 +914,10 @@
                 <div class="product-info">
                     <div>
                         <h3 class="product-title">أوليمبيا</h3>
-                        <p class="product-desc">عطر الأساطير بأسلوب شرقي مالح وفانيليا ساحرة.</p>
+                        <div class="product-size">20 مل | تركيبة مركزة</div>
+                        <p class="product-desc">عطر الأساطير بأسلوب شرقي مالح وفانيليا ساحرة تدوم طويلاً.</p>
                     </div>
-                    <a href="https://wa.me/212605015387?text=أريد طلب عطر: أوليمبيا" target="_blank" class="buy-btn">
+                    <a href="https://wa.me/212605015387?text=أريد طلب عطر: أوليمبيا (20 مل)" target="_blank" class="buy-btn">
                         <i class="fab fa-whatsapp"></i> اطلبي الآن عبر الواتساب
                     </a>
                 </div>
@@ -898,9 +931,10 @@
                 <div class="product-info">
                     <div>
                         <h3 class="product-title">ليبر إيف سان لوران</h3>
-                        <p class="product-desc">عطر الحرية والأناقة العصرية بامتياز.</p>
+                        <div class="product-size">20 مل | تركيبة مركزة</div>
+                        <p class="product-desc">عطر الحرية والأناقة العصرية بامتياز وثبات يدوم طويلاً.</p>
                     </div>
-                    <a href="https://wa.me/212605015387?text=أريد طلب عطر: ليبر إيف سان لوران" target="_blank" class="buy-btn">
+                    <a href="https://wa.me/212605015387?text=أريد طلب عطر: ليبر إيف سان لوران (20 مل)" target="_blank" class="buy-btn">
                         <i class="fab fa-whatsapp"></i> اطلبي الآن عبر الواتساب
                     </a>
                 </div>
@@ -915,11 +949,11 @@
             <div class="feature-item">
                 <i class="fas fa-gem"></i>
                 <h3>جودة أصلية</h3>
-                <p>عطور مختارة بعناية فائقة لتضمن لكِ ثباتاً عالياً طوال اليوم.</p>
+                <p>عطور مختارة بعناية فائقة سعة 20 مل لتضمن لكِ ثباتاً عالياً طوال اليوم.</p>
             </div>
             <div class="feature-item">
                 <i class="fas fa-shipping-fast"></i>
-                <h3>توصيل لمدينة ميدلت</h3>
+                <h3>التوصيل لمدينة ميدلت</h3>
                 <p>خدمة توصيل آمنة وسريعة لكافة أحياء مدينة ميدلت مع الدفع عند الاستلام.</p>
             </div>
             <div class="feature-item">
@@ -934,7 +968,7 @@
     <footer>
         <div class="footer-content">
             <div class="logo" style="color: white;">Parfumerie <span>Yousra</span></div>
-            <p>وجهتك الأولى للعطور النسائية الفاخرة في ميدلت والتي تليق بتميزك.</p>
+            <p>وجهتك الأولى لعطور سعة 20 مل الفاخرة في ميدلت والتي تليق بتميزك.</p>
             <div class="social-icons">
                 <a href="#"><i class="fab fa-instagram"></i></a>
                 <a href="#"><i class="fab fa-facebook"></i></a>
