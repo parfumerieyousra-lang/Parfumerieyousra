@@ -189,6 +189,64 @@
             box-shadow: 0 15px 35px rgba(212, 175, 55, 0.4);
         }
 
+        /* قسم معرض المجموعات والإصدارات الخاصة (الصور الأربع الجديدة) */
+        .showcase-section {
+            max-width: 1300px;
+            margin: 80px auto;
+            padding: 0 30px;
+        }
+
+        .showcase-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .showcase-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 36px;
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+
+        .showcase-desc {
+            color: var(--text-muted);
+            font-size: 16px;
+        }
+
+        .showcase-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .showcase-card {
+            background: var(--card-bg);
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.04);
+            border: 1px solid var(--border-color);
+            transition: var(--transition);
+            cursor: pointer;
+        }
+
+        .showcase-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 35px rgba(212, 175, 55, 0.2);
+            border-color: var(--gold);
+        }
+
+        .showcase-card img {
+            width: 100%;
+            height: auto;
+            display: block;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .showcase-card:hover img {
+            transform: scale(1.03);
+        }
+
         /* قسم المنتجات الرئيسي */
         .section {
             max-width: 1300px;
@@ -570,6 +628,7 @@
             <div class="logo">Parfumerie <span>Yousra</span></div>
             <ul class="nav-links">
                 <li><a href="#">الرئيسية</a></li>
+                <li><a href="#showcase">مجموعاتنا</a></li>
                 <li><a href="#products">التشكيلة الفاخرة</a></li>
                 <li><a href="#features">مميزاتنا</a></li>
             </ul>
@@ -598,7 +657,29 @@
         </div>
     </section>
 
-    <!-- قسم العطور والمنتجات -->
+    <!-- قسم معرض المجموعات والإصدارات الخاصة (الصور الأربع الجديدة بمعزل عن منتجات البيع الفردية) -->
+    <section id="showcase" class="showcase-section">
+        <div class="showcase-header">
+            <h2 class="showcase-title">مجموعات وعروض سولانا الحصرية</h2>
+            <p class="showcase-desc">تشكيلات فاخرة ومنصات عرض راقية مصممة لتبرز فخامة عطرك</p>
+        </div>
+        <div class="showcase-grid">
+            <div class="showcase-card">
+                <img src="1000598373.jpg" alt="مجموعة سولانا الفاخرة" class="product-img" loading="lazy">
+            </div>
+            <div class="showcase-card">
+                <img src="1000598354.jpg" alt="تشكيلة العطور المركزة" class="product-img" loading="lazy">
+            </div>
+            <div class="showcase-card">
+                <img src="1000598358.jpg" alt="إصدارات العطور النسائية" class="product-img" loading="lazy">
+            </div>
+            <div class="showcase-card">
+                <img src="1000598360.jpg" alt="عروض العطور المميزة" class="product-img" loading="lazy">
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم العطور والمنتجات الفردية للطلب -->
     <section id="products" class="section">
         <div class="section-header">
             <h2 class="section-title">التشكيلة الملكية الفاخرة</h2>
@@ -1036,7 +1117,7 @@
     <script>
         // تصفية المنتجات حسب التصنيف
         function filterCategory(category) {
-            const cards = document.querySelectorAll('.product-card');
+            const cards = document.querySelectorAll('.products-grid .product-card');
             const buttons = document.querySelectorAll('.filter-btn');
             
             buttons.forEach(btn => btn.classList.remove('active'));
