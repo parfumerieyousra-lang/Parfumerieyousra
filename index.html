@@ -240,7 +240,7 @@
             border-color: var(--primary);
         }
 
-        /* شبكة المنتجات */
+        /* شبكة المنتجات مع تأثير الظهور التدريجي (Scroll Reveal) */
         .products-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
@@ -252,11 +252,20 @@
             border-radius: 16px;
             overflow: hidden;
             box-shadow: 0 10px 30px rgba(0,0,0,0.04);
-            transition: var(--transition);
+            transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
             border: 1px solid var(--border-color);
             display: flex;
             flex-direction: column;
             position: relative;
+            /* الحالة الأولية قبل ظهورها على الشاشة */
+            opacity: 0;
+            transform: translateY(40px);
+        }
+
+        /* الحالة عند ظهور البطاقة أثناء التمرير */
+        .product-card.appear {
+            opacity: 1;
+            transform: translateY(0);
         }
 
         .product-card:hover {
@@ -1032,8 +1041,25 @@
         </div>
     </footer>
 
-    <!-- جافاسكريبت متقدم للتفاعل وتكبير الصور وتصفية المنتجات -->
+    <!-- جافاسكريبت متقدم للتفاعل وتكبير الصور وتصفية المنتجات مع التمرير السلس -->
     <script>
+        // تفعيل الظهور التدريجي للصور أثناء التمرير (Scroll Reveal)
+        const observerOptions = {
+            threshold: 0.1
+        };
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('appear');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.product-card').forEach(card => {
+            observer.observe(card);
+        });
+
         // تصفية المنتجات حسب التصنيف
         function filterCategory(category) {
             const cards = document.querySelectorAll('.products-grid .product-card');
