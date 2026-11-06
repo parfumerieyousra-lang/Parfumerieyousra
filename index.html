@@ -257,12 +257,10 @@
             display: flex;
             flex-direction: column;
             position: relative;
-            /* الحالة الأولية قبل ظهورها على الشاشة */
             opacity: 0;
             transform: translateY(40px);
         }
 
-        /* الحالة عند ظهور البطاقة أثناء التمرير */
         .product-card.appear {
             opacity: 1;
             transform: translateY(0);
@@ -333,11 +331,23 @@
             font-size: 13px;
             color: var(--gold);
             font-weight: 700;
-            margin-bottom: 10px;
+            margin-bottom: 6px;
             background: #1a1a1a;
             display: inline-block;
             padding: 3px 12px;
             border-radius: 12px;
+        }
+
+        .product-price {
+            font-size: 19px;
+            color: var(--primary);
+            font-weight: 700;
+            margin-bottom: 12px;
+            background: var(--gold-light);
+            padding: 4px 15px;
+            border-radius: 20px;
+            display: inline-block;
+            border: 1px solid var(--gold);
         }
 
         .product-desc {
@@ -569,7 +579,7 @@
     <!-- شريط الإعلانات العلوي المتحرك (من اليمين إلى اليسار) -->
     <div class="top-bar">
         <div class="marquee-track">
-            ✨ خدمة التوصيل السريع والآمن خاصة بمدينة ميدلت | الدفع عند الاستلام 🚚 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 💎 عطور نسائية فاخرة سعة 20 مل بتركيبة مركزة تدوم طويلاً ✨ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 🌸 اطلبي عطرك المفضلة الآن عبر الواتساب واستمتعي بأرقى النفحات العطرية 🛍️
+            ✨ خدمة التوصيل السريع والآمن خاصة بمدينة ميدلت | الدفع عند الاستلام 🚚 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 💎 جميع العطور بسعر استثنائي: 30 درهم فقط للسعة 20 مل ✨ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 🌸 اطلبي عطرك المفضلة الآن عبر الواتساب واستمتعي بأرقى النفحات العطرية 🛍️
         </div>
     </div>
 
@@ -602,7 +612,7 @@
         <div class="hero-content">
             <div class="hero-subtitle">إصدارات حصرية لعشاق التميز</div>
             <h1>عطور نسائية فاخرة سعة 20 مل</h1>
-            <p>اكتشفي تشكيلة راقية من أرقى العطور النسائية المركزة المصممة خصيصاً لتلهم حضورك بجاذبية ساحرة تدوم طويلاً.</p>
+            <p>اكتشفي تشكيلة راقية من أرقى العطور النسائية المركزة بسعر موحد 30 درهم فقط.</p>
             <a href="#products" class="btn-gold">اكتشفي التشكيلة</a>
         </div>
     </section>
@@ -611,7 +621,7 @@
     <section id="products" class="section">
         <div class="section-header">
             <h2 class="section-title">التشكيلة الملكية الفاخرة</h2>
-            <p class="section-desc">تركيبة مركزة سعة 20 مل تدوم طويلاً لتترك انطباعاً راقياً</p>
+            <p class="section-desc">تركيبة مركزة سعة 20 مل تدوم طويلاً بسعر موحد 30 درهم فقط</p>
         </div>
 
         <!-- تصنيفات سريعة -->
@@ -633,9 +643,10 @@
                     <div>
                         <h3 class="product-title">أمبر إيليكسير</h3>
                         <div class="product-size">20 مل | تركيبة مركزة</div>
+                        <div class="product-price">30 درهم</div>
                         <p class="product-desc">تركيبة مركزة تنبض بالفخامة والدفء الشرقي وتدوم طويلاً.</p>
                     </div>
-                    <a href="https://wa.me/212605015387?text=أريد طلب عطر: أمبر إيليكسير (20 مل)" target="_blank" class="buy-btn">
+                    <a href="https://wa.me/212605015387?text=أريد طلب عطر: أمبر إيليكسير (20 مل) بسعر 30 درهم" target="_blank" class="buy-btn">
                         <i class="fab fa-whatsapp"></i> اطلبي الآن عبر الواتساب
                     </a>
                 </div>
@@ -651,9 +662,10 @@
                     <div>
                         <h3 class="product-title">سينما</h3>
                         <div class="product-size">20 مل | تركيبة مركزة</div>
+                        <div class="product-price">30 درهم</div>
                         <p class="product-desc">عطر الأضواء بلمسات أنثوية خلابة وثبات عالٍ يدوم طويلاً.</p>
                     </div>
-                    <a href="https://wa.me/212605015387?text=أريد طلب عطر: سينما (20 مل)" target="_blank" class="buy-btn">
+                    <a href="https://wa.me/212605015387?text=أريد طلب عطر: سينما (20 مل) بسعر 30 درهم" target="_blank" class="buy-btn">
                         <i class="fab fa-whatsapp"></i> اطلبي الآن عبر الواتساب
                     </a>
                 </div>
@@ -668,9 +680,10 @@
                     <div>
                         <h3 class="product-title">ماي فيا</h3>
                         <div class="product-size">20 مل | تركيبة مركزة</div>
+                        <div class="product-price">30 درهم</div>
                         <p class="product-desc">مزيج زهور رقيق يعبر عن الحرية والجاذبية بتركيبة مركزة.</p>
                     </div>
-                    <a href="https://wa.me/212605015387?text=أريد طلب عطر: ماي فيا (20 مل)" target="_blank" class="buy-btn">
+                    <a href="https://wa.me/212605015387?text=أريد طلب عطر: ماي فيا (20 مل) بسعر 30 درهم" target="_blank" class="buy-btn">
                         <i class="fab fa-whatsapp"></i> اطلبي الآن عبر الواتساب
                     </a>
                 </div>
@@ -685,9 +698,10 @@
                     <div>
                         <h3 class="product-title">كايالي</h3>
                         <div class="product-size">20 مل | تركيبة مركزة</div>
+                        <div class="product-price">30 درهم</div>
                         <p class="product-desc">نفحات دافئة تجمع بين العصرية والعمق العطري الذي يدوم طويلاً.</p>
                     </div>
-                    <a href="https://wa.me/212605015387?text=أريد طلب عطر: كايالي (20 مل)" target="_blank" class="buy-btn">
+                    <a href="https://wa.me/212605015387?text=أريد طلب عطر: كايالي (20 مل) بسعر 30 درهم" target="_blank" class="buy-btn">
                         <i class="fab fa-whatsapp"></i> اطلبي الآن عبر الواتساب
                     </a>
                 </div>
@@ -702,9 +716,10 @@
                     <div>
                         <h3 class="product-title">إسكادا</h3>
                         <div class="product-size">20 مل | تركيبة مركزة</div>
+                        <div class="product-price">30 درهم</div>
                         <p class="product-desc">انتعاش الفواكه الصيفية بنفحات حيوية ومشرقة تدوم طويلاً.</p>
                     </div>
-                    <a href="https://wa.me/212605015387?text=أريد طلب عطر: إسكادا (20 مل)" target="_blank" class="buy-btn">
+                    <a href="https://wa.me/212605015387?text=أريد طلب عطر: إسكادا (20 مل) بسعر 30 درهم" target="_blank" class="buy-btn">
                         <i class="fab fa-whatsapp"></i> اطلبي الآن عبر الواتساب
                     </a>
                 </div>
@@ -719,9 +734,10 @@
                     <div>
                         <h3 class="product-title">لومبيراتريس</h3>
                         <div class="product-size">20 مل | تركيبة مركزة</div>
+                        <div class="product-price">30 درهم</div>
                         <p class="product-desc">عطر الملكات الفاخر بعبق الفواكه المنعشة وبثبات ممتاز.</p>
                     </div>
-                    <a href="https://wa.me/212605015387?text=أريد طلب عطر: لومبيراتريس (20 مل)" target="_blank" class="buy-btn">
+                    <a href="https://wa.me/212605015387?text=أريد طلب عطر: لومبيراتريس (20 مل) بسعر 30 درهم" target="_blank" class="buy-btn">
                         <i class="fab fa-whatsapp"></i> اطلبي الآن عبر الواتساب
                     </a>
                 </div>
@@ -736,9 +752,10 @@
                     <div>
                         <h3 class="product-title">يارا</h3>
                         <div class="product-size">20 مل | تركيبة مركزة</div>
+                        <div class="product-price">30 درهم</div>
                         <p class="product-desc">عبير شرقي ساحر يترك أثراً ناعماً وثابتاً طوال اليوم.</p>
                     </div>
-                    <a href="https://wa.me/212605015387?text=أريد طلب عطر: يارا (20 مل)" target="_blank" class="buy-btn">
+                    <a href="https://wa.me/212605015387?text=أريد طلب عطر: يارا (20 مل) بسعر 30 درهم" target="_blank" class="buy-btn">
                         <i class="fab fa-whatsapp"></i> اطلبي الآن عبر الواتساب
                     </a>
                 </div>
@@ -753,9 +770,10 @@
                     <div>
                         <h3 class="product-title">ماي فيا جولد</h3>
                         <div class="product-size">20 مل | تركيبة مركزة</div>
+                        <div class="product-price">30 درهم</div>
                         <p class="product-desc">إصدار خاص وفخم يجمع بين نعومة الزهور ودفء القاعدة المركزة.</p>
                     </div>
-                    <a href="https://wa.me/212605015387?text=أريد طلب عطر: ماي فيا جولد (20 مل)" target="_blank" class="buy-btn">
+                    <a href="https://wa.me/212605015387?text=أريد طلب عطر: ماي فيا جولد (20 مل) بسعر 30 درهم" target="_blank" class="buy-btn">
                         <i class="fab fa-whatsapp"></i> اطلبي الآن عبر الواتساب
                     </a>
                 </div>
@@ -770,9 +788,10 @@
                     <div>
                         <h3 class="product-title">كوكونت باشن</h3>
                         <div class="product-size">20 مل | تركيبة مركزة</div>
+                        <div class="product-price">30 درهم</div>
                         <p class="product-desc">نفحات استوائية دافئة من جوز الهند والفانيليا المركزة.</p>
                     </div>
-                    <a href="https://wa.me/212605015387?text=أريد طلب عطر: كوكونت باشن (20 مل)" target="_blank" class="buy-btn">
+                    <a href="https://wa.me/212605015387?text=أريد طلب عطر: كوكونت باشن (20 مل) بسعر 30 درهم" target="_blank" class="buy-btn">
                         <i class="fab fa-whatsapp"></i> اطلبي الآن عبر الواتساب
                     </a>
                 </div>
@@ -787,9 +806,10 @@
                     <div>
                         <h3 class="product-title">لومبيراتريس إيليت</h3>
                         <div class="product-size">20 مل | تركيبة مركزة</div>
+                        <div class="product-price">30 درهم</div>
                         <p class="product-desc">تركيبة مكثفة خاصة تزيد من ثبات العطر وفخامته طوال اليوم.</p>
                     </div>
-                    <a href="https://wa.me/212605015387?text=أريد طلب عطر: لومبيراتريس إيليت (20 مل)" target="_blank" class="buy-btn">
+                    <a href="https://wa.me/212605015387?text=أريد طلب عطر: لومبيراتريس إيليت (20 مل) بسعر 30 درهم" target="_blank" class="buy-btn">
                         <i class="fab fa-whatsapp"></i> اطلبي الآن عبر الواتساب
                     </a>
                 </div>
@@ -804,9 +824,10 @@
                     <div>
                         <h3 class="product-title">ميرة العرب</h3>
                         <div class="product-size">20 مل | تركيبة مركزة</div>
+                        <div class="product-price">30 درهم</div>
                         <p class="product-desc">عطر عربي أصيل يجمع بين عبق التراث وفخامة الثبات الطويل.</p>
                     </div>
-                    <a href="https://wa.me/212605015387?text=أريد طلب عطر: ميرة العرب (20 مل)" target="_blank" class="buy-btn">
+                    <a href="https://wa.me/212605015387?text=أريد طلب عطر: ميرة العرب (20 مل) بسعر 30 درهم" target="_blank" class="buy-btn">
                         <i class="fab fa-whatsapp"></i> اطلبي الآن عبر الواتساب
                     </a>
                 </div>
@@ -821,9 +842,10 @@
                     <div>
                         <h3 class="product-title">شانس شانيل</h3>
                         <div class="product-size">20 مل | تركيبة مركزة</div>
+                        <div class="product-price">30 درهم</div>
                         <p class="product-desc">نفحات منعشة ومفعمة بالحيوية تدوم طويلاً لكل أوقات اليوم.</p>
                     </div>
-                    <a href="https://wa.me/212605015387?text=أريد طلب عطر: شانس شانيل (20 مل)" target="_blank" class="buy-btn">
+                    <a href="https://wa.me/212605015387?text=أريد طلب عطر: شانس شانيل (20 مل) بسعر 30 درهم" target="_blank" class="buy-btn">
                         <i class="fab fa-whatsapp"></i> اطلبي الآن عبر الواتساب
                     </a>
                 </div>
@@ -838,9 +860,10 @@
                     <div>
                         <h3 class="product-title">لأنترديت جيفنشي</h3>
                         <div class="product-size">20 مل | تركيبة مركزة</div>
+                        <div class="product-price">30 درهم</div>
                         <p class="product-desc">عطر الجرأة والأناقة بزهور بيضاء استثنائية ومركزة للغاية.</p>
                     </div>
-                    <a href="https://wa.me/212605015387?text=أريد طلب عطر: لأنترديت جيفنشي (20 مل)" target="_blank" class="buy-btn">
+                    <a href="https://wa.me/212605015387?text=أريد طلب عطر: لأنترديت جيفنشي (20 مل) بسعر 30 درهم" target="_blank" class="buy-btn">
                         <i class="fab fa-whatsapp"></i> اطلبي الآن عبر الواتساب
                     </a>
                 </div>
@@ -855,9 +878,10 @@
                     <div>
                         <h3 class="product-title">فيكتوريا سيكريت</h3>
                         <div class="product-size">20 مل | تركيبة مركزة</div>
+                        <div class="product-price">30 درهم</div>
                         <p class="product-desc">رائحة رومانسية جذابة تمنحك شعوراً بالانتعاش الدائم والثبات.</p>
                     </div>
-                    <a href="https://wa.me/212605015387?text=أريد طلب عطر: فيكتوريا سيكريت (20 مل)" target="_blank" class="buy-btn">
+                    <a href="https://wa.me/212605015387?text=أريد طلب عطر: فيكتوريا سيكريت (20 مل) بسعر 30 درهم" target="_blank" class="buy-btn">
                         <i class="fab fa-whatsapp"></i> اطلبي الآن عبر الواتساب
                     </a>
                 </div>
@@ -872,9 +896,10 @@
                     <div>
                         <h3 class="product-title">إنسانس أولترامارين</h3>
                         <div class="product-size">20 مل | تركيبة مركزة</div>
+                        <div class="product-price">30 درهم</div>
                         <p class="product-desc">نفحات مائية ومنعشة تضفي حيوية مطلقة وثباتاً يدوم.</p>
                     </div>
-                    <a href="https://wa.me/212605015387?text=أريد طلب عطر: إنسانس أولترامارين (20 مل)" target="_blank" class="buy-btn">
+                    <a href="https://wa.me/212605015387?text=أريد طلب عطر: إنسانس أولترامارين (20 مل) بسعر 30 درهم" target="_blank" class="buy-btn">
                         <i class="fab fa-whatsapp"></i> اطلبي الآن عبر الواتساب
                     </a>
                 </div>
@@ -889,9 +914,10 @@
                     <div>
                         <h3 class="product-title">غوتشي فلورال</h3>
                         <div class="product-size">20 مل | تركيبة مركزة</div>
+                        <div class="product-price">30 درهم</div>
                         <p class="product-desc">باقة زهور ساحرة تعبر عن رقة وجمال الأنثى بتركيبة مركزة.</p>
                     </div>
-                    <a href="https://wa.me/212605015387?text=أريد طلب عطر: غوتشي فلورال (20 مل)" target="_blank" class="buy-btn">
+                    <a href="https://wa.me/212605015387?text=أريد طلب عطر: غوتشي فلورال (20 مل) بسعر 30 درهم" target="_blank" class="buy-btn">
                         <i class="fab fa-whatsapp"></i> اطلبي الآن عبر الواتساب
                     </a>
                 </div>
@@ -906,9 +932,10 @@
                     <div>
                         <h3 class="product-title">سكاندال</h3>
                         <div class="product-size">20 مل | تركيبة مركزة</div>
+                        <div class="product-price">30 درهم</div>
                         <p class="product-desc">عطر جذاب بتركيبة جريئة تترك أثراً قوياً لا يُمحى طوال اليوم.</p>
                     </div>
-                    <a href="https://wa.me/212605015387?text=أريد طلب عطر: سكاندال (20 مل)" target="_blank" class="buy-btn">
+                    <a href="https://wa.me/212605015387?text=أريد طلب عطر: سكاندال (20 مل) بسعر 30 درهم" target="_blank" class="buy-btn">
                         <i class="fab fa-whatsapp"></i> اطلبي الآن عبر الواتساب
                     </a>
                 </div>
@@ -923,9 +950,10 @@
                     <div>
                         <h3 class="product-title">كوم يون إفدونس</h3>
                         <div class="product-size">20 مل | تركيبة مركزة</div>
+                        <div class="product-price">30 درهم</div>
                         <p class="product-desc">رائحة طبيعية راقية تنبض بالصفاء والانسجام وثبات عالٍ.</p>
                     </div>
-                    <a href="https://wa.me/212605015387?text=أريد طلب عطر: كوم يون إفدونس (20 مل)" target="_blank" class="buy-btn">
+                    <a href="https://wa.me/212605015387?text=أريد طلب عطر: كوم يون إفدونس (20 مل) بسعر 30 درهم" target="_blank" class="buy-btn">
                         <i class="fab fa-whatsapp"></i> اطلبي الآن عبر الواتساب
                     </a>
                 </div>
@@ -940,9 +968,10 @@
                     <div>
                         <h3 class="product-title">أوليمبيا</h3>
                         <div class="product-size">20 مل | تركيبة مركزة</div>
+                        <div class="product-price">30 درهم</div>
                         <p class="product-desc">عطر الأساطير بأسلوب شرقي مالح وفانيليا ساحرة تدوم طويلاً.</p>
                     </div>
-                    <a href="https://wa.me/212605015387?text=أريد طلب عطر: أوليمبيا (20 مل)" target="_blank" class="buy-btn">
+                    <a href="https://wa.me/212605015387?text=أريد طلب عطر: أوليمبيا (20 مل) بسعر 30 درهم" target="_blank" class="buy-btn">
                         <i class="fab fa-whatsapp"></i> اطلبي الآن عبر الواتساب
                     </a>
                 </div>
@@ -957,9 +986,10 @@
                     <div>
                         <h3 class="product-title">ليبر إيف سان لوران</h3>
                         <div class="product-size">20 مل | تركيبة مركزة</div>
+                        <div class="product-price">30 درهم</div>
                         <p class="product-desc">عطر الحرية والأناقة العصرية بامتياز وثبات يدوم طويلاً.</p>
                     </div>
-                    <a href="https://wa.me/212605015387?text=أريد طلب عطر: ليبر إيف سان لوران (20 مل)" target="_blank" class="buy-btn">
+                    <a href="https://wa.me/212605015387?text=أريد طلب عطر: ليبر إيف سان لوران (20 مل) بسعر 30 درهم" target="_blank" class="buy-btn">
                         <i class="fab fa-whatsapp"></i> اطلبي الآن عبر الواتساب
                     </a>
                 </div>
@@ -975,9 +1005,10 @@
                     <div>
                         <h3 class="product-title">فالنتينو دونا</h3>
                         <div class="product-size">20 مل | تركيبة مركزة</div>
+                        <div class="product-price">30 درهم</div>
                         <p class="product-desc">عطر أنثوي راقي يجمع بين الأناقة العصرية والنفحات الزهرية المركزة.</p>
                     </div>
-                    <a href="https://wa.me/212605015387?text=أريد طلب عطر: فالنتينو دونا (20 مل)" target="_blank" class="buy-btn">
+                    <a href="https://wa.me/212605015387?text=أريد طلب عطر: فالنتينو دونا (20 مل) بسعر 30 درهم" target="_blank" class="buy-btn">
                         <i class="fab fa-whatsapp"></i> اطلبي الآن عبر الواتساب
                     </a>
                 </div>
@@ -993,9 +1024,10 @@
                     <div>
                         <h3 class="product-title">لايت بلو صن</h3>
                         <div class="product-size">20 مل | تركيبة مركزة</div>
+                        <div class="product-price">30 درهم</div>
                         <p class="product-desc">انتعاش صيفي ساحر بنفحات مشرقة وتركيبة مركزة تدوم طويلاً.</p>
                     </div>
-                    <a href="https://wa.me/212605015387?text=أريد طلب عطر: لايت بلو صن (20 مل)" target="_blank" class="buy-btn">
+                    <a href="https://wa.me/212605015387?text=أريد طلب عطر: لايت بلو صن (20 مل) بسعر 30 درهم" target="_blank" class="buy-btn">
                         <i class="fab fa-whatsapp"></i> اطلبي الآن عبر الواتساب
                     </a>
                 </div>
@@ -1010,7 +1042,7 @@
             <div class="feature-item">
                 <i class="fas fa-gem"></i>
                 <h3>جودة أصلية</h3>
-                <p>عطور مختارة بعناية فائقة سعة 20 مل لتضمن لكِ ثباتاً عالياً طوال اليوم.</p>
+                <p>عطور مختارة بعناية فائقة سعة 20 مل بسعر موحد 30 درهم لثبات عالٍ طوال اليوم.</p>
             </div>
             <div class="feature-item">
                 <i class="fas fa-shipping-fast"></i>
