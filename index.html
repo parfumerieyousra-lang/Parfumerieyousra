@@ -11,14 +11,15 @@
     
     <style>
         :root {
-            --bg-color: #fbf9f5;
+            --bg-color: #fcfbfa;
             --card-bg: #ffffff;
-            --primary: #121212;
-            --gold: #d4af37;
-            --gold-light: #f3ebd1;
+            --primary: #0f0f0f;
+            --gold: #c5a059;
+            --gold-light: #f7f2e7;
+            --gold-hover: #b08d4c;
             --text-main: #2b2b2b;
-            --text-muted: #666666;
-            --border-color: #eee3d0;
+            --text-muted: #777777;
+            --border-color: #e6dec5;
             --transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
         }
 
@@ -32,26 +33,26 @@
             font-family: 'Cairo', sans-serif;
             background-color: var(--bg-color);
             color: var(--text-main);
-            line-height: 1.7;
+            line-height: 1.8;
         }
 
-        /* شريط الإعلانات العلوي المتحرك من اليمين إلى اليسار */
+        /* شريط الإعلانات العلوي المتحرك */
         .top-bar {
             background-color: var(--primary);
             color: var(--gold);
-            padding: 9px 0;
+            padding: 10px 0;
             font-size: 13px;
             font-weight: 600;
             overflow: hidden;
             white-space: nowrap;
             position: relative;
-            border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+            border-bottom: 1px solid rgba(197, 160, 89, 0.3);
         }
 
         .marquee-track {
             display: inline-block;
             white-space: nowrap;
-            animation: moveTextFromRight 25s linear infinite;
+            animation: moveTextFromRight 30s linear infinite;
         }
 
         @keyframes moveTextFromRight {
@@ -59,16 +60,17 @@
             100% { transform: translateX(-100%); }
         }
 
-        /* الهيدر الفاخر */
+        /* الهيدر الاحترافي الفاخر */
         header {
-            background-color: rgba(255, 255, 255, 0.92);
-            backdrop-filter: blur(12px);
+            background-color: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(15px);
             position: sticky;
             top: 0;
             left: 0;
             width: 100%;
             z-index: 1000;
             border-bottom: 1px solid var(--border-color);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.02);
             transition: var(--transition);
         }
 
@@ -78,12 +80,12 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 18px 30px;
+            padding: 15px 30px;
         }
 
         .logo {
             font-family: 'Playfair Display', serif;
-            font-size: 26px;
+            font-size: 28px;
             font-weight: 700;
             color: var(--primary);
             letter-spacing: 1.5px;
@@ -133,7 +135,7 @@
         /* واجهة الـ Hero الاحترافية */
         .hero {
             height: 85vh;
-            background: linear-gradient(rgba(18, 18, 18, 0.65), rgba(18, 18, 18, 0.75)), url('https://images.unsplash.com/photo-1594035910387-fea47794261f?auto=format&fit=crop&w=1920&q=80') no-repeat center center/cover;
+            background: linear-gradient(rgba(15, 15, 15, 0.7), rgba(15, 15, 15, 0.8)), url('https://images.unsplash.com/photo-1594035910387-fea47794261f?auto=format&fit=crop&w=1920&q=80') no-repeat center center/cover;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -144,14 +146,14 @@
         }
 
         .hero-content {
-            max-width: 800px;
+            max-width: 850px;
         }
 
         .hero-subtitle {
             color: var(--gold);
             text-transform: uppercase;
-            letter-spacing: 3px;
-            font-size: 14px;
+            letter-spacing: 4px;
+            font-size: 13px;
             margin-bottom: 15px;
             font-weight: 700;
         }
@@ -173,20 +175,20 @@
         .btn-gold {
             background-color: var(--gold);
             color: var(--primary);
-            padding: 15px 40px;
+            padding: 15px 45px;
             border-radius: 50px;
             text-decoration: none;
             font-weight: 700;
             font-size: 16px;
             transition: var(--transition);
             display: inline-block;
-            box-shadow: 0 10px 30px rgba(212, 175, 55, 0.3);
+            box-shadow: 0 10px 30px rgba(197, 160, 89, 0.3);
         }
 
         .btn-gold:hover {
-            background-color: #e6be40;
+            background-color: var(--gold-hover);
             transform: translateY(-3px);
-            box-shadow: 0 15px 35px rgba(212, 175, 55, 0.4);
+            box-shadow: 0 15px 35px rgba(197, 160, 89, 0.4);
         }
 
         /* قسم المنتجات الرئيسي */
@@ -213,7 +215,7 @@
             font-size: 16px;
         }
 
-        /* أزرار الفلترة */
+        /* أزرار الفلترة الاحترافية */
         .filter-tabs {
             display: flex;
             justify-content: center;
@@ -225,7 +227,7 @@
         .filter-btn {
             background: transparent;
             border: 1px solid var(--border-color);
-            padding: 8px 22px;
+            padding: 9px 24px;
             border-radius: 30px;
             cursor: pointer;
             font-family: 'Cairo', sans-serif;
@@ -249,10 +251,10 @@
 
         .product-card {
             background: var(--card-bg);
-            border-radius: 16px;
+            border-radius: 20px;
             overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.04);
-            transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+            transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
             border: 1px solid var(--border-color);
             display: flex;
             flex-direction: column;
@@ -267,8 +269,8 @@
         }
 
         .product-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(212, 175, 55, 0.15);
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(197, 160, 89, 0.15);
             border-color: var(--gold);
         }
 
@@ -287,13 +289,13 @@
         }
 
         .product-img-container {
-            height: 400px;
+            height: 380px;
             background-color: #f7f4ee;
             cursor: pointer;
             display: flex;
             align-items: center;
             justify-content: center;
-            padding: 15px;
+            padding: 20px;
             overflow: hidden;
             position: relative;
         }
@@ -338,12 +340,12 @@
         }
 
         .product-price {
-            font-size: 19px;
+            font-size: 20px;
             color: var(--primary);
             font-weight: 700;
             margin-bottom: 12px;
             background: var(--gold-light);
-            padding: 4px 15px;
+            padding: 5px 16px;
             border-radius: 20px;
             display: inline-block;
             border: 1px solid var(--gold);
@@ -353,7 +355,7 @@
             font-size: 14px;
             color: var(--text-muted);
             margin-bottom: 20px;
-            line-height: 1.5;
+            line-height: 1.6;
         }
 
         .buy-btn {
@@ -364,8 +366,8 @@
             width: 100%;
             background-color: var(--primary);
             color: white;
-            padding: 13px;
-            border-radius: 10px;
+            padding: 14px;
+            border-radius: 12px;
             text-decoration: none;
             font-weight: 600;
             font-size: 15px;
@@ -386,11 +388,11 @@
             color: var(--primary);
         }
 
-        /* قسم آراء الزبونات (مكتوب بالدارجة الحقيقية والصحيحة) */
+        /* قسم آراء الزبونات بالدارجة الحقيقية */
         .reviews-section {
-            background-color: #f5f0e6;
-            padding: 80px 30px;
-            margin-top: 80px;
+            background-color: #f7f4ee;
+            padding: 90px 30px;
+            margin-top: 100px;
             border-top: 1px solid var(--border-color);
             border-bottom: 1px solid var(--border-color);
         }
@@ -402,17 +404,17 @@
 
         .reviews-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
             gap: 30px;
             margin-top: 40px;
         }
 
         .review-card {
             background: var(--card-bg);
-            padding: 30px;
-            border-radius: 16px;
+            padding: 35px;
+            border-radius: 20px;
             border: 1px solid var(--border-color);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.02);
             position: relative;
             transition: var(--transition);
         }
@@ -433,7 +435,7 @@
             color: var(--text-main);
             margin-bottom: 20px;
             font-style: italic;
-            line-height: 1.6;
+            line-height: 1.7;
         }
 
         .review-author {
@@ -451,25 +453,25 @@
             font-weight: normal;
         }
 
-        /* إشعار زوار الموقع والطلبات المتحرك في زاوية الشاشة */
+        /* الإشعار الحي الاحترافي (حركة واقعية وديناميكية) */
         .live-notification {
             position: fixed;
             bottom: 35px;
             left: 35px;
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
+            background: rgba(255, 255, 255, 0.96);
+            backdrop-filter: blur(12px);
             border: 1px solid var(--gold);
-            padding: 14px 20px;
-            border-radius: 14px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+            padding: 15px 22px;
+            border-radius: 16px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.08);
             z-index: 1500;
             display: flex;
             align-items: center;
-            gap: 12px;
-            max-width: 320px;
-            transform: translateY(100px);
+            gap: 15px;
+            max-width: 330px;
+            transform: translateY(120px);
             opacity: 0;
-            transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+            transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
         }
 
         .live-notification.show {
@@ -480,8 +482,8 @@
         .live-icon {
             background: var(--gold-light);
             color: var(--primary);
-            width: 40px;
-            height: 40px;
+            width: 42px;
+            height: 42px;
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -495,12 +497,31 @@
             font-size: 13px;
             color: var(--primary);
             font-weight: 700;
-            margin-bottom: 2px;
+            margin-bottom: 3px;
         }
 
         .live-content p {
             font-size: 12px;
             color: var(--text-muted);
+        }
+
+        /* عداد الزوار الثابت والديناميكي في شريط الموثوقية */
+        .trust-counter-badge {
+            background: rgba(197, 160, 89, 0.15);
+            border: 1px solid var(--gold);
+            color: var(--primary);
+            padding: 6px 16px;
+            border-radius: 30px;
+            font-size: 13px;
+            font-weight: 700;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 25px;
+        }
+
+        .trust-counter-badge i {
+            color: var(--gold);
         }
 
         /* زر الواتساب العائم النابض */
@@ -510,14 +531,14 @@
             right: 35px;
             background-color: #25d366;
             color: white;
-            width: 65px;
-            height: 65px;
+            width: 68px;
+            height: 68px;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 36px;
-            box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
+            font-size: 38px;
+            box-shadow: 0 10px 30px rgba(37, 211, 102, 0.4);
             z-index: 2000;
             text-decoration: none;
             border: none;
@@ -528,7 +549,7 @@
 
         @keyframes pulse-animation {
             0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.6); }
-            70% { box-shadow: 0 0 0 20px rgba(37, 211, 102, 0); }
+            70% { box-shadow: 0 0 0 22px rgba(37, 211, 102, 0); }
             100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
         }
 
@@ -557,7 +578,7 @@
             display: block;
             max-width: 85%;
             max-height: 80vh;
-            border-radius: 12px;
+            border-radius: 16px;
             box-shadow: 0 10px 40px rgba(0,0,0,0.5);
         }
 
@@ -579,7 +600,7 @@
         /* قسم المميزات */
         .features {
             background-color: var(--gold-light);
-            padding: 70px 0;
+            padding: 80px 0;
             border-top: 1px solid var(--border-color);
             border-bottom: 1px solid var(--border-color);
         }
@@ -595,13 +616,13 @@
         }
 
         .feature-item i {
-            font-size: 40px;
+            font-size: 42px;
             color: var(--primary);
             margin-bottom: 20px;
             background: var(--gold);
-            width: 80px;
-            height: 80px;
-            line-height: 80px;
+            width: 85px;
+            height: 85px;
+            line-height: 85px;
             border-radius: 50%;
             display: inline-block;
             box-shadow: 0 10px 20px rgba(0,0,0,0.05);
@@ -609,7 +630,7 @@
 
         .feature-item h3 {
             font-family: 'Playfair Display', serif;
-            font-size: 20px;
+            font-size: 21px;
             margin-bottom: 10px;
             color: var(--primary);
         }
@@ -619,7 +640,7 @@
             color: var(--text-muted);
         }
 
-        /* الفوتر الفاخر */
+        /* الفوتر */
         footer {
             background-color: var(--primary);
             color: white;
@@ -670,20 +691,10 @@
         }
 
         @media (max-width: 768px) {
-            .nav-links {
-                display: none;
-            }
-            .hero-content h1 {
-                font-size: 36px;
-            }
-            .nav-container {
-                padding: 15px 20px;
-            }
-            .live-notification {
-                left: 15px;
-                bottom: 110px;
-                max-width: 280px;
-            }
+            .nav-links { display: none; }
+            .hero-content h1 { font-size: 36px; }
+            .nav-container { padding: 15px 20px; }
+            .live-notification { left: 15px; bottom: 110px; max-width: 280px; }
         }
     </style>
 </head>
@@ -696,7 +707,7 @@
         </div>
     </div>
 
-    <!-- الهيدر -->
+    <!-- الهيدر الاحترافي -->
     <header>
         <div class="nav-container">
             <div class="logo">Parfumerie <span>Yousra</span></div>
@@ -715,14 +726,14 @@
         <i class="fab fa-whatsapp"></i>
     </a>
 
-    <!-- إشعار الحركة الحية للزوار والطلبات -->
+    <!-- إشعار الحركة الحية للطلبات (مرتبط بعطور الموقع بشكل حقيقي) -->
     <div id="liveNotification" class="live-notification">
         <div class="live-icon" id="liveIcon">
             <i class="fas fa-shopping-bag"></i>
         </div>
         <div class="live-content">
             <h4 id="liveTitle">طلب جديد في ميدلت</h4>
-            <p id="liveText">زبونة طلبت عطر "ليبر" قبل قليل</p>
+            <p id="liveText">زبونة طلبت عطر "ليبر إيف سان لوران" الآن</p>
         </div>
     </div>
 
@@ -735,9 +746,9 @@
     <!-- واجهة البداية Hero -->
     <section class="hero">
         <div class="hero-content">
-            <div class="hero-subtitle">إصدارات حصرية لعشاق التميز</div>
+            <div class="hero-subtitle">إصدارات حصرية لعشاق التميز في ميدلت</div>
             <h1>عطور نسائية فاخرة سعة 20 مل</h1>
-            <p>اكتشفي تشكيلة راقية من أرقى العطور المركزة بسعر موحد 30 درهم فقط، مع التوصيل لحد باب الدار في ميدلت والدفع عند الاستلام.</p>
+            <p>اكتشفي تشكيلة راقية من أرقى العطور المركزة بسعر موحد 30 درهم فقط، مع التوصيل لحد باب الدار والدفع عند الاستلام بكل أمان.</p>
             <a href="#products" class="btn-gold">اكتشفي التشكيلة</a>
         </div>
     </section>
@@ -745,6 +756,10 @@
     <!-- قسم العطور والمنتجات الفردية للطلب -->
     <section id="products" class="section">
         <div class="section-header">
+            <!-- شاره عداد الزوار التفاعلي والثابت (لا تثير الشبهة وبأرقام واقعية) -->
+            <div class="trust-counter-badge">
+                <i class="fas fa-eye"></i> <span id="visitorCount">16</span> زبونة يتصفحن العطور الآن في ميدلت
+            </div>
             <h2 class="section-title">التشكيلة الملكية الفاخرة</h2>
             <p class="section-desc">تركيبة مركزة سعة 20 مل تدوم طويلاً بسعر موحد 30 درهم فقط</p>
         </div>
@@ -1161,7 +1176,7 @@
         </div>
     </section>
 
-    <!-- قسم آراء الزبونات (مصحح بالدارجة الصحيحة والطبيعية) -->
+    <!-- قسم آراء الزبونات (بالدارجة المغربية الأصلية والمصححة) -->
     <section id="reviews" class="reviews-section">
         <div class="reviews-container">
             <div class="section-header" style="margin-bottom: 20px;">
@@ -1203,7 +1218,7 @@
         </div>
     </section>
 
-    <!-- قسم المميزات -->
+    <!-- قسم المميزات وتأكيد الأمان -->
     <section id="features" class="features">
         <div class="features-grid">
             <div class="feature-item">
@@ -1213,8 +1228,8 @@
             </div>
             <div class="feature-item">
                 <i class="fas fa-shipping-fast"></i>
-                <h3>التوصيل لمدينة ميدلت</h3>
-                <p>خدمة توصيل آمنة وسريعة لكافة أحياء مدينة ميدلت مع الدفع عند الاستلام يدوياً بكل أمان.</p>
+                <h3>التوصيل في ميدلت</h3>
+                <p>خدمة توصيل آمنة وسريعة لكافة أحياء مدينة ميدلت مع <strong>الدفع عند الاستلام</strong> بكل ثقة وأمان.</p>
             </div>
             <div class="feature-item">
                 <i class="fas fa-headset"></i>
@@ -1240,45 +1255,55 @@
         </div>
     </footer>
 
-    <!-- جافاسكريبت متقدم للتفاعل والإشعار المتحرك الحقيقي -->
+    <!-- جافاسكريبت متطور ومحترف للعداد التلقائي والإشعارات الذكية -->
     <script>
-        // إشعار الزوار والطلبات الحي المتحرك في الزاوية
-        const notifications = [
-            { icon: 'fa-shopping-bag', title: 'طلب جديد في ميدلت 🛍️', text: 'زبونة طلبت عطر "ليبر" قبل قليل' },
-            { icon: 'fa-eye', title: 'زوار الجدد 👀', text: '12 شخص يتصفحون المتجر الآن' },
-            { icon: 'fa-truck', title: 'توصيل مؤكد 🚚', text: 'تم توصيل طلبية عطور بنجاح في ميدلت' },
-            { icon: 'fa-heart', title: 'إعجاب بالمنتجات ⭐', text: 'زبونة أضافت عطر "سكاندال" لقائمة طلباتها' }
+        // 1. نظام عداد زوار واقعي وغير مثير للشبهة (يتأرجح ببطء بين 12 و 22 زبونة)
+        let currentVisitors = 16;
+        const visitorElement = document.getElementById('visitorCount');
+        
+        setInterval(() => {
+            const fluctuation = Math.floor(Math.random() * 3) - 1; // إما -1، 0، أو +1
+            currentVisitors += fluctuation;
+            if (currentVisitors < 12) currentVisitors = 12;
+            if (currentVisitors > 24) currentVisitors = 24;
+            visitorElement.innerText = currentVisitors;
+        }, 7000);
+
+        // 2. إشعارات طلبات حية ومترابطة بأسماء العطور الفعليّة الموجودة في الموقع
+        const liveOrders = [
+            { title: 'طلب جديد في ميدلت 🛍️', text: 'زبونة طلبت عطر "ليبر إيف سان لوران" قبل قليل' },
+            { title: 'توصيل مؤكد 🚚', text: 'تم توصيل طلبية عطر "سينما" بنجاح في حي مسيرة' },
+            { title: 'إقبال كبير ⭐', text: 'زبونة طلبت 3 عطور من تشكيلة "كايالي" و"يارا"' },
+            { title: 'طلب جديد 🛒', text: 'تم تأكيد طلب عطر "سكاندال" بـ 30 درهم' },
+            { title: 'توصيل جاري 🛵', text: 'عامل التوصيل في طريقه لتسليم عطر "أمبر إيليكسير"' }
         ];
 
-        let currentNotifIndex = 0;
+        let orderIndex = 0;
         const notifBox = document.getElementById('liveNotification');
         const notifTitle = document.getElementById('liveTitle');
         const notifText = document.getElementById('liveText');
-        const notifIcon = document.getElementById('liveIcon').querySelector('i');
 
-        function showNotification() {
-            const current = notifications[currentNotifIndex];
-            notifTitle.innerText = current.title;
-            notifText.innerText = current.text;
-            notifIcon.className = `fas ${current.icon}`;
+        function triggerLiveOrder() {
+            const currentOrder = liveOrders[orderIndex];
+            notifTitle.innerText = currentOrder.title;
+            notifText.innerText = currentOrder.text;
 
             notifBox.classList.add('show');
 
-            // إخفاء الإشعار بعد 4.5 ثانية
             setTimeout(() => {
                 notifBox.classList.remove('show');
             }, 4500);
 
-            currentNotifIndex = (currentNotifIndex + 1) % notifications.length;
+            orderIndex = (orderIndex + 1) % liveOrders.length;
         }
 
-        // إطلاق أول إشعار بعد 3 ثوانٍ، ثم تكراره كل 10 ثوانٍ
+        // إطلاق أول إشعار بعد 4 ثوانٍ، ثم تكراره كل 12 ثانية بشكل طبيعي
         setTimeout(() => {
-            showNotification();
-            setInterval(showNotification, 10000);
-        }, 3000);
+            triggerLiveOrder();
+            setInterval(triggerLiveOrder, 12000);
+        }, 4000);
 
-        // تفعيل الظهور التدريجي للصور أثناء التمرير (Scroll Reveal)
+        // تفعيل الظهور التدريجي للبطاقات أثناء التمرير (Scroll Reveal)
         const observerOptions = { threshold: 0.1 };
         const observer = new IntersectionObserver((entries, observer) => {
             entries.forEach(entry => {
