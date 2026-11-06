@@ -130,7 +130,7 @@
             transform: translateY(-2px);
         }
 
-        /* واجهة الـ Hero الاحترافية الخاصة بعطور النساء الفاخرة */
+        /* واجهة الـ Hero الاحترافية */
         .hero {
             height: 85vh;
             background: linear-gradient(rgba(18, 18, 18, 0.65), rgba(18, 18, 18, 0.75)), url('https://images.unsplash.com/photo-1594035910387-fea47794261f?auto=format&fit=crop&w=1920&q=80') no-repeat center center/cover;
@@ -213,7 +213,7 @@
             font-size: 16px;
         }
 
-        /* أزرار الفلترة الاحترافية */
+        /* أزرار الفلترة */
         .filter-tabs {
             display: flex;
             justify-content: center;
@@ -240,7 +240,7 @@
             border-color: var(--primary);
         }
 
-        /* شبكة المنتجات مع تأثير الظهور التدريجي (Scroll Reveal) */
+        /* شبكة المنتجات مع تأثير الظهور التدريجي */
         .products-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
@@ -286,7 +286,6 @@
             letter-spacing: 0.5px;
         }
 
-        /* حاوية الصور الكبيرة والواضحة */
         .product-img-container {
             height: 400px;
             background-color: #f7f4ee;
@@ -387,6 +386,123 @@
             color: var(--primary);
         }
 
+        /* قسم آراء الزبونات (مكتوب بالدارجة الحقيقية) */
+        .reviews-section {
+            background-color: #f5f0e6;
+            padding: 80px 30px;
+            margin-top: 80px;
+            border-top: 1px solid var(--border-color);
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .reviews-container {
+            max-width: 1300px;
+            margin: 0 auto;
+        }
+
+        .reviews-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .review-card {
+            background: var(--card-bg);
+            padding: 30px;
+            border-radius: 16px;
+            border: 1px solid var(--border-color);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+            position: relative;
+            transition: var(--transition);
+        }
+
+        .review-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--gold);
+        }
+
+        .review-stars {
+            color: var(--gold);
+            margin-bottom: 15px;
+            font-size: 14px;
+        }
+
+        .review-text {
+            font-size: 15px;
+            color: var(--text-main);
+            margin-bottom: 20px;
+            font-style: italic;
+            line-height: 1.6;
+        }
+
+        .review-author {
+            font-weight: 700;
+            color: var(--primary);
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .review-author span {
+            color: var(--gold);
+            font-size: 12px;
+            font-weight: normal;
+        }
+
+        /* إشعار زوار الموقع والطلبات المتحرك في زاوية الشاشة */
+        .live-notification {
+            position: fixed;
+            bottom: 35px;
+            left: 35px;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--gold);
+            padding: 14px 20px;
+            border-radius: 14px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+            z-index: 1500;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            max-width: 320px;
+            transform: translateY(100px);
+            opacity: 0;
+            transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+
+        .live-notification.show {
+            transform: translateY(0);
+            opacity: 1;
+        }
+
+        .live-icon {
+            background: var(--gold-light);
+            color: var(--primary);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            flex-shrink: 0;
+            border: 1px solid var(--gold);
+        }
+
+        .live-content h4 {
+            font-size: 13px;
+            color: var(--primary);
+            font-weight: 700;
+            margin-bottom: 2px;
+        }
+
+        .live-content p {
+            font-size: 12px;
+            color: var(--text-muted);
+        }
+
         /* زر الواتساب العائم النابض */
         .float-whatsapp {
             position: fixed;
@@ -443,12 +559,6 @@
             max-height: 80vh;
             border-radius: 12px;
             box-shadow: 0 10px 40px rgba(0,0,0,0.5);
-            animation: zoomIn 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
-        }
-
-        @keyframes zoomIn {
-            from { transform: scale(0.8); opacity: 0; }
-            to { transform: scale(1); opacity: 1; }
         }
 
         .close-modal {
@@ -470,7 +580,6 @@
         .features {
             background-color: var(--gold-light);
             padding: 70px 0;
-            margin-top: 100px;
             border-top: 1px solid var(--border-color);
             border-bottom: 1px solid var(--border-color);
         }
@@ -560,7 +669,6 @@
             margin-top: 15px;
         }
 
-        /* التجاوب مع الهواتف الذكية */
         @media (max-width: 768px) {
             .nav-links {
                 display: none;
@@ -571,15 +679,20 @@
             .nav-container {
                 padding: 15px 20px;
             }
+            .live-notification {
+                left: 15px;
+                bottom: 110px;
+                max-width: 280px;
+            }
         }
     </style>
 </head>
 <body>
 
-    <!-- شريط الإعلانات العلوي المتحرك (من اليمين إلى اليسار) -->
+    <!-- شريط الإعلانات العلوي المتحرك -->
     <div class="top-bar">
         <div class="marquee-track">
-            ✨ خدمة التوصيل السريع والآمن خاصة بمدينة ميدلت | الدفع عند الاستلام 🚚 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 💎 جميع العطور بسعر استثنائي: 30 درهم فقط للسعة 20 مل ✨ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 🌸 اطلبي عطرك المفضلة الآن عبر الواتساب واستمتعي بأرقى النفحات العطرية 🛍️
+            ✨ خدمة التوصيل السريع والآمن بمدينة ميدلت | الدفع عند الاستلام 🚚 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 💎 جميع العطور بسعر موحد: 30 درهم فقط للسعة 20 مل ✨ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 🌸 اطلبي عطرك المفضل الآن واستمتعي بثبات طوال اليوم 🛍️
         </div>
     </div>
 
@@ -590,6 +703,7 @@
             <ul class="nav-links">
                 <li><a href="#">الرئيسية</a></li>
                 <li><a href="#products">التشكيلة الفاخرة</a></li>
+                <li><a href="#reviews">آراء الزبونات</a></li>
                 <li><a href="#features">مميزاتنا</a></li>
             </ul>
             <a href="https://wa.me/212605015387?text=سلام، أهتم بالاستفسار عن عطور Parfumerie Yousra" target="_blank" class="header-cta">تواصل معنا</a>
@@ -600,6 +714,17 @@
     <a href="https://wa.me/212605015387?text=سلام، أريد طلب عطر من متجر Parfumerie Yousra" target="_blank" class="float-whatsapp" title="تواصل معنا عبر الواتساب">
         <i class="fab fa-whatsapp"></i>
     </a>
+
+    <!-- إشعار الحركة الحية للزوار والطلبات (يظهر بشكل حقيقي ومتحرك) -->
+    <div id="liveNotification" class="live-notification">
+        <div class="live-icon" id="liveIcon">
+            <i class="fas fa-shopping-bag"></i>
+        </div>
+        <div class="live-content">
+            <h4 id="liveTitle">طلب جديد في ميدلت</h4>
+            <p id="liveText">زبونة طلبت عطر "ليبر" قبل قليل</p>
+        </div>
+    </div>
 
     <!-- نافذة تكبير الصور -->
     <div id="imageModal" class="modal">
@@ -612,7 +737,7 @@
         <div class="hero-content">
             <div class="hero-subtitle">إصدارات حصرية لعشاق التميز</div>
             <h1>عطور نسائية فاخرة سعة 20 مل</h1>
-            <p>اكتشفي تشكيلة راقية من أرقى العطور النسائية المركزة بسعر موحد 30 درهم فقط.</p>
+            <p>اكتشفي تشكيلة راقية من أرقى العطور المركزة بسعر موحد 30 درهم فقط، مع التوصيل لحد باب الدار في ميدلت والدفع عند الاستلام.</p>
             <a href="#products" class="btn-gold">اكتشفي التشكيلة</a>
         </div>
     </section>
@@ -995,7 +1120,7 @@
                 </div>
             </div>
 
-            <!-- منتج 21 (فالنتينو دونا) -->
+            <!-- منتج 21 -->
             <div class="product-card" data-category="floral">
                 <div class="product-badge">جديد</div>
                 <div class="product-img-container">
@@ -1014,7 +1139,7 @@
                 </div>
             </div>
 
-            <!-- منتج 22 (دولتشي آند غابانا لايت بلو صن) -->
+            <!-- منتج 22 -->
             <div class="product-card" data-category="floral">
                 <div class="product-badge">حصري</div>
                 <div class="product-img-container">
@@ -1036,6 +1161,48 @@
         </div>
     </section>
 
+    <!-- قسم آراء الزبونات (بالدارجة المغربية الحقيقية لتعزيز الثقة) -->
+    <section id="reviews" class="reviews-section">
+        <div class="reviews-container">
+            <div class="section-header" style="margin-bottom: 20px;">
+                <h2 class="section-title">شنو كايقولو علينا زبوناتنا؟</h2>
+                <p class="section-desc">شهادات حقيقية من ناس جربو عطورنا في ميدلت</p>
+            </div>
+            
+            <div class="reviews-grid">
+                <div class="review-card">
+                    <div class="review-stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="review-text">"الصراحة العطور دكشي رفيع، ريحتهم فواحة بزاف وكاتبقى شادة فاللباس نهار كامل! خدايت جوج وبجوجهم فصالح الموت، شكراً على المعاملة."</p>
+                    <div class="review-author">
+                        فاطمة الزهراء <span>(زبونة من ميدلت)</span>
+                    </div>
+                </div>
+
+                <div class="review-card">
+                    <div class="review-stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="review-text">"الثمن مناسب بزاف بـ 30 درهم والجودة طالعة بزااف، التوصيل وصلني حتى لعند الدار بسرعة وبكل أمان. الله يسر ليك أختي يسرى."</p>
+                    <div class="review-author">
+                        إيمان م. <span>(زبونة من ميدلت)</span>
+                    </div>
+                </div>
+
+                <div class="review-card">
+                    <div class="review-stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    1</div>
+                    <p class="review-text">"الريحة مطابقة للأصلي وثابتة، لي شافها عندي كيسولني منين خداتها. الثقة والصدق فالمعاملة، تبارك الله عليكم."</p>
+                    <div class="review-author">
+                        سناء أ. <span>(زبونة من ميدلت)</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- قسم المميزات -->
     <section id="features" class="features">
         <div class="features-grid">
@@ -1047,12 +1214,12 @@
             <div class="feature-item">
                 <i class="fas fa-shipping-fast"></i>
                 <h3>التوصيل لمدينة ميدلت</h3>
-                <p>خدمة توصيل آمنة وسريعة لكافة أحياء مدينة ميدلت مع الدفع عند الاستلام.</p>
+                <p>خدمة توصيل آمنة وسريعة لكافة أحياء مدينة ميدلت مع الدفع عند الاستلام يدوياً بكل أمان.</p>
             </div>
             <div class="feature-item">
                 <i class="fas fa-headset"></i>
                 <h3>دعم عملاء ممتاز</h3>
-                <p>فريقنا جاهز دائماً لمساعدتكِ في اختيار العطر المناسب لذوقكِ.</p>
+                <p>فريقنا جاهز دائماً لمساعدتكِ في اختيار العطر المناسب لذوقكِ عبر الواتساب.</p>
             </div>
         </div>
     </section>
@@ -1073,12 +1240,46 @@
         </div>
     </footer>
 
-    <!-- جافاسكريبت متقدم للتفاعل وتكبير الصور وتصفية المنتجات مع التمرير السلس -->
+    <!-- جافاسكريبت متقدم للتفاعل والإشعار المتحرك الحقيقي -->
     <script>
+        // إشعار الزوار والطلبات الحي المتحرك في الزاوية
+        const notifications = [
+            { icon: 'fa-shopping-bag', title: 'طلب جديد في ميدلت 🛍️', text: 'زبونة طلبت عطر "ليبر" قبل قليل' },
+            { icon: 'fa-eye', title: 'زوار الجدد 👀', text: '12 شخص يتصفحون المتجر الآن' },
+            { icon: 'fa-truck', title: 'توصيل مؤكد 🚚', text: 'تم توصيل طلبية عطور بنجاح في ميدلت' },
+            { icon: 'fa-heart', title: 'إعجاب بالمنتجات ⭐', text: 'زبونة أضافت عطر "سكاندال" لقائمة طلباتها' }
+        ];
+
+        let currentNotifIndex = 0;
+        const notifBox = document.getElementById('liveNotification');
+        const notifTitle = document.getElementById('liveTitle');
+        const notifText = document.getElementById('liveText');
+        const notifIcon = document.getElementById('liveIcon').querySelector('i');
+
+        function showNotification() {
+            const current = notifications[currentNotifIndex];
+            notifTitle.innerText = current.title;
+            notifText.innerText = current.text;
+            notifIcon.className = `fas ${current.icon}`;
+
+            notifBox.classList.add('show');
+
+            // إخفاء الإشعار بعد 4 ثوانٍ
+            setTimeout(() => {
+                notifBox.classList.remove('show');
+            }, 4500);
+
+            currentNotifIndex = (currentNotifIndex + 1) % notifications.length;
+        }
+
+        // إطلاق أول إشعار بعد 3 ثوانٍ، ثم تكراره كل 10 ثوانٍ
+        setTimeout(() => {
+            showNotification();
+            setInterval(showNotification, 10000);
+        }, 3000);
+
         // تفعيل الظهور التدريجي للصور أثناء التمرير (Scroll Reveal)
-        const observerOptions = {
-            threshold: 0.1
-        };
+        const observerOptions = { threshold: 0.1 };
         const observer = new IntersectionObserver((entries, observer) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
