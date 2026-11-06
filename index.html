@@ -835,11 +835,11 @@
             <p class="section-desc">تركيبة مركزة سعة 20 مل تدوم طويلاً بسعر موحد 30 درهم فقط</p>
         </div>
 
-        <!-- أزرار الفلترة -->
+        <!-- أزرار الفلترة المُصلحة والمحدثة -->
         <div class="filter-tabs">
-            <button class="filter-btn active" onclick="filterCategory('all')">جميع العطور</button>
-            <button class="filter-btn" onclick="filterCategory('oriental')">شرقية ودافئة</button>
-            <button class="filter-btn" onclick="filterCategory('floral')">زهور ومنعشة</button>
+            <button class="filter-btn active" onclick="filterCategory('all', this)">جميع العطور</button>
+            <button class="filter-btn" onclick="filterCategory('oriental', this)">شرقية ودافئة</button>
+            <button class="filter-btn" onclick="filterCategory('floral', this)">زهور ومنعشة</button>
         </div>
 
         <div class="products-grid">
@@ -1373,13 +1373,13 @@
             setInterval(triggerLiveOrder, 12000);
         }, 4000);
 
-        // تصفية المنتجات حسب التصنيف
-        function filterCategory(category) {
+        // تصفية المنتجات حسب التصنيف (تم إصلاحها بالكامل هنا لتستجيب فوراً)
+        function filterCategory(category, btnElement) {
             const cards = document.querySelectorAll('.products-grid .product-card');
             const buttons = document.querySelectorAll('.filter-btn');
             
             buttons.forEach(btn => btn.classList.remove('active'));
-            event.target.classList.add('active');
+            btnElement.classList.add('active');
 
             cards.forEach(card => {
                 if (category === 'all' || card.dataset.category === category) {
@@ -1402,4 +1402,16 @@
             });
         });
 
-        if(
+        if(closeBtn) {
+            closeBtn.onclick = function() { 
+                modal.style.display = "none";
+            }
+        }
+
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+
