@@ -4,6 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Parfumerie Yousra | عطور نسائية فاخرة 20 مل</title>
+    
+    <!-- وسوم المعاينة في وسائل التواصل الاجتماعي وواتساب (Open Graph) -->
+    <meta property="og:title" content="Parfumerie Yousra | عطور نسائية فاخرة 20 مل">
+    <meta property="og:description" content="اكتشفي تشكيلة راقية من أرقى العطور المركزة بسعر موحد 30 درهم فقط في ميدلت، مع التوصيل والدفع عند الاستلام.">
+    <meta property="og:image" content="https://parfumerieyousra-lang.github.io/Parfumerieyousra/1000598435_2.jpg">
+    <meta property="og:url" content="https://parfumerieyousra-lang.github.io/Parfumerieyousra/">
+    <meta property="og:type" content="website">
+
     <!-- خطوط عربية وعالمية راقية -->
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap" rel="stylesheet">
     <!-- أيقونات FontAwesome -->
@@ -835,7 +843,7 @@
             <p class="section-desc">تركيبة مركزة سعة 20 مل تدوم طويلاً بسعر موحد 30 درهم فقط</p>
         </div>
 
-        <!-- أزرار الفلترة المُصلحة والمحدثة -->
+        <!-- أزرار الفلترة -->
         <div class="filter-tabs">
             <button class="filter-btn active" onclick="filterCategory('all', this)">جميع العطور</button>
             <button class="filter-btn" onclick="filterCategory('oriental', this)">شرقية ودافئة</button>
@@ -1373,7 +1381,7 @@
             setInterval(triggerLiveOrder, 12000);
         }, 4000);
 
-        // تصفية المنتجات حسب التصنيف (تم إصلاحها بالكامل هنا لتستجيب فوراً)
+        // تصفية المنتجات حسب التصنيف
         function filterCategory(category, btnElement) {
             const cards = document.querySelectorAll('.products-grid .product-card');
             const buttons = document.querySelectorAll('.filter-btn');
@@ -1415,3 +1423,5 @@
         }
     </script>
 
+</body>
+</html>
