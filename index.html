@@ -20,7 +20,7 @@
             --text-main: #2b2b2b;
             --text-muted: #777777;
             --border-color: #e6dec5;
-            --transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+            --transition: all 0.25s ease-in-out;
         }
 
         * {
@@ -242,7 +242,7 @@
             border-color: var(--primary);
         }
 
-        /* شبكة المنتجات مع تأثير الظهور التدريجي */
+        /* شبكة المنتجات (سريعة وفورية) */
         .products-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
@@ -254,23 +254,16 @@
             border-radius: 20px;
             overflow: hidden;
             box-shadow: 0 10px 30px rgba(0,0,0,0.03);
-            transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+            transition: var(--transition);
             border: 1px solid var(--border-color);
             display: flex;
             flex-direction: column;
             position: relative;
-            opacity: 0;
-            transform: translateY(40px);
-        }
-
-        .product-card.appear {
-            opacity: 1;
-            transform: translateY(0);
         }
 
         .product-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 20px 40px rgba(197, 160, 89, 0.15);
+            transform: translateY(-6px);
+            box-shadow: 0 15px 30px rgba(197, 160, 89, 0.15);
             border-color: var(--gold);
         }
 
@@ -308,7 +301,7 @@
         }
 
         .product-card:hover .product-img {
-            transform: scale(1.06);
+            transform: scale(1.04);
         }
 
         .product-info {
@@ -471,7 +464,7 @@
             max-width: 330px;
             transform: translateY(120px);
             opacity: 0;
-            transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+            transition: all 0.5s ease;
         }
 
         .live-notification.show {
@@ -776,7 +769,7 @@
             <div class="product-card" data-category="oriental">
                 <div class="product-badge">حصري</div>
                 <div class="product-img-container">
-                    <img src="1000598193.jpg" alt="أمبر إيليكسير" class="product-img" loading="lazy">
+                    <img src="1000598193.jpg" alt="أمبر إيليكسير" class="product-img">
                 </div>
                 <div class="product-info">
                     <div>
@@ -795,7 +788,7 @@
             <div class="product-card" data-category="floral">
                 <div class="product-badge">الأكثر طلباً</div>
                 <div class="product-img-container">
-                    <img src="1000598196.jpg" alt="سينما" class="product-img" loading="lazy">
+                    <img src="1000598196.jpg" alt="سينما" class="product-img">
                 </div>
                 <div class="product-info">
                     <div>
@@ -813,7 +806,7 @@
             <!-- منتج 3 -->
             <div class="product-card" data-category="floral">
                 <div class="product-img-container">
-                    <img src="1000598197.png" alt="ماي فيا" class="product-img" loading="lazy">
+                    <img src="1000598197.png" alt="ماي فيا" class="product-img">
                 </div>
                 <div class="product-info">
                     <div>
@@ -831,7 +824,7 @@
             <!-- منتج 4 -->
             <div class="product-card" data-category="oriental">
                 <div class="product-img-container">
-                    <img src="1000598198.jpg" alt="كايالي" class="product-img" loading="lazy">
+                    <img src="1000598198.jpg" alt="كايالي" class="product-img">
                 </div>
                 <div class="product-info">
                     <div>
@@ -849,7 +842,7 @@
             <!-- منتج 5 -->
             <div class="product-card" data-category="floral">
                 <div class="product-img-container">
-                    <img src="1000598199.jpg" alt="إسكادا" class="product-img" loading="lazy">
+                    <img src="1000598199.jpg" alt="إسكادا" class="product-img">
                 </div>
                 <div class="product-info">
                     <div>
@@ -867,7 +860,7 @@
             <!-- منتج 6 -->
             <div class="product-card" data-category="floral">
                 <div class="product-img-container">
-                    <img src="1000598200.jpg" alt="لومبيراتريس" class="product-img" loading="lazy">
+                    <img src="1000598200.jpg" alt="لومبيراتريس" class="product-img">
                 </div>
                 <div class="product-info">
                     <div>
@@ -885,7 +878,7 @@
             <!-- منتج 7 -->
             <div class="product-card" data-category="oriental">
                 <div class="product-img-container">
-                    <img src="1000598209.jpg" alt="يارا" class="product-img" loading="lazy">
+                    <img src="1000598209.jpg" alt="يارا" class="product-img">
                 </div>
                 <div class="product-info">
                     <div>
@@ -903,7 +896,7 @@
             <!-- منتج 8 -->
             <div class="product-card" data-category="oriental">
                 <div class="product-img-container">
-                    <img src="1000598210.jpg" alt="ماي فيا جولد" class="product-img" loading="lazy">
+                    <img src="1000598210.jpg" alt="ماي فيا جولد" class="product-img">
                 </div>
                 <div class="product-info">
                     <div>
@@ -921,7 +914,7 @@
             <!-- منتج 9 -->
             <div class="product-card" data-category="floral">
                 <div class="product-img-container">
-                    <img src="1000598211.jpg" alt="كوكونت باشن" class="product-img" loading="lazy">
+                    <img src="1000598211.jpg" alt="كوكونت باشن" class="product-img">
                 </div>
                 <div class="product-info">
                     <div>
@@ -939,7 +932,7 @@
             <!-- منتج 10 -->
             <div class="product-card" data-category="oriental">
                 <div class="product-img-container">
-                    <img src="1000598212.jpg" alt="لومبيراتريس إيليت" class="product-img" loading="lazy">
+                    <img src="1000598212.jpg" alt="لومبيراتريس إيليت" class="product-img">
                 </div>
                 <div class="product-info">
                     <div>
@@ -957,7 +950,7 @@
             <!-- منتج 11 -->
             <div class="product-card" data-category="oriental">
                 <div class="product-img-container">
-                    <img src="1000598213.jpg" alt="ميرة العرب" class="product-img" loading="lazy">
+                    <img src="1000598213.jpg" alt="ميرة العرب" class="product-img">
                 </div>
                 <div class="product-info">
                     <div>
@@ -975,7 +968,7 @@
             <!-- منتج 12 -->
             <div class="product-card" data-category="floral">
                 <div class="product-img-container">
-                    <img src="1000598214.png" alt="شانس شانيل" class="product-img" loading="lazy">
+                    <img src="1000598214.png" alt="شانس شانيل" class="product-img">
                 </div>
                 <div class="product-info">
                     <div>
@@ -993,7 +986,7 @@
             <!-- منتج 13 -->
             <div class="product-card" data-category="floral">
                 <div class="product-img-container">
-                    <img src="1000598215.png" alt="لأنترديت جيفنشي" class="product-img" loading="lazy">
+                    <img src="1000598215.png" alt="لأنترديت جيفنشي" class="product-img">
                 </div>
                 <div class="product-info">
                     <div>
@@ -1011,7 +1004,7 @@
             <!-- منتج 14 -->
             <div class="product-card" data-category="floral">
                 <div class="product-img-container">
-                    <img src="1000598216.png" alt="فيكتوريا سيكريت" class="product-img" loading="lazy">
+                    <img src="1000598216.png" alt="فيكتوريا سيكريت" class="product-img">
                 </div>
                 <div class="product-info">
                     <div>
@@ -1029,7 +1022,7 @@
             <!-- منتج 15 -->
             <div class="product-card" data-category="floral">
                 <div class="product-img-container">
-                    <img src="1000598217.png" alt="إنسانس أولترامارين" class="product-img" loading="lazy">
+                    <img src="1000598217.png" alt="إنسانس أولترامارين" class="product-img">
                 </div>
                 <div class="product-info">
                     <div>
@@ -1047,7 +1040,7 @@
             <!-- منتج 16 -->
             <div class="product-card" data-category="floral">
                 <div class="product-img-container">
-                    <img src="1000598218.jpg" alt="غوتشي فلورال" class="product-img" loading="lazy">
+                    <img src="1000598218.jpg" alt="غوتشي فلورال" class="product-img">
                 </div>
                 <div class="product-info">
                     <div>
@@ -1065,7 +1058,7 @@
             <!-- منتج 17 -->
             <div class="product-card" data-category="oriental">
                 <div class="product-img-container">
-                    <img src="1000598219.jpg" alt="سكاندال" class="product-img" loading="lazy">
+                    <img src="1000598219.jpg" alt="سكاندال" class="product-img">
                 </div>
                 <div class="product-info">
                     <div>
@@ -1083,7 +1076,7 @@
             <!-- منتج 18 -->
             <div class="product-card" data-category="floral">
                 <div class="product-img-container">
-                    <img src="1000598220.jpg" alt="كوم يون إفدونس" class="product-img" loading="lazy">
+                    <img src="1000598220.jpg" alt="كوم يون إفدونس" class="product-img">
                 </div>
                 <div class="product-info">
                     <div>
@@ -1101,7 +1094,7 @@
             <!-- منتج 19 -->
             <div class="product-card" data-category="oriental">
                 <div class="product-img-container">
-                    <img src="1000598221.jpg" alt="أوليمبيا" class="product-img" loading="lazy">
+                    <img src="1000598221.jpg" alt="أوليمبيا" class="product-img">
                 </div>
                 <div class="product-info">
                     <div>
@@ -1119,7 +1112,7 @@
             <!-- منتج 20 -->
             <div class="product-card" data-category="floral">
                 <div class="product-img-container">
-                    <img src="1000598222.jpg" alt="ليبر إيف سان لوران" class="product-img" loading="lazy">
+                    <img src="1000598222.jpg" alt="ليبر إيف سان لوران" class="product-img">
                 </div>
                 <div class="product-info">
                     <div>
@@ -1138,7 +1131,7 @@
             <div class="product-card" data-category="floral">
                 <div class="product-badge">جديد</div>
                 <div class="product-img-container">
-                    <img src="1000598223.jpg" alt="فالنتينو دونا" class="product-img" loading="lazy">
+                    <img src="1000598223.jpg" alt="فالنتينو دونا" class="product-img">
                 </div>
                 <div class="product-info">
                     <div>
@@ -1157,7 +1150,7 @@
             <div class="product-card" data-category="floral">
                 <div class="product-badge">حصري</div>
                 <div class="product-img-container">
-                    <img src="1000598224.jpg" alt="دولتشي آند غابانا لايت بلو" class="product-img" loading="lazy">
+                    <img src="1000598224.jpg" alt="دولتشي آند غابانا لايت بلو" class="product-img">
                 </div>
                 <div class="product-info">
                     <div>
@@ -1254,21 +1247,21 @@
         </div>
     </footer>
 
-    <!-- جافاسكريبت متطور ومحترف للعداد التلقائي والإشعارات الذكية -->
+    <!-- جافاسكريبت متطور وسريع للعداد والإشعارات -->
     <script>
         // 1. نظام عداد زوار يتغير كل 10 ثوانٍ في حدود 30 زبونة (بين 20 و 30)
         let currentVisitors = 24;
         const visitorElement = document.getElementById('visitorCount');
         
         setInterval(() => {
-            const fluctuation = Math.floor(Math.random() * 5) - 2; // يغير الرقم بشكل طفيف طبيعي (-2 إلى +2)
+            const fluctuation = Math.floor(Math.random() * 5) - 2;
             currentVisitors += fluctuation;
             if (currentVisitors < 20) currentVisitors = 20;
             if (currentVisitors > 30) currentVisitors = 30;
             visitorElement.innerText = currentVisitors;
-        }, 10000); // كل 10 ثوانٍ بالتمام والكمال
+        }, 10000);
 
-        // 2. إشعارات طلبات حية ومترابطة بأسماء العطور ومستقلة عن أي أحياء
+        // 2. إشعارات طلبات حية ومترابطة بأسماء العطور
         const liveOrders = [
             { title: 'طلب جديد في ميدلت 🛍️', text: 'زبونة طلبت عطر "ليبر إيف سان لوران" قبل قليل' },
             { title: 'توصيل مؤكد 🚚', text: 'تم توصيل طلبية عطر "سينما" بنجاح بمدينة ميدلت' },
@@ -1300,21 +1293,6 @@
             triggerLiveOrder();
             setInterval(triggerLiveOrder, 12000);
         }, 4000);
-
-        // تفعيل الظهور التدريجي للبطاقات أثناء التمرير
-        const observerOptions = { threshold: 0.1 };
-        const observer = new IntersectionObserver((entries, observer) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('appear');
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, observerOptions);
-
-        document.querySelectorAll('.product-card').forEach(card => {
-            observer.observe(card);
-        });
 
         // تصفية المنتجات حسب التصنيف
         function filterCategory(category) {
