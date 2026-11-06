@@ -757,7 +757,7 @@
     <section id="products" class="section">
         <div class="section-header">
             <div class="trust-counter-badge">
-                <i class="fas fa-eye"></i> <span id="visitorCount">16</span> زبونة يتصفحن العطور الآن في ميدلت
+                <i class="fas fa-eye"></i> <span id="visitorCount">24</span> زبونة يتصفحن العطور الآن في ميدلت
             </div>
             <h2 class="section-title">التشكيلة الملكية الفاخرة</h2>
             <p class="section-desc">تركيبة مركزة سعة 20 مل تدوم طويلاً بسعر موحد 30 درهم فقط</p>
@@ -820,7 +820,7 @@
                         <h3 class="product-title">ماي فيا</h3>
                         <div class="product-size">20 مل | تركيبة مركزة</div>
                         <div class="product-price">30 درهم</div>
-                        <p class="product-desc">مزيج زهور رقيق يعبر عن الحرية والجأذبية بتركيبة مركزة.</p>
+                        <p class="product-desc">مزيج زهور رقيق يعبر عن الحرية والجاذبية بتركيبة مركزة.</p>
                     </div>
                     <a href="https://wa.me/212605015387?text=أريد طلب عطر: ماي فيا (20 مل) بسعر 30 درهم" target="_blank" class="buy-btn">
                         <i class="fab fa-whatsapp"></i> اطلبي الآن عبر الواتساب
@@ -1256,17 +1256,17 @@
 
     <!-- جافاسكريبت متطور ومحترف للعداد التلقائي والإشعارات الذكية -->
     <script>
-        // 1. نظام عداد زوار واقعي وغير مثير للشبهة
-        let currentVisitors = 16;
+        // 1. نظام عداد زوار يتغير كل 10 ثوانٍ في حدود 30 زبونة (بين 20 و 30)
+        let currentVisitors = 24;
         const visitorElement = document.getElementById('visitorCount');
         
         setInterval(() => {
-            const fluctuation = Math.floor(Math.random() * 3) - 1;
+            const fluctuation = Math.floor(Math.random() * 5) - 2; // يغير الرقم بشكل طفيف طبيعي (-2 إلى +2)
             currentVisitors += fluctuation;
-            if (currentVisitors < 12) currentVisitors = 12;
-            if (currentVisitors > 24) currentVisitors = 24;
+            if (currentVisitors < 20) currentVisitors = 20;
+            if (currentVisitors > 30) currentVisitors = 30;
             visitorElement.innerText = currentVisitors;
-        }, 7000);
+        }, 10000); // كل 10 ثوانٍ بالتمام والكمال
 
         // 2. إشعارات طلبات حية ومترابطة بأسماء العطور ومستقلة عن أي أحياء
         const liveOrders = [
