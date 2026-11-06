@@ -5,22 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Parfumerie Yousra | عطور نسائية فاخرة 20 مل</title>
     <!-- خطوط عربية وعالمية راقية -->
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap" rel="stylesheet">
     <!-- أيقونات FontAwesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <style>
         :root {
-            --bg-color: #fcfbfa;
-            --card-bg: #ffffff;
-            --primary: #0f0f0f;
-            --gold: #c5a059;
-            --gold-light: #f7f2e7;
-            --gold-hover: #b08d4c;
-            --text-main: #2b2b2b;
-            --text-muted: #777777;
-            --border-color: #e6dec5;
-            --transition: all 0.25s ease-in-out;
+            --bg-color: #0c0c0c;
+            --surface-color: #161616;
+            --card-bg: #1a1a1a;
+            --primary: #ffffff;
+            --gold: #d4af37;
+            --gold-light: #f3ebd1;
+            --gold-hover: #e6be40;
+            --text-main: #f0f0f0;
+            --text-muted: #aaaaaa;
+            --border-color: #332d1d;
+            --transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
         }
 
         * {
@@ -38,21 +39,21 @@
 
         /* شريط الإعلانات العلوي المتحرك */
         .top-bar {
-            background-color: var(--primary);
+            background: linear-gradient(90deg, #121212, #2a220e, #121212);
             color: var(--gold);
             padding: 10px 0;
             font-size: 13px;
-            font-weight: 600;
+            font-weight: 700;
             overflow: hidden;
             white-space: nowrap;
             position: relative;
-            border-bottom: 1px solid rgba(197, 160, 89, 0.3);
+            border-bottom: 1px solid rgba(212, 175, 55, 0.3);
         }
 
         .marquee-track {
             display: inline-block;
             white-space: nowrap;
-            animation: moveTextFromRight 30s linear infinite;
+            animation: moveTextFromRight 35s linear infinite;
         }
 
         @keyframes moveTextFromRight {
@@ -60,35 +61,34 @@
             100% { transform: translateX(-100%); }
         }
 
-        /* الهيدر الاحترافي الفاخر */
+        /* الهيدر الفخم الشفاف */
         header {
-            background-color: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(15px);
+            background-color: rgba(12, 12, 12, 0.85);
+            backdrop-filter: blur(20px);
             position: sticky;
             top: 0;
             left: 0;
             width: 100%;
             z-index: 1000;
-            border-bottom: 1px solid var(--border-color);
-            box-shadow: 0 4px 20px rgba(0,0,0,0.02);
+            border-bottom: 1px solid rgba(212, 175, 55, 0.2);
             transition: var(--transition);
         }
 
         .nav-container {
-            max-width: 1300px;
+            max-width: 1350px;
             margin: 0 auto;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 15px 30px;
+            padding: 18px 30px;
         }
 
         .logo {
             font-family: 'Playfair Display', serif;
-            font-size: 28px;
+            font-size: 30px;
             font-weight: 700;
             color: var(--primary);
-            letter-spacing: 1.5px;
+            letter-spacing: 2px;
         }
 
         .logo span {
@@ -98,7 +98,7 @@
 
         .nav-links {
             display: flex;
-            gap: 35px;
+            gap: 40px;
             list-style: none;
         }
 
@@ -115,27 +115,26 @@
         }
 
         .header-cta {
-            background-color: var(--primary);
-            color: var(--gold);
-            padding: 10px 24px;
+            background: linear-gradient(135deg, var(--gold), #aa8229);
+            color: #000;
+            padding: 11px 26px;
             border-radius: 50px;
             text-decoration: none;
-            font-weight: 600;
+            font-weight: 700;
             font-size: 14px;
-            border: 1px solid var(--gold);
+            box-shadow: 0 5px 20px rgba(212, 175, 55, 0.3);
             transition: var(--transition);
         }
 
         .header-cta:hover {
-            background-color: var(--gold);
-            color: var(--primary);
-            transform: translateY(-2px);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(212, 175, 55, 0.5);
         }
 
-        /* واجهة الـ Hero الاحترافية */
+        /* واجهة الـ Hero الخرافية */
         .hero {
-            height: 85vh;
-            background: linear-gradient(rgba(15, 15, 15, 0.7), rgba(15, 15, 15, 0.8)), url('https://images.unsplash.com/photo-1594035910387-fea47794261f?auto=format&fit=crop&w=1920&q=80') no-repeat center center/cover;
+            height: 90vh;
+            background: linear-gradient(rgba(12, 12, 12, 0.6), rgba(12, 12, 12, 0.85)), url('https://images.unsplash.com/photo-1594035910387-fea47794261f?auto=format&fit=crop&w=1920&q=80') no-repeat center center/cover;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -146,150 +145,162 @@
         }
 
         .hero-content {
-            max-width: 850px;
+            max-width: 900px;
         }
 
         .hero-subtitle {
             color: var(--gold);
             text-transform: uppercase;
-            letter-spacing: 4px;
+            letter-spacing: 6px;
             font-size: 13px;
-            margin-bottom: 15px;
-            font-weight: 700;
+            margin-bottom: 20px;
+            font-weight: 800;
         }
 
         .hero-content h1 {
             font-family: 'Playfair Display', serif;
-            font-size: 52px;
+            font-size: 58px;
             margin-bottom: 20px;
             line-height: 1.2;
+            text-shadow: 0 4px 20px rgba(0,0,0,0.8);
         }
 
         .hero-content p {
-            font-size: 18px;
-            margin-bottom: 35px;
-            color: #dcdcdc;
+            font-size: 19px;
+            margin-bottom: 40px;
+            color: #cccccc;
             font-weight: 300;
         }
 
         .btn-gold {
-            background-color: var(--gold);
-            color: var(--primary);
-            padding: 15px 45px;
+            background: linear-gradient(135deg, var(--gold), #9e7a20);
+            color: #000;
+            padding: 16px 45px;
             border-radius: 50px;
             text-decoration: none;
-            font-weight: 700;
-            font-size: 16px;
+            font-weight: 800;
+            font-size: 17px;
             transition: var(--transition);
             display: inline-block;
-            box-shadow: 0 10px 30px rgba(197, 160, 89, 0.3);
+            box-shadow: 0 10px 30px rgba(212, 175, 55, 0.4);
         }
 
         .btn-gold:hover {
-            background-color: var(--gold-hover);
-            transform: translateY(-3px);
-            box-shadow: 0 15px 35px rgba(197, 160, 89, 0.4);
+            transform: translateY(-4px);
+            box-shadow: 0 15px 40px rgba(212, 175, 55, 0.6);
         }
 
-        /* تنسيق قسم المعرض الفاخر (الصور الأربع الكبيرة بإطار) */
+        /* قسم معرض الصور الكبرى بإطارات ذهبية ثلاثية الأبعاد */
         .showcase-section {
-            max-width: 1300px;
-            margin: 80px auto;
+            max-width: 1350px;
+            margin: 100px auto 60px;
             padding: 0 30px;
         }
 
         .showcase-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(520px, 1fr));
-            gap: 35px;
-            margin-top: 40px;
+            grid-template-columns: repeat(auto-fit, minmax(540px, 1fr));
+            gap: 40px;
+            margin-top: 50px;
         }
 
         .showcase-frame {
             background: var(--card-bg);
             border: 2px solid var(--gold);
-            border-radius: 20px;
-            padding: 18px;
-            box-shadow: 0 12px 35px rgba(197, 160, 89, 0.15);
+            border-radius: 24px;
+            padding: 22px;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.6), 0 0 25px rgba(212, 175, 55, 0.15);
             transition: var(--transition);
             display: flex;
             align-items: center;
             justify-content: center;
             overflow: hidden;
+            position: relative;
+        }
+
+        .showcase-frame::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            border-radius: 24px;
+            border: 1px solid rgba(255,255,255,0.05);
+            pointer-events: none;
         }
 
         .showcase-frame:hover {
-            transform: translateY(-6px);
-            box-shadow: 0 18px 45px rgba(197, 160, 89, 0.25);
-            border-color: var(--primary);
+            transform: translateY(-8px);
+            box-shadow: 0 25px 60px rgba(0,0,0,0.8), 0 0 35px rgba(212, 175, 55, 0.3);
+            border-color: #fff;
         }
 
         .showcase-img {
             width: 100%;
             height: auto;
-            max-height: 520px;
+            max-height: 550px;
             object-fit: contain;
-            border-radius: 14px;
+            border-radius: 16px;
             cursor: pointer;
             transition: var(--transition);
         }
 
         .showcase-img:hover {
-            transform: scale(1.02);
+            transform: scale(1.03);
         }
 
         /* قسم المنتجات الرئيسي */
         .section {
-            max-width: 1300px;
-            margin: 90px auto;
+            max-width: 1350px;
+            margin: 100px auto;
             padding: 0 30px;
         }
 
         .section-header {
             text-align: center;
-            margin-bottom: 50px;
+            margin-bottom: 60px;
         }
 
         .section-title {
             font-family: 'Playfair Display', serif;
-            font-size: 40px;
+            font-size: 44px;
             color: var(--primary);
-            margin-bottom: 12px;
+            margin-bottom: 15px;
+            letter-spacing: 1px;
         }
 
         .section-desc {
             color: var(--text-muted);
-            font-size: 16px;
+            font-size: 17px;
         }
 
-        /* أزرار الفلترة الاحترافية */
+        /* أزرار الفلترة الفخمة */
         .filter-tabs {
             display: flex;
             justify-content: center;
             gap: 15px;
-            margin-bottom: 45px;
+            margin-bottom: 50px;
             flex-wrap: wrap;
         }
 
         .filter-btn {
-            background: transparent;
+            background: var(--surface-color);
             border: 1px solid var(--border-color);
-            padding: 9px 24px;
+            padding: 11px 28px;
             border-radius: 30px;
             cursor: pointer;
             font-family: 'Cairo', sans-serif;
-            font-weight: 600;
+            font-weight: 700;
             color: var(--text-muted);
             transition: var(--transition);
         }
 
         .filter-btn.active, .filter-btn:hover {
-            background-color: var(--primary);
-            color: var(--gold);
-            border-color: var(--primary);
+            background: var(--gold);
+            color: #000;
+            border-color: var(--gold);
+            box-shadow: 0 5px 20px rgba(212, 175, 55, 0.3);
         }
 
-        /* شبكة المنتجات (سريعة وفورية) */
+        /* شبكة المنتجات الفاخرة */
         .products-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
@@ -300,7 +311,7 @@
             background: var(--card-bg);
             border-radius: 20px;
             overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.4);
             transition: var(--transition);
             border: 1px solid var(--border-color);
             display: flex;
@@ -309,8 +320,8 @@
         }
 
         .product-card:hover {
-            transform: translateY(-6px);
-            box-shadow: 0 15px 30px rgba(197, 160, 89, 0.15);
+            transform: translateY(-8px);
+            box-shadow: 0 25px 50px rgba(0,0,0,0.7), 0 0 20px rgba(212, 175, 55, 0.2);
             border-color: var(--gold);
         }
 
@@ -318,19 +329,19 @@
             position: absolute;
             top: 15px;
             right: 15px;
-            background-color: var(--primary);
-            color: var(--gold);
+            background: var(--gold);
+            color: #000;
             font-size: 11px;
             padding: 5px 14px;
             border-radius: 20px;
-            font-weight: 700;
+            font-weight: 800;
             z-index: 10;
             letter-spacing: 0.5px;
         }
 
         .product-img-container {
             height: 380px;
-            background-color: #f7f4ee;
+            background-color: #141414;
             cursor: pointer;
             display: flex;
             align-items: center;
@@ -348,7 +359,7 @@
         }
 
         .product-card:hover .product-img {
-            transform: scale(1.04);
+            transform: scale(1.06);
         }
 
         .product-info {
@@ -362,7 +373,7 @@
 
         .product-title {
             font-family: 'Playfair Display', serif;
-            font-size: 22px;
+            font-size: 23px;
             font-weight: 700;
             margin-bottom: 8px;
             color: var(--primary);
@@ -372,23 +383,24 @@
             font-size: 13px;
             color: var(--gold);
             font-weight: 700;
-            margin-bottom: 6px;
-            background: #1a1a1a;
+            margin-bottom: 8px;
+            background: #252525;
             display: inline-block;
-            padding: 3px 12px;
+            padding: 4px 14px;
             border-radius: 12px;
+            border: 1px solid rgba(212, 175, 55, 0.2);
         }
 
         .product-price {
-            font-size: 20px;
-            color: var(--primary);
-            font-weight: 700;
-            margin-bottom: 12px;
-            background: var(--gold-light);
-            padding: 5px 16px;
-            border-radius: 20px;
+            font-size: 21px;
+            color: #000;
+            font-weight: 800;
+            margin-bottom: 15px;
+            background: var(--gold);
+            padding: 6px 18px;
+            border-radius: 25px;
             display: inline-block;
-            border: 1px solid var(--gold);
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
         }
 
         .product-desc {
@@ -404,49 +416,46 @@
             justify-content: center;
             gap: 10px;
             width: 100%;
-            background-color: var(--primary);
+            background: #25d366;
             color: white;
             padding: 14px;
-            border-radius: 12px;
+            border-radius: 14px;
             text-decoration: none;
-            font-weight: 600;
+            font-weight: 700;
             font-size: 15px;
+            box-shadow: 0 5px 20px rgba(37, 211, 102, 0.3);
             transition: var(--transition);
         }
 
         .buy-btn i {
-            color: #25d366;
-            font-size: 18px;
+            font-size: 20px;
         }
 
         .buy-btn:hover {
-            background-color: var(--gold);
-            color: var(--primary);
+            background: #20ba5a;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(37, 211, 102, 0.5);
         }
 
-        .buy-btn:hover i {
-            color: var(--primary);
-        }
-
-        /* قسم آراء الزبونات بالدارجة الحقيقية */
+        /* قسم آراء الزبونات (Reviews) */
         .reviews-section {
-            background-color: #f7f4ee;
-            padding: 90px 30px;
-            margin-top: 100px;
+            background: linear-gradient(180deg, var(--bg-color), var(--surface-color), var(--bg-color));
+            padding: 100px 30px;
+            margin-top: 120px;
             border-top: 1px solid var(--border-color);
             border-bottom: 1px solid var(--border-color);
         }
 
         .reviews-container {
-            max-width: 1300px;
+            max-width: 1350px;
             margin: 0 auto;
         }
 
         .reviews-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 30px;
-            margin-top: 40px;
+            gap: 35px;
+            margin-top: 50px;
         }
 
         .review-card {
@@ -454,20 +463,21 @@
             padding: 35px;
             border-radius: 20px;
             border: 1px solid var(--border-color);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.02);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.4);
             position: relative;
             transition: var(--transition);
         }
 
         .review-card:hover {
-            transform: translateY(-5px);
+            transform: translateY(-6px);
             border-color: var(--gold);
+            box-shadow: 0 20px 45px rgba(0,0,0,0.6), 0 0 20px rgba(212, 175, 55, 0.15);
         }
 
         .review-stars {
             color: var(--gold);
             margin-bottom: 15px;
-            font-size: 14px;
+            font-size: 15px;
         }
 
         .review-text {
@@ -475,13 +485,13 @@
             color: var(--text-main);
             margin-bottom: 20px;
             font-style: italic;
-            line-height: 1.7;
+            line-height: 1.8;
         }
 
         .review-author {
             font-weight: 700;
             color: var(--primary);
-            font-size: 14px;
+            font-size: 15px;
             display: flex;
             align-items: center;
             gap: 8px;
@@ -489,7 +499,7 @@
 
         .review-author span {
             color: var(--gold);
-            font-size: 12px;
+            font-size: 13px;
             font-weight: normal;
         }
 
@@ -498,20 +508,20 @@
             position: fixed;
             bottom: 35px;
             left: 35px;
-            background: rgba(255, 255, 255, 0.96);
-            backdrop-filter: blur(12px);
+            background: rgba(22, 22, 22, 0.95);
+            backdrop-filter: blur(15px);
             border: 1px solid var(--gold);
-            padding: 15px 22px;
-            border-radius: 16px;
-            box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+            padding: 16px 24px;
+            border-radius: 18px;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.7), 0 0 20px rgba(212, 175, 55, 0.2);
             z-index: 1500;
             display: flex;
             align-items: center;
-            gap: 15px;
-            max-width: 330px;
-            transform: translateY(120px);
+            gap: 16px;
+            max-width: 350px;
+            transform: translateY(130px);
             opacity: 0;
-            transition: all 0.5s ease;
+            transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
         }
 
         .live-notification.show {
@@ -520,23 +530,23 @@
         }
 
         .live-icon {
-            background: var(--gold-light);
-            color: var(--primary);
-            width: 42px;
-            height: 42px;
+            background: var(--gold);
+            color: #000;
+            width: 44px;
+            height: 44px;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             font-size: 18px;
             flex-shrink: 0;
-            border: 1px solid var(--gold);
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.4);
         }
 
         .live-content h4 {
-            font-size: 13px;
+            font-size: 14px;
             color: var(--primary);
-            font-weight: 700;
+            font-weight: 800;
             margin-bottom: 3px;
         }
 
@@ -545,23 +555,20 @@
             color: var(--text-muted);
         }
 
-        /* عداد الزوار الثابت والديناميكي */
+        /* شارة عداد الزوار الديناميكي */
         .trust-counter-badge {
-            background: rgba(197, 160, 89, 0.15);
+            background: rgba(212, 175, 55, 0.1);
             border: 1px solid var(--gold);
-            color: var(--primary);
-            padding: 6px 16px;
+            color: var(--gold);
+            padding: 8px 20px;
             border-radius: 30px;
-            font-size: 13px;
+            font-size: 14px;
             font-weight: 700;
             display: inline-flex;
             align-items: center;
-            gap: 8px;
+            gap: 10px;
             margin-bottom: 25px;
-        }
-
-        .trust-counter-badge i {
-            color: var(--gold);
+            box-shadow: 0 4px 20px rgba(212, 175, 55, 0.15);
         }
 
         /* زر الواتساب العائم النابض */
@@ -571,25 +578,23 @@
             right: 35px;
             background-color: #25d366;
             color: white;
-            width: 68px;
-            height: 68px;
+            width: 70px;
+            height: 70px;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 38px;
-            box-shadow: 0 10px 30px rgba(37, 211, 102, 0.4);
+            font-size: 40px;
+            box-shadow: 0 10px 30px rgba(37, 211, 102, 0.5);
             z-index: 2000;
             text-decoration: none;
-            border: none;
-            outline: none;
             transition: var(--transition);
             animation: pulse-animation 2s infinite;
         }
 
         @keyframes pulse-animation {
-            0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.6); }
-            70% { box-shadow: 0 0 0 22px rgba(37, 211, 102, 0); }
+            0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
+            70% { box-shadow: 0 0 0 25px rgba(37, 211, 102, 0); }
             100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
         }
 
@@ -609,17 +614,18 @@
             width: 100%;
             height: 100%;
             overflow: auto;
-            background-color: rgba(10, 10, 10, 0.95);
-            backdrop-filter: blur(8px);
+            background-color: rgba(5, 5, 5, 0.96);
+            backdrop-filter: blur(10px);
         }
 
         .modal-content {
             margin: auto;
             display: block;
             max-width: 85%;
-            max-height: 80vh;
-            border-radius: 16px;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+            max-height: 82vh;
+            border-radius: 18px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.8);
+            border: 2px solid var(--gold);
         }
 
         .close-modal {
@@ -639,14 +645,14 @@
 
         /* قسم المميزات */
         .features {
-            background-color: var(--gold-light);
-            padding: 80px 0;
+            background-color: var(--surface-color);
+            padding: 90px 0;
             border-top: 1px solid var(--border-color);
             border-bottom: 1px solid var(--border-color);
         }
 
         .features-grid {
-            max-width: 1300px;
+            max-width: 1350px;
             margin: 0 auto;
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -656,22 +662,22 @@
         }
 
         .feature-item i {
-            font-size: 42px;
-            color: var(--primary);
+            font-size: 45px;
+            color: #000;
             margin-bottom: 20px;
             background: var(--gold);
-            width: 85px;
-            height: 85px;
-            line-height: 85px;
+            width: 90px;
+            height: 90px;
+            line-height: 90px;
             border-radius: 50%;
             display: inline-block;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+            box-shadow: 0 10px 25px rgba(212, 175, 55, 0.3);
         }
 
         .feature-item h3 {
             font-family: 'Playfair Display', serif;
-            font-size: 21px;
-            margin-bottom: 10px;
+            font-size: 22px;
+            margin-bottom: 12px;
             color: var(--primary);
         }
 
@@ -680,16 +686,17 @@
             color: var(--text-muted);
         }
 
-        /* الفوتر */
+        /* الفوتر الفاخر */
         footer {
-            background-color: var(--primary);
+            background-color: #080808;
             color: white;
-            padding: 60px 30px 25px;
+            padding: 70px 30px 30px;
             text-align: center;
+            border-top: 1px solid var(--border-color);
         }
 
         .footer-content {
-            max-width: 1300px;
+            max-width: 1350px;
             margin: 0 auto;
             display: flex;
             flex-direction: column;
@@ -707,32 +714,34 @@
             font-size: 22px;
             transition: var(--transition);
             background: rgba(255,255,255,0.05);
-            width: 45px;
-            height: 45px;
+            width: 50px;
+            height: 50px;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
+            border: 1px solid var(--border-color);
         }
 
         .social-icons a:hover {
-            color: var(--primary);
+            color: #000;
             background-color: var(--gold);
-            transform: translateY(-3px);
+            border-color: var(--gold);
+            transform: translateY(-4px);
         }
 
         .copyright {
             font-size: 13px;
-            color: #888;
-            border-top: 1px solid rgba(255,255,255,0.1);
+            color: #777;
+            border-top: 1px solid rgba(255,255,255,0.05);
             width: 100%;
-            padding-top: 25px;
+            padding-top: 30px;
             margin-top: 15px;
         }
 
         @media (max-width: 768px) {
             .nav-links { display: none; }
-            .hero-content h1 { font-size: 36px; }
+            .hero-content h1 { font-size: 38px; }
             .nav-container { padding: 15px 20px; }
             .live-notification { left: 15px; bottom: 110px; max-width: 280px; }
             .showcase-grid { grid-template-columns: 1fr; }
@@ -748,14 +757,14 @@
         </div>
     </div>
 
-    <!-- الهيدر الاحترافي -->
+    <!-- الهيدر الفاخر -->
     <header>
         <div class="nav-container">
             <div class="logo">Parfumerie <span>Yousra</span></div>
             <ul class="nav-links">
                 <li><a href="#">الرئيسية</a></li>
                 <li><a href="#showcase">المعرض الفاخر</a></li>
-                <li><a href="#products">التشكيلة الفاخرة</a></li>
+                <li><a href="#products">التشكيلة الملكية</a></li>
                 <li><a href="#reviews">آراء الزبونات</a></li>
             </ul>
             <a href="https://wa.me/212605015387?text=سلام، أهتم بالاستفسار عن عطور Parfumerie Yousra" target="_blank" class="header-cta">تواصل معنا</a>
@@ -769,7 +778,7 @@
 
     <!-- إشعار الحركة الحية للطلبات -->
     <div id="liveNotification" class="live-notification">
-        <div class="live-icon" id="liveIcon">
+        <div class="live-icon">
             <i class="fas fa-shopping-bag"></i>
         </div>
         <div class="live-content">
@@ -790,15 +799,15 @@
             <div class="hero-subtitle">إصدارات حصرية لعشاق التميز في ميدلت</div>
             <h1>عطور نسائية فاخرة سعة 20 مل</h1>
             <p>اكتشفي تشكيلة راقية من أرقى العطور المركزة بسعر موحد 30 درهم فقط، مع التوصيل لحد باب الدار والدفع عند الاستلام بكل أمان.</p>
-            <a href="#products" class="btn-gold">اكتشفي التشكيلة</a>
+            <a href="#products" class="btn-gold">اكتشفي التشكيلة الملكية</a>
         </div>
     </section>
 
-    <!-- قسم معرض الصور الأربع بحجم كبير وإطار ذهبي فاخر -->
+    <!-- قسم معرض الصور الأربع الكبرى بإطارات ذهبية فاخرة -->
     <section id="showcase" class="showcase-section">
         <div class="section-header">
             <h2 class="section-title">لمسات فخمة وتشكيلات حصرية</h2>
-            <p class="section-desc">شاهد عن قرب جودة القارورات وتصاميم العرض الراقية</p>
+            <p class="section-desc">شاهد عن قرب جودة القارورات وتصاميم العرض الراقية المتاحة لدينا</p>
         </div>
         <div class="showcase-grid">
             <div class="showcase-frame">
@@ -826,7 +835,7 @@
             <p class="section-desc">تركيبة مركزة سعة 20 مل تدوم طويلاً بسعر موحد 30 درهم فقط</p>
         </div>
 
-        <!-- تصنيفات سريعة -->
+        <!-- أزرار الفلترة -->
         <div class="filter-tabs">
             <button class="filter-btn active" onclick="filterCategory('all')">جميع العطور</button>
             <button class="filter-btn" onclick="filterCategory('oriental')">شرقية ودافئة</button>
@@ -1280,8 +1289,8 @@
         </div>
     </section>
 
-    <!-- قسم المميزات وتأكيد الأمان -->
-    <section id="features" class="features">
+    <!-- قسم المميزات -->
+    <section class="features">
         <div class="features-grid">
             <div class="feature-item">
                 <i class="fas fa-gem"></i>
@@ -1301,7 +1310,7 @@
         </div>
     </section>
 
-    <!-- الفوتر -->
+    <!-- الفوتر الفاخر -->
     <footer>
         <div class="footer-content">
             <div class="logo" style="color: white;">Parfumerie <span>Yousra</span></div>
@@ -1317,7 +1326,7 @@
         </div>
     </footer>
 
-    <!-- جافاسكريبت متطور وسريع للعداد والإشعارات -->
+    <!-- جافاسكريبت متطور -->
     <script>
         // 1. نظام عداد زوار يتغير كل 10 ثوانٍ في حدود 30 زبونة (بين 20 و 30)
         let currentVisitors = 24;
@@ -1381,7 +1390,7 @@
             });
         }
 
-        // نافذة تكبير الصور (Lightbox) تشمل صور المعرض والمنتجات
+        // نافذة تكبير الصور (Lightbox) لجميع صور الموقع
         const modal = document.getElementById("imageModal");
         const modalImg = document.getElementById("modalImg");
         const closeBtn = document.getElementsByClassName("close-modal")[0];
@@ -1393,18 +1402,4 @@
             });
         });
 
-        if(closeBtn) {
-            closeBtn.onclick = function() { 
-                modal.style.display = "none";
-            }
-        }
-
-        window.onclick = function(event) {
-            if (event.target == modal) {
-                modal.style.display = "none";
-            }
-        }
-    </script>
-
-</body>
-</html>
+        if(
