@@ -189,64 +189,6 @@
             box-shadow: 0 15px 35px rgba(212, 175, 55, 0.4);
         }
 
-        /* قسم معرض المجموعات والإصدارات الخاصة */
-        .showcase-section {
-            max-width: 1300px;
-            margin: 80px auto;
-            padding: 0 30px;
-        }
-
-        .showcase-header {
-            text-align: center;
-            margin-bottom: 40px;
-        }
-
-        .showcase-title {
-            font-family: 'Playfair Display', serif;
-            font-size: 36px;
-            color: var(--primary);
-            margin-bottom: 10px;
-        }
-
-        .showcase-desc {
-            color: var(--text-muted);
-            font-size: 16px;
-        }
-
-        .showcase-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 25px;
-        }
-
-        .showcase-card {
-            background: var(--card-bg);
-            border-radius: 16px;
-            overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.04);
-            border: 1px solid var(--border-color);
-            transition: var(--transition);
-            cursor: pointer;
-        }
-
-        .showcase-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 15px 35px rgba(212, 175, 55, 0.2);
-            border-color: var(--gold);
-        }
-
-        .showcase-img {
-            width: 100%;
-            height: auto;
-            display: block;
-            object-fit: cover;
-            transition: var(--transition);
-        }
-
-        .showcase-card:hover .showcase-img {
-            transform: scale(1.03);
-        }
-
         /* قسم المنتجات الرئيسي */
         .section {
             max-width: 1300px;
@@ -628,7 +570,6 @@
             <div class="logo">Parfumerie <span>Yousra</span></div>
             <ul class="nav-links">
                 <li><a href="#">الرئيسية</a></li>
-                <li><a href="#showcase">مجموعاتنا</a></li>
                 <li><a href="#products">التشكيلة الفاخرة</a></li>
                 <li><a href="#features">مميزاتنا</a></li>
             </ul>
@@ -654,28 +595,6 @@
             <h1>عطور نسائية فاخرة سعة 20 مل</h1>
             <p>اكتشفي تشكيلة راقية من أرقى العطور النسائية المركزة المصممة خصيصاً لتلهم حضورك بجاذبية ساحرة تدوم طويلاً.</p>
             <a href="#products" class="btn-gold">اكتشفي التشكيلة</a>
-        </div>
-    </section>
-
-    <!-- قسم معرض المجموعات والإصدارات الخاصة (بالأسماء الدقيقة المحدثة للصورة) -->
-    <section id="showcase" class="showcase-section">
-        <div class="showcase-header">
-            <h2 class="showcase-title">مجموعات وعروض سولانا الحصرية</h2>
-            <p class="showcase-desc">تشكيلات فاخرة ومنصات عرض راقية مصممة لتبرز فخامة عطرك</p>
-        </div>
-        <div class="showcase-grid">
-            <div class="showcase-card">
-                <img src="1000598435.jpg" alt="مجموعة سولانا الفاخرة" class="showcase-img" loading="lazy">
-            </div>
-            <div class="showcase-card">
-                <img src="1000598354_2.jpg" alt="تشكيلة العطور المركزة" class="showcase-img" loading="lazy">
-            </div>
-            <div class="showcase-card">
-                <img src="1000598358_2.jpg" alt="إصدارات العطور النسائية" class="showcase-img" loading="lazy">
-            </div>
-            <div class="showcase-card">
-                <img src="1000598360_2.jpg" alt="عروض العطور المميزة" class="showcase-img" loading="lazy">
-            </div>
         </div>
     </section>
 
@@ -1138,13 +1057,6 @@
         const closeBtn = document.getElementsByClassName("close-modal")[0];
 
         document.querySelectorAll('.product-img').forEach(img => {
-            img.addEventListener('click', function() {
-                modal.style.display = "block";
-                modalImg.src = this.src;
-            });
-        });
-
-        document.querySelectorAll('.showcase-img').forEach(img => {
             img.addEventListener('click', function() {
                 modal.style.display = "block";
                 modalImg.src = this.src;
