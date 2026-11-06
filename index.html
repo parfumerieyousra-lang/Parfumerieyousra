@@ -191,6 +191,53 @@
             box-shadow: 0 15px 35px rgba(197, 160, 89, 0.4);
         }
 
+        /* تنسيق قسم المعرض الفاخر (الصور الأربع الكبيرة بإطار) */
+        .showcase-section {
+            max-width: 1300px;
+            margin: 80px auto;
+            padding: 0 30px;
+        }
+
+        .showcase-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(520px, 1fr));
+            gap: 35px;
+            margin-top: 40px;
+        }
+
+        .showcase-frame {
+            background: var(--card-bg);
+            border: 2px solid var(--gold);
+            border-radius: 20px;
+            padding: 18px;
+            box-shadow: 0 12px 35px rgba(197, 160, 89, 0.15);
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .showcase-frame:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 18px 45px rgba(197, 160, 89, 0.25);
+            border-color: var(--primary);
+        }
+
+        .showcase-img {
+            width: 100%;
+            height: auto;
+            max-height: 520px;
+            object-fit: contain;
+            border-radius: 14px;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .showcase-img:hover {
+            transform: scale(1.02);
+        }
+
         /* قسم المنتجات الرئيسي */
         .section {
             max-width: 1300px;
@@ -688,6 +735,7 @@
             .hero-content h1 { font-size: 36px; }
             .nav-container { padding: 15px 20px; }
             .live-notification { left: 15px; bottom: 110px; max-width: 280px; }
+            .showcase-grid { grid-template-columns: 1fr; }
         }
     </style>
 </head>
@@ -746,32 +794,24 @@
         </div>
     </section>
 
-    <!-- قسم معرض الصور الأربع الجديدة (المجموعات والعروض) -->
-    <section id="showcase" class="section">
+    <!-- قسم معرض الصور الأربع بحجم كبير وإطار ذهبي فاخر -->
+    <section id="showcase" class="showcase-section">
         <div class="section-header">
             <h2 class="section-title">لمسات فخمة وتشكيلات حصرية</h2>
             <p class="section-desc">شاهد عن قرب جودة القارورات وتصاميم العرض الراقية</p>
         </div>
-        <div class="products-grid">
-            <div class="product-card" style="padding: 15px; text-align: center;">
-                <div class="product-img-container" style="height: 350px;">
-                    <img src="1000598435_2.jpg" alt="منصة عرض العطور" class="product-img">
-                </div>
+        <div class="showcase-grid">
+            <div class="showcase-frame">
+                <img src="1000598435_2.jpg" alt="منصة عرض العطور" class="showcase-img product-img">
             </div>
-            <div class="product-card" style="padding: 15px; text-align: center;">
-                <div class="product-img-container" style="height: 350px;">
-                    <img src="1000598354_3.jpg" alt="تشكيلة العطور 1" class="product-img">
-                </div>
+            <div class="showcase-frame">
+                <img src="1000598354_3.jpg" alt="تشكيلة العطور الفاخرة" class="showcase-img product-img">
             </div>
-            <div class="product-card" style="padding: 15px; text-align: center;">
-                <div class="product-img-container" style="height: 350px;">
-                    <img src="1000598358_3.jpg" alt="تشكيلة العطور 2" class="product-img">
-                </div>
+            <div class="showcase-frame">
+                <img src="1000598358_3.jpg" alt="إصدارات العطور النسائية" class="showcase-img product-img">
             </div>
-            <div class="product-card" style="padding: 15px; text-align: center;">
-                <div class="product-img-container" style="height: 350px;">
-                    <img src="1000598360_3.jpg" alt="تشكيلة العطور 3" class="product-img">
-                </div>
+            <div class="showcase-frame">
+                <img src="1000598360_3.jpg" alt="عروض العطور المميزة" class="showcase-img product-img">
             </div>
         </div>
     </section>
@@ -1341,7 +1381,7 @@
             });
         }
 
-        // نافذة تكبير الصور
+        // نافذة تكبير الصور (Lightbox) تشمل صور المعرض والمنتجات
         const modal = document.getElementById("imageModal");
         const modalImg = document.getElementById("modalImg");
         const closeBtn = document.getElementsByClassName("close-modal")[0];
